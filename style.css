@@ -1,0 +1,296 @@
+/*
+Theme Name: Tri
+Theme URI: https://github.com/CriticalChicken/Tri
+Author: Critical Chicken
+Author URI: https://github.com/CriticalChicken
+Version: 3.0.0 Beta
+*/
+
+/* http://meyerweb.com/eric/tools/css/reset */
+/* v2.0 | 20110126 */
+/* License: none (public domain) */
+
+a,abbr,acronym,address,applet,article,aside,audio,b,big,blockquote,body,canvas,caption,center,cite,code,dd,del,details,dfn,div,dl,dt,em,embed,fieldset,figcaption,figure,footer,form,h1,h2,h3,h4,h5,h6,header,hgroup,html,i,iframe,img,ins,kbd,label,legend,li,mark,menu,nav,object,ol,output,p,pre,q,ruby,s,samp,section,small,span,strike,strong,sub,summary,sup,table,tbody,td,tfoot,th,thead,time,tr,tt,u,ul,var,video{margin:0;padding:0;border:0;font-size:100%;font:inherit;vertical-align:baseline}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:after,blockquote:before,q:after,q:before{content:'';content:none}table{border-collapse:collapse;border-spacing:0}
+
+/*
+Copyright (C) Critical Chicken. All rights reserved.
+Critical Chicken, the Critical Chicken logo and wordmark, and #ForTheGaymers are trademarks of Critical Chicken.
+All other trademarks referred to are trademarks of their respective owners.
+*/
+
+/* Variables */
+
+:root {
+    /* Main colour palette */
+    --black: #000000;
+    --white: #ffffff;
+    --red: #d20202;
+    --orange: #f47614;
+    --yellow: #ffdc17;
+    --lightgrey: #edecec;
+
+    --ko-fi-blue: #72A4F2;
+    --ko-fi-red: #FF5A16;
+    --pokemon-yellow: #ffe103;
+    --pokemon-grey: #5e5e5e;
+
+    --black50: rgba(0,0,0,0.5);
+}
+
+/* Animations */
+
+@keyframes button-highlight {
+	0% {
+		background-position: 152px center;
+	}
+	50% {
+		background-position: 146px center;
+	}
+    100% {
+		background-position: 152px center;
+    }
+}
+
+body {
+    background-color: var(--lightgrey);
+    font-family: "Noto Sans Display";
+}
+
+#fab-container {
+    width: 240px;
+    height: 100%;
+    position: fixed;
+    z-index: 990;
+    left: calc(50% - 120px);
+    top: 0;
+    pointer-events: none;
+}
+
+#fab {
+    width: 64px;
+    height: 64px;
+    background-color: var(--red);
+    position: absolute;
+    z-index: 1000;
+    right: 0;
+    bottom: 32px;
+    border-radius: 24px;
+    box-shadow: 0 1px 8px var(--black50);
+    background-image: url(img/icon-64_menu.png);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: 32px 32px;
+    cursor: pointer;
+    display: block;
+}
+
+#container {
+    width: 240px;
+    left: calc(50% - 120px);
+    top: 37px;
+    position: relative;
+}
+
+#main-menu {
+    margin-bottom: 13px;
+}
+
+#main-menu .logo {
+    filter: drop-shadow(0 1px 1px var(--black));
+}
+
+#ticker {
+    width: 240px;
+    height: 40px;
+    display: block;
+    border-radius: 24px;
+    box-shadow: 0 1px 1px var(--black);
+    background-color: var(--yellow);
+    margin-bottom: 16px;
+}
+
+#featured-posts div {
+    width: 208px;
+    padding: 16px;
+    background-color: var(--orange);
+    display: block;
+    border-radius: 24px;
+    box-shadow: 0 1px 1px var(--black);
+    margin-bottom: 16px;
+}
+
+#featured-posts div span {
+    width: 24px;
+    height: 24px;
+    background-color: var(--black);
+    display: block;
+    border-radius: 12px;
+    box-shadow: 0 1px 1px var(--black);
+    float: right;
+    background-image: url(img/icon-32_featured-post.png);
+    background-size: 16px 16px;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+#keep-going span.box-icon {
+    width: 24px;
+    height: 24px;
+    background-color: var(--black);
+    display: block;
+    border-radius: 12px;
+    box-shadow: 0 1px 1px var(--black);
+    float: right;
+    background-image: url(img/icon-32_ko-fi.png);
+    background-size: 16px 16px;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+#featured-posts div a.review {
+    width: 176px;
+    font-size: 13px;
+    line-height: 24px;
+    font-weight: 800;
+    font-stretch: 75%;
+    text-transform: uppercase;
+    display: block;
+    height: 24px;
+    background-color: var(--white);
+    box-shadow: 0 1px 1px var(--black);
+    border-radius: 12px;
+    color: var(--orange);
+    text-decoration: none;
+    margin-bottom: 8px;
+}
+
+#featured-posts div a.pokemon {
+    width: 208px;
+    font-size: 13px;
+    line-height: 24px;
+    font-weight: 800;
+    font-stretch: 75%;
+    text-transform: uppercase;
+    display: block;
+    height: 24px;
+    background-color: var(--pokemon-yellow);
+    box-shadow: 0 1px 1px var(--black);
+    border-radius: 12px;
+    color: var(--pokemon-grey);
+    text-decoration: none;
+    margin-bottom: 8px;
+    background-image: url(img/titletag_pokemon.png);
+    background-size: 208px 24px;
+    background-position: right top;
+    background-repeat: no-repeat;
+    text-shadow: 0 1px 1px var(--white);
+}
+
+#featured-posts div a.titleTag img {
+    margin: 0 8px 0 8px;
+    display: inline-block;
+    margin-bottom: -3px;
+}
+
+#featured-posts div a.titleTag.pokemon img {
+    filter: drop-shadow(0 1px 1px var(--black));
+}
+
+#featured-posts div a.thumbnail {
+    border-radius: 12px;
+    margin-bottom: 8px;
+    display: block;
+}
+
+#featured-posts div a.thumbnail img {
+    box-shadow: 0 1px 1px var(--black);
+    border-radius: 12px;
+    display: block;
+}
+
+#featured-posts div a.headline {
+    text-shadow: 0 1px 1px var(--black);
+    font-weight: 800;
+    text-decoration: none;
+    color: var(--white);
+    font-size: 19px;
+    line-height: 24px;
+    display: block;
+}
+
+#featured-posts div a.comments-count {
+    width: 168px;
+    font-size: 13px;
+    line-height: 24px;
+    font-weight: 600;
+    font-stretch: 75%;
+    display: block;
+    height: 24px;
+    background-color: var(--white);
+    box-shadow: 0 1px 1px var(--black);
+    border-radius: 12px;
+    color: var(--black);
+    text-decoration: none;
+    margin-top: 11px;
+    padding-left: 8px;
+    background-image: url(img/icon-32_comments.png);
+    background-size: 16px 16px;
+    background-position: 152px center;
+    background-repeat: no-repeat;
+}
+
+#keep-going {
+    width: 208px;
+    padding: 16px;
+    background-color: var(--ko-fi-blue);
+    display: block;
+    border-radius: 24px;
+    box-shadow: 0 1px 1px var(--black);
+}
+
+#keep-going span {
+    color: var(--white);
+    font-weight: 800;
+    font-stretch: 75%;
+    text-shadow: 0 1px 1px var(--black);
+    font-size: 19px;
+    line-height: 24px;
+    display: block;
+    height: 32px;
+}
+
+#keep-going span img {
+    filter: drop-shadow(0 1px 1px var(--black));
+    margin: 0 8px 8px 0;
+    float: left;
+}
+
+a.button {
+    width: 168px;
+    font-size: 13px;
+    line-height: 24px;
+    font-weight: 600;
+    font-stretch: 75%;
+    display: block;
+    height: 24px;
+    background-color: var(--white);
+    box-shadow: 0 1px 1px var(--black);
+    border-radius: 12px;
+    color: var(--black);
+    text-decoration: none;
+    margin-top: 11px;
+    padding-left: 8px;
+    background-image: url(img/icon-32_button.png);
+    background-size: 16px 16px;
+    background-position: 152px center;
+    background-repeat: no-repeat;
+}
+
+a.button.ko-fi {
+    background-color: var(--ko-fi-red);
+    background-image: url(img/icon-32_button_alt.png);
+    color: var(--white);
+    font-weight: 900;
+    animation: button-highlight 2s ease-in-out;
+    animation-iteration-count: infinite;
+}
