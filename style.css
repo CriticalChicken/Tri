@@ -95,8 +95,8 @@ body {
     margin-bottom: 13px;
 }
 
-#main-menu .logo {
-    filter: drop-shadow(0 1px 1px var(--black));
+#main-menu img.logo {
+    filter: drop-shadow(0 1px 0 var(--black));
 }
 
 #ticker {
@@ -104,7 +104,7 @@ body {
     height: 40px;
     display: block;
     border-radius: 24px;
-    box-shadow: 0 1px 1px var(--black);
+    box-shadow: 0 1px 0 var(--black);
     background-color: var(--yellow);
     margin-bottom: 16px;
 }
@@ -115,7 +115,7 @@ body {
     background-color: var(--orange);
     display: block;
     border-radius: 24px;
-    box-shadow: 0 1px 1px var(--black);
+    box-shadow: 0 1px 0 var(--black);
     margin-bottom: 16px;
 }
 
@@ -125,7 +125,7 @@ body {
     background-color: var(--black);
     display: block;
     border-radius: 12px;
-    box-shadow: 0 1px 1px var(--black);
+    box-shadow: 0 1px 0 var(--black);
     float: right;
     background-image: url(img/icon64_featured.png);
     background-size: 16px 16px;
@@ -139,7 +139,7 @@ body {
     background-color: var(--black);
     display: block;
     border-radius: 12px;
-    box-shadow: 0 1px 1px var(--black);
+    box-shadow: 0 1px 0 var(--black);
     float: right;
     background-image: url(img/icon64_ko-fi.png);
     background-size: 16px 16px;
@@ -157,7 +157,7 @@ body {
     display: block;
     height: 24px;
     background-color: var(--white);
-    box-shadow: 0 1px 1px var(--black);
+    box-shadow: 0 1px 0 var(--black);
     border-radius: 12px;
     color: var(--orange);
     text-decoration: none;
@@ -174,16 +174,16 @@ body {
     display: block;
     height: 24px;
     background-color: var(--pokemon-yellow);
-    box-shadow: 0 1px 1px var(--black);
+    box-shadow: 0 1px 0 var(--black);
     border-radius: 12px;
     color: var(--pokemon-grey);
     text-decoration: none;
     margin-bottom: 8px;
     background-image: url(img/ttag_pokemon.png);
-    background-size: 208px 24px;
+    background-size: 140px 24px;
     background-position: right top;
     background-repeat: no-repeat;
-    text-shadow: 0 1px 1px var(--white);
+    text-shadow: 0 1px 0 var(--white);
 }
 
 #featured-posts div a.titleTag img {
@@ -193,7 +193,7 @@ body {
 }
 
 #featured-posts div a.titleTag.pokemon img {
-    filter: drop-shadow(0 1px 1px var(--black));
+    filter: drop-shadow(0 1px 0 var(--black));
 }
 
 #featured-posts div a.thumbnail {
@@ -203,13 +203,13 @@ body {
 }
 
 #featured-posts div a.thumbnail img {
-    box-shadow: 0 1px 1px var(--black);
+    box-shadow: 0 1px 0 var(--black);
     border-radius: 12px;
     display: block;
 }
 
 #featured-posts div a.headline {
-    text-shadow: 0 1px 1px var(--black);
+    text-shadow: 0 1px 0 var(--black);
     font-weight: 800;
     text-decoration: none;
     color: var(--white);
@@ -227,7 +227,7 @@ body {
     display: block;
     height: 24px;
     background-color: var(--white);
-    box-shadow: 0 1px 1px var(--black);
+    box-shadow: 0 1px 0 var(--black);
     border-radius: 12px;
     color: var(--black);
     text-decoration: none;
@@ -245,14 +245,14 @@ body {
     background-color: var(--ko-fi-blue);
     display: block;
     border-radius: 24px;
-    box-shadow: 0 1px 1px var(--black);
+    box-shadow: 0 1px 0 var(--black);
 }
 
 #keep-going span {
     color: var(--white);
     font-weight: 800;
     font-stretch: 75%;
-    text-shadow: 0 1px 1px var(--black);
+    text-shadow: 0 1px 0 var(--black);
     font-size: 19px;
     line-height: 24px;
     display: block;
@@ -260,7 +260,7 @@ body {
 }
 
 #keep-going span img {
-    filter: drop-shadow(0 1px 1px var(--black));
+    filter: drop-shadow(0 1px 0 var(--black));
     margin: 0 8px 8px 0;
     float: left;
 }
@@ -274,7 +274,7 @@ a.button {
     display: block;
     height: 24px;
     background-color: var(--white);
-    box-shadow: 0 1px 1px var(--black);
+    box-shadow: 0 1px 0 var(--black);
     border-radius: 12px;
     color: var(--black);
     text-decoration: none;
@@ -293,4 +293,23 @@ a.button.ko-fi {
     font-weight: 900;
     animation: button-highlight 2s ease-in-out;
     animation-iteration-count: infinite;
+}
+
+#social-icons {
+    font-size: 0;
+    margin-top: 16px;
+    width: 100%;
+    display: block;
+}
+
+#social-icons a {
+    margin: 0 8px 16px 8px;
+    margin-bottom: 16px;
+    border-radius: 24px;
+    display: inline-block;
+    box-shadow: 0 1px 0 var(--black);
+}
+
+#social-icons a img {
+    border-radius: 24px;
 }
