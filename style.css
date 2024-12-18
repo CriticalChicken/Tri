@@ -27,8 +27,9 @@ All other trademarks referred to are trademarks of their respective owners.
     --red: #d20202;
     --orange: #f47614;
     --yellow: #ffdc17;
+    --darkgrey: #717070;
     --lightgrey: #edecec;
-
+    --structuregrey: #e1dfdf;
     --ko-fi-blue: #72A4F2;
     --ko-fi-red: #FF5A16;
     --pokemon-yellow: #ffe103;
@@ -54,6 +55,8 @@ All other trademarks referred to are trademarks of their respective owners.
 body {
     background-color: var(--lightgrey);
     font-family: "Noto Sans Display";
+    color: var(--black);
+    font-weight: 400;
 }
 
 #fab-container {
@@ -99,6 +102,42 @@ body {
     filter: drop-shadow(0 1px 0 var(--black));
 }
 
+#noscript {
+    width: 208px;
+    padding: 13px 16px 11px 16px;
+    background-color: var(--darkgrey);
+    display: block;
+    border-radius: 24px;
+    box-shadow: 0 1px 0 var(--black);
+    margin-bottom: 16px;
+    text-shadow: 0 1px 0 var(--black);
+    font-weight: 600;
+    text-decoration: none;
+    color: var(--white);
+    font-size: 19px;
+    line-height: 24px;
+    display: block;
+}
+
+#noscript a {
+    color: var(--white);
+}
+
+#noscript span.box-icon {
+    width: 24px;
+    height: 24px;
+    background-color: var(--black);
+    display: block;
+    border-radius: 12px;
+    box-shadow: 0 1px 0 var(--black);
+    float: right;
+    background-image: url(img/icon64_warning.png);
+    background-size: 16px 16px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    margin: 0 0 16px 16px;
+}
+
 #ticker {
     width: 240px;
     height: 40px;
@@ -107,6 +146,11 @@ body {
     box-shadow: 0 1px 0 var(--black);
     background-color: var(--yellow);
     margin-bottom: 16px;
+}
+
+#ticker iframe {
+    border: none;
+    border-radius: 24px;
 }
 
 #featured-posts div {
@@ -128,20 +172,6 @@ body {
     box-shadow: 0 1px 0 var(--black);
     float: right;
     background-image: url(img/icon64_featured.png);
-    background-size: 16px 16px;
-    background-position: center center;
-    background-repeat: no-repeat;
-}
-
-#keep-going span.box-icon {
-    width: 24px;
-    height: 24px;
-    background-color: var(--black);
-    display: block;
-    border-radius: 12px;
-    box-shadow: 0 1px 0 var(--black);
-    float: right;
-    background-image: url(img/icon64_ko-fi.png);
     background-size: 16px 16px;
     background-position: center center;
     background-repeat: no-repeat;
@@ -259,6 +289,20 @@ body {
     height: 32px;
 }
 
+#keep-going span.box-icon {
+    width: 24px;
+    height: 24px;
+    background-color: var(--black);
+    display: block;
+    border-radius: 12px;
+    box-shadow: 0 1px 0 var(--black);
+    float: right;
+    background-image: url(img/icon64_ko-fi.png);
+    background-size: 16px 16px;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
 #keep-going span img {
     filter: drop-shadow(0 1px 0 var(--black));
     margin: 0 8px 8px 0;
@@ -278,7 +322,7 @@ a.button {
     border-radius: 12px;
     color: var(--black);
     text-decoration: none;
-    margin-top: 11px;
+    margin-top: 8px;
     padding-left: 8px;
     background-image: url(img/icon64_button.png);
     background-size: 16px 16px;
@@ -312,4 +356,133 @@ a.button.ko-fi {
 
 #social-icons a img {
     border-radius: 24px;
+}
+
+h2 {
+    font-size: 32px;
+    font-weight: 600;
+    line-height: 40px;
+    width: 100%;
+    display: block;
+    text-align: center;
+    margin-bottom: 16px;
+}
+
+
+
+
+
+#homepage-posts div {
+    width: 208px;
+    padding: 16px;
+    background-color: var(--structuregrey);
+    display: block;
+    border-radius: 24px;
+    box-shadow: 0 1px 0 var(--black);
+    margin-bottom: 16px;
+}
+
+#homepage-posts div span {
+    width: 24px;
+    height: 24px;
+    background-color: var(--black);
+    display: block;
+    border-radius: 12px;
+    box-shadow: 0 1px 0 var(--black);
+    float: right;
+    background-image: url(img/icon64_featured.png);
+    background-size: 16px 16px;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+#homepage-posts div a.news {
+    width: 208px;
+    font-size: 13px;
+    line-height: 24px;
+    font-weight: 800;
+    font-stretch: 75%;
+    text-transform: uppercase;
+    display: block;
+    height: 24px;
+    background-color: var(--white);
+    box-shadow: 0 1px 0 var(--black);
+    border-radius: 12px;
+    color: var(--red);
+    text-decoration: none;
+    margin-bottom: 8px;
+}
+
+#homepage-posts div a.pokemon {
+    width: 208px;
+    font-size: 13px;
+    line-height: 24px;
+    font-weight: 800;
+    font-stretch: 75%;
+    text-transform: uppercase;
+    display: block;
+    height: 24px;
+    background-color: var(--pokemon-yellow);
+    box-shadow: 0 1px 0 var(--black);
+    border-radius: 12px;
+    color: var(--pokemon-grey);
+    text-decoration: none;
+    margin-bottom: 8px;
+    background-image: url(img/ttag_pokemon.png);
+    background-size: 140px 24px;
+    background-position: right top;
+    background-repeat: no-repeat;
+    text-shadow: 0 1px 0 var(--white);
+}
+
+#homepage-posts div a.titleTag img {
+    margin: 0 8px 0 8px;
+    display: inline-block;
+    margin-bottom: -3px;
+}
+
+#homepage-posts div a.titleTag.pokemon img {
+    filter: drop-shadow(0 1px 0 var(--black));
+}
+
+#homepage-posts div a.thumbnail {
+    border-radius: 12px;
+    margin-bottom: 8px;
+    display: block;
+}
+
+#homepage-posts div a.thumbnail img {
+    box-shadow: 0 1px 0 var(--black);
+    border-radius: 12px;
+    display: block;
+}
+
+#homepage-posts div a.headline {
+    font-weight: 600;
+    text-decoration: none;
+    color: var(--black);
+    font-size: 19px;
+    line-height: 24px;
+    display: block;
+}
+
+#homepage-posts div a.comments-count {
+    width: 168px;
+    font-size: 13px;
+    line-height: 24px;
+    font-weight: 600;
+    font-stretch: 75%;
+    display: block;
+    height: 24px;
+    background-color: var(--white);
+    box-shadow: 0 1px 0 var(--black);
+    border-radius: 12px;
+    color: var(--black);
+    text-decoration: none;
+    margin-top: 11px;
+    padding-left: 8px;
+    background-image: url(img/icon64_comments.png);
+    background-size: 16px 16px;
+    background-position: 152px center;
+    background-repeat: no-repeat;
 }
