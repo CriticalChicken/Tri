@@ -18,6 +18,8 @@ Critical Chicken, the Critical Chicken logo and wordmark, and #ForTheGaymers are
 All other trademarks referred to are trademarks of their respective owners.
 */
 
+/* Commons */
+
 /* Variables */
 
 :root {
@@ -91,6 +93,7 @@ body {
     background-size: 32px 32px;
     cursor: pointer;
     display: block;
+    pointer-events: all;
 }
 
 #container {
@@ -104,8 +107,47 @@ body {
     margin-bottom: 13px;
 }
 
-#main-menu img.logo {
+#main-menu a img.logo {
     filter: drop-shadow(0 1px 0 var(--black));
+    transition: all 0.12s;
+}
+
+#main-menu a:hover img.logo {
+    filter: drop-shadow(0 -1px 0 var(--black));
+}
+
+#ticker {
+    width: 240px;
+    height: 40px;
+    display: block;
+    border-radius: 24px;
+    box-shadow: 0 1px 0 var(--black);
+    background-color: var(--yellow);
+    margin-bottom: 16px;
+}
+
+#ticker iframe {
+    border: none;
+    border-radius: 24px;
+}
+
+/*
+Main ticker styles can be found in css/ticker.css.
+*/
+
+span.box-icon {
+    width: 24px;
+    height: 24px;
+    background-color: var(--black);
+    display: block;
+    border-radius: 12px;
+    box-shadow: 0 1px 0 var(--black);
+    float: right;
+    background-image: url(img/icon64_critical-chicken_white.png);
+    background-size: 16px 16px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    margin: 0 0 16px 16px;
 }
 
 #noscript {
@@ -125,195 +167,39 @@ body {
     display: block;
 }
 
+#noscript span.box-icon {
+    background-image: url(img/icon64_warning.png);
+}
+
 #noscript a {
     color: var(--white);
 }
 
-#noscript span.box-icon {
-    width: 24px;
-    height: 24px;
-    background-color: var(--black);
+#social-icons {
+    font-size: 0;
+    margin-top: 16px;
+    width: 100%;
     display: block;
-    border-radius: 12px;
-    box-shadow: 0 1px 0 var(--black);
-    float: right;
-    background-image: url(img/icon64_warning.png);
-    background-size: 16px 16px;
-    background-position: center center;
-    background-repeat: no-repeat;
-    margin: 0 0 16px 16px;
 }
 
-#ticker {
-    width: 240px;
-    height: 40px;
-    display: block;
-    border-radius: 24px;
-    box-shadow: 0 1px 0 var(--black);
-    background-color: var(--yellow);
+#social-icons a {
+    margin: 0 8px 16px 8px;
     margin-bottom: 16px;
-}
-
-#ticker iframe {
-    border: none;
     border-radius: 24px;
-}
-
-#featured-posts div {
-    width: 208px;
-    padding: 16px;
-    background-color: var(--orange);
-    display: block;
-    border-radius: 24px;
-    box-shadow: 0 1px 0 var(--black);
-    margin-bottom: 16px;
-}
-
-#featured-posts div span {
-    width: 24px;
-    height: 24px;
-    background-color: var(--black);
-    display: block;
-    border-radius: 12px;
-    box-shadow: 0 1px 0 var(--black);
-    float: right;
-    background-image: url(img/icon64_featured.png);
-    background-size: 16px 16px;
-    background-position: center center;
-    background-repeat: no-repeat;
-}
-
-#featured-posts div a.review {
-    width: 176px;
-    font-size: 13px;
-    line-height: 24px;
-    font-weight: 800;
-    font-stretch: 75%;
-    text-transform: uppercase;
-    display: block;
-    height: 24px;
-    background-color: var(--white);
-    box-shadow: 0 1px 0 var(--black);
-    border-radius: 12px;
-    color: var(--orange);
-    text-decoration: none;
-    margin-bottom: 8px;
-}
-
-#featured-posts div a.pokemon {
-    width: 208px;
-    font-size: 13px;
-    line-height: 24px;
-    font-weight: 800;
-    font-stretch: 75%;
-    text-transform: uppercase;
-    display: block;
-    height: 24px;
-    background-color: var(--pokemon-yellow);
-    box-shadow: 0 1px 0 var(--black);
-    border-radius: 12px;
-    color: var(--pokemon-grey);
-    text-decoration: none;
-    margin-bottom: 8px;
-    background-image: url(img/ttag_pokemon.png);
-    background-size: 140px 24px;
-    background-position: right top;
-    background-repeat: no-repeat;
-    text-shadow: 0 1px 0 var(--white);
-}
-
-#featured-posts div a.titleTag img {
-    margin: 0 8px 0 8px;
     display: inline-block;
-    margin-bottom: -3px;
-}
-
-#featured-posts div a.titleTag.pokemon img {
-    filter: drop-shadow(0 1px 0 var(--black));
-}
-
-#featured-posts div a.thumbnail {
-    border-radius: 12px;
-    margin-bottom: 8px;
-    display: block;
-}
-
-#featured-posts div a.thumbnail img {
     box-shadow: 0 1px 0 var(--black);
-    border-radius: 12px;
-    display: block;
+    transition: all 0.12s;
 }
 
-#featured-posts div a.headline {
-    text-shadow: 0 1px 0 var(--black);
-    font-weight: 800;
-    text-decoration: none;
-    color: var(--white);
-    font-size: 19px;
-    line-height: 24px;
-    display: block;
+#social-icons a:hover {
+    box-shadow: 0 -1px 0 var(--black);
 }
 
-#featured-posts div a.comments-count {
-    width: 168px;
-    font-size: 13px;
-    line-height: 24px;
-    font-weight: 600;
-    font-stretch: 75%;
-    display: block;
-    height: 24px;
-    background-color: var(--white);
-    box-shadow: 0 1px 0 var(--black);
-    border-radius: 12px;
-    color: var(--black);
-    text-decoration: none;
-    margin-top: 11px;
-    padding-left: 8px;
-    background-image: url(img/icon64_comments.png);
-    background-size: 16px 16px;
-    background-position: 152px center;
-    background-repeat: no-repeat;
-}
-
-#keep-going {
-    width: 208px;
-    padding: 16px;
-    background-color: var(--ko-fi-blue);
-    display: block;
+#social-icons a img {
     border-radius: 24px;
-    box-shadow: 0 1px 0 var(--black);
 }
 
-#keep-going span {
-    color: var(--white);
-    font-weight: 800;
-    font-stretch: 75%;
-    text-shadow: 0 1px 0 var(--black);
-    font-size: 19px;
-    line-height: 24px;
-    display: block;
-    height: 32px;
-}
-
-#keep-going span.box-icon {
-    width: 24px;
-    height: 24px;
-    background-color: var(--black);
-    display: block;
-    border-radius: 12px;
-    box-shadow: 0 1px 0 var(--black);
-    float: right;
-    background-image: url(img/icon64_ko-fi.png);
-    background-size: 16px 16px;
-    background-position: center center;
-    background-repeat: no-repeat;
-}
-
-#keep-going span img {
-    filter: drop-shadow(0 1px 0 var(--black));
-    margin: 0 8px 8px 0;
-    float: left;
-}
+/* Buttons */
 
 a.button {
     width: 168px;
@@ -334,6 +220,11 @@ a.button {
     background-size: 16px 16px;
     background-position: 152px center;
     background-repeat: no-repeat;
+    transition: all 0.12s;
+}
+
+a.button:hover {
+    box-shadow: 0 -1px 0 var(--black);
 }
 
 a.button.ko-fi {
@@ -345,147 +236,13 @@ a.button.ko-fi {
     animation-iteration-count: infinite;
 }
 
-#social-icons {
-    font-size: 0;
-    margin-top: 16px;
-    width: 100%;
-    display: block;
-}
-
-#social-icons a {
-    margin: 0 8px 16px 8px;
-    margin-bottom: 16px;
-    border-radius: 24px;
-    display: inline-block;
-    box-shadow: 0 1px 0 var(--black);
-}
-
-#social-icons a img {
-    border-radius: 24px;
-}
-
-h2 {
-    font-size: 32px;
-    font-weight: 600;
-    line-height: 40px;
-    width: 100%;
-    display: block;
-    text-align: center;
-    margin-bottom: 16px;
-}
-
-
-
-
-
-#homepage-posts div {
-    width: 208px;
-    padding: 16px;
-    background-color: var(--structuregrey);
-    display: block;
-    border-radius: 24px;
-    box-shadow: 0 1px 0 var(--black);
-    margin-bottom: 16px;
-}
-
-#homepage-posts div a.news {
-    width: 208px;
-    font-size: 13px;
-    line-height: 24px;
-    font-weight: 800;
-    font-stretch: 75%;
-    text-transform: uppercase;
-    display: block;
-    height: 24px;
-    background-color: var(--white);
-    box-shadow: 0 1px 0 var(--black);
-    border-radius: 12px;
-    color: var(--red);
-    text-decoration: none;
-    margin-bottom: 8px;
-}
-
-#homepage-posts div a.pokemon {
-    width: 208px;
-    font-size: 13px;
-    line-height: 24px;
-    font-weight: 800;
-    font-stretch: 75%;
-    text-transform: uppercase;
-    display: block;
-    height: 24px;
-    background-color: var(--pokemon-yellow);
-    box-shadow: 0 1px 0 var(--black);
-    border-radius: 12px;
-    color: var(--pokemon-grey);
-    text-decoration: none;
-    margin-bottom: 8px;
-    background-image: url(img/ttag_pokemon.png);
-    background-size: 140px 24px;
-    background-position: right top;
-    background-repeat: no-repeat;
-    text-shadow: 0 1px 0 var(--white);
-}
-
-#homepage-posts div a.titleTag img {
-    margin: 0 8px 0 8px;
-    display: inline-block;
-    margin-bottom: -3px;
-}
-
-#homepage-posts div a.titleTag.pokemon img {
-    filter: drop-shadow(0 1px 0 var(--black));
-}
-
-#homepage-posts div a.thumbnail {
-    border-radius: 12px;
-    margin-bottom: 8px;
-    display: block;
-}
-
-#homepage-posts div a.thumbnail img {
-    box-shadow: 0 1px 0 var(--black);
-    border-radius: 12px;
-    display: block;
-}
-
-#homepage-posts div a.headline {
-    font-weight: 600;
-    text-decoration: none;
-    color: var(--black);
-    font-size: 19px;
-    line-height: 24px;
-    display: block;
-}
-
-#homepage-posts div a.comments-count {
-    width: 168px;
-    font-size: 13px;
-    line-height: 24px;
-    font-weight: 600;
-    font-stretch: 75%;
-    display: block;
-    height: 24px;
-    background-color: var(--white);
-    box-shadow: 0 1px 0 var(--black);
-    border-radius: 12px;
-    color: var(--black);
-    text-decoration: none;
-    margin-top: 11px;
-    padding-left: 8px;
+a.button.comments-count {
     background-image: url(img/icon64_comments.png);
-    background-size: 16px 16px;
-    background-position: 152px center;
-    background-repeat: no-repeat;
 }
-
-
-
-
 
 /* titleTags */
 
-/* Commons */
+/* Common titleTags */
 
 a.titleTag {
     width: 208px;
@@ -500,10 +257,21 @@ a.titleTag {
     border-radius: 12px;
     text-decoration: none;
     margin-bottom: 8px;
+    transition: all 0.12s;
 }
 
 #featured-posts a.titleTag:first-of-type {
     width: 176px;
+}
+
+a.titleTag:hover {
+    box-shadow: 0 -1px 0 var(--black);
+}
+
+a.titleTag img {
+    margin: 0 8px 0 8px;
+    display: inline-block;
+    margin-bottom: -3px;
 }
 
 /* Features */
@@ -716,4 +484,141 @@ a.titleTag.summer-game-fest-2024 {
 a.titleTag.critical-chicken {
     background-color: var(--white);
     color: var(--black);
+}
+
+/* Homepage */
+
+#featured-posts div {
+    width: 208px;
+    padding: 16px;
+    background-color: var(--black);
+    display: block;
+    border-radius: 24px;
+    box-shadow: 0 1px 0 var(--black);
+    margin-bottom: 16px;
+}
+
+#featured-posts div.news {
+    background-color: var(--red);
+}
+
+#featured-posts div.review {
+    background-color: var(--orange);
+}
+
+#featured-posts div.feature {
+    background-color: var(--blue);
+}
+
+#featured-posts span.box-icon {
+    background-image: url(img/icon64_featured.png);
+    margin: 0;
+}
+
+#featured-posts div a.thumbnail {
+    border-radius: 12px;
+    margin-bottom: 8px;
+    display: block;
+}
+
+#featured-posts div a.thumbnail img {
+    box-shadow: 0 1px 0 var(--black);
+    border-radius: 12px;
+    display: block;
+    transition: all 0.12s;
+}
+
+#featured-posts div a.thumbnail:hover img {
+    box-shadow: 0 -1px 0 var(--black);
+}
+
+#featured-posts div a.headline {
+    text-shadow: 0 1px 0 var(--black);
+    font-weight: 800;
+    text-decoration: none;
+    color: var(--white);
+    font-size: 19px;
+    line-height: 24px;
+    display: inline;
+    transition: all 0.12s;
+}
+
+#featured-posts div a.headline:hover {
+    text-shadow: 0 -1px 0 var(--black);
+}
+
+#keep-going {
+    width: 208px;
+    padding: 16px;
+    background-color: var(--ko-fi-blue);
+    display: block;
+    border-radius: 24px;
+    box-shadow: 0 1px 0 var(--black);
+}
+
+#keep-going span.item {
+    color: var(--white);
+    font-weight: 800;
+    font-stretch: 75%;
+    text-shadow: 0 1px 0 var(--black);
+    font-size: 19px;
+    line-height: 24px;
+    display: block;
+    height: 32px;
+}
+
+#keep-going span.item img {
+    filter: drop-shadow(0 1px 0 var(--black));
+    margin: 0 8px 8px 0;
+    float: left;
+}
+
+#keep-going span.box-icon {
+    background-image: url(img/icon64_ko-fi.png);
+}
+
+#homepage-posts h2 {
+    font-size: 32px;
+    font-weight: 600;
+    line-height: 40px;
+    width: 100%;
+    display: block;
+    text-align: center;
+    margin-bottom: 16px;
+}
+
+#homepage-posts div {
+    width: 208px;
+    padding: 16px;
+    background-color: var(--structuregrey);
+    display: block;
+    border-radius: 24px;
+    box-shadow: 0 1px 0 var(--black);
+    margin-bottom: 16px;
+}
+
+#homepage-posts div a.thumbnail {
+    border-radius: 12px;
+    margin-bottom: 8px;
+    display: block;
+}
+
+#homepage-posts div a.thumbnail img {
+    box-shadow: 0 1px 0 var(--black);
+    border-radius: 12px;
+    display: block;
+    transition: all 0.12s;
+}
+
+#homepage-posts div a.thumbnail:hover img {
+    box-shadow: 0 -1px 0 var(--black);
+}
+
+#homepage-posts div a.headline {
+    font-weight: 600;
+    text-decoration: none;
+    color: var(--black);
+    font-size: 19px;
+    line-height: 24px;
+    display: inline;
 }

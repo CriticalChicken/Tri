@@ -73,8 +73,71 @@ span.titleTag {
     top: -2px;
     margin: 0 16px 0 23px;
     padding: 0 8px 0 32px;
-    background-image: url(../img/ticker/icon64_news.png);
     background-position: 8px center;
     background-repeat: no-repeat;
     background-size: 16px 16px;
+}
+
+span.titleTag.ace-attorney {
+    background-image: url(../img/ticker/icon64_ace-attorney.png);
+}
+
+span.titleTag.bluesky {
+    background-image: url(../img/ticker/icon64_bluesky.png);
+}
+
+span.titleTag.dungeons-and-dragons {
+    background-image: url(../img/ticker/icon64_dungeons-and-dragons.png);
+}
+
+span.titleTag.e3 {
+    background-image: url(../img/ticker/icon64_e3.png);
+}
+
+span.titleTag.exclusive {
+    background-image: url(../img/ticker/icon64_exclusive.png);
+}
+
+span.titleTag.forthegaymers {
+    background-image: url(../img/ticker/icon64_forthegaymers.png);
+}
+
+span.titleTag.live {
+    background-image: url(../img/ticker/icon64_live.gif);
+}
+
+span.titleTag.news {
+    background-image: url(../img/ticker/icon64_news.png);
+}
+
+span.titleTag.nintendo-direct {
+    background-image: url(../img/ticker/icon64_nintendo-direct.png);
+}
+
+span.titleTag.persona {
+    background-image: url(../img/ticker/icon64_persona.png);
+}
+
+span.titleTag.pokemon {
+    background-image: url(../img/ticker/icon64_pokemon.png);
+}
+
+span.titleTag.pokemon-presents {
+    background-image: url(../img/ticker/icon64_pokemon-presents.png);
+}
+
+span.titleTag.state-of-play {
+    background-image: url(../img/ticker/icon64_state-of-play.png);
+}
+
+span.titleTag.summer-game-fest {
+    background-image: url(../img/ticker/icon64_summer-game-fest.png);
+}
+
+span.titleTag.switch-2 {
+    background-image: url(../img/ticker/icon64_switch-2.png);
+}
+
+span.titleTag.the-game-awards {
+    background-image: url(../img/ticker/icon64_the-game-awards.png);
 }
