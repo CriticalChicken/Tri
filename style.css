@@ -26,12 +26,18 @@ All other trademarks referred to are trademarks of their respective owners.
     --white: #ffffff;
     --red: #d20202;
     --orange: #f47614;
+    --blue: #1564dc;
     --yellow: #ffdc17;
     --darkgrey: #717070;
     --lightgrey: #edecec;
     --structuregrey: #e1dfdf;
+    --gold: #be9e3a;
+    --bluesky-blue: #1185fe;
+    --game-fest-pink: #cd4298;
+    --game-fest-purple: #5613c5;
     --ko-fi-blue: #72A4F2;
     --ko-fi-red: #FF5A16;
+    --nintendo-red: #fc1926;
     --pokemon-yellow: #ffe103;
     --pokemon-grey: #5e5e5e;
 
@@ -382,20 +388,6 @@ h2 {
     margin-bottom: 16px;
 }
 
-#homepage-posts div span {
-    width: 24px;
-    height: 24px;
-    background-color: var(--black);
-    display: block;
-    border-radius: 12px;
-    box-shadow: 0 1px 0 var(--black);
-    float: right;
-    background-image: url(img/icon64_featured.png);
-    background-size: 16px 16px;
-    background-position: center center;
-    background-repeat: no-repeat;
-}
-
 #homepage-posts div a.news {
     width: 208px;
     font-size: 13px;
@@ -485,4 +477,243 @@ h2 {
     background-size: 16px 16px;
     background-position: 152px center;
     background-repeat: no-repeat;
+}
+
+
+
+
+
+/* titleTags */
+
+/* Commons */
+
+a.titleTag {
+    width: 208px;
+    font-size: 13px;
+    line-height: 24px;
+    font-weight: 800;
+    font-stretch: 75%;
+    text-transform: uppercase;
+    display: block;
+    height: 24px;
+    box-shadow: 0 1px 0 var(--black);
+    border-radius: 12px;
+    text-decoration: none;
+    margin-bottom: 8px;
+}
+
+#featured-posts a.titleTag:first-of-type {
+    width: 176px;
+}
+
+/* Features */
+
+a.titleTag.feature {
+    background-color: var(--white);
+    color: var(--blue);
+}
+
+/* News */
+
+a.titleTag.news {
+    background-color: var(--white);
+    color: var(--red);
+}
+
+/* Updated */
+a.titleTag.news span {
+    font-weight: 600;
+}
+
+/* Reviews */
+
+a.titleTag.review {
+    background-color: var(--white);
+    color: var(--orange);
+}
+
+/* Special */
+
+/* Ace Attorney */
+a.titleTag.ace-attorney {
+    background-image: linear-gradient(to bottom, #744e2f, #623917 77%);
+    color: white;
+}
+
+/* Best of */
+a.titleTag.best-of {
+    background-color: var(--gold);
+    background-image: url(img/ttag_best-of.png);
+    background-size: 208px 24px;
+    background-position: left center;
+    background-repeat: no-repeat;
+    color: white;
+    text-shadow: 0 1px 4px black;
+}
+
+a.titleTag.best-of img {
+    filter: drop-shadow(0 1px 4px black);
+}
+
+/* Bluesky */
+a.titleTag.bluesky {
+    background-color: var(--bluesky-blue);
+    background-image: url(img/ttag_bluesky.png);
+    background-size: 208px 24px;
+    background-position: left center;
+    background-repeat: no-repeat;
+    color: white;
+    text-shadow: 0 0 3px rgba(0,0,0,0.1);
+}
+
+/* Breaking news */
+/* Exclusive */
+/* Live */
+/* News alert */
+a.titleTag.breaking-news,
+a.titleTag.exclusive,
+a.titleTag.live,
+a.titleTag.news-alert {
+    background-color: var(--yellow);
+    color: var(--black);
+}
+
+/* Dungeons & Dragons */
+a.titleTag.dungeons-and-dragons {
+    background-color: #007aa7;
+    background-image: url(img/ttag_dungeons-and-dragons.png);
+    background-size: 208px 24px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    color: white;
+    text-shadow: 0 1px 4px black;
+}
+
+a.titleTag.dungeons-and-dragons img {
+    filter: drop-shadow(0 1px 4px black);
+}
+
+/* E3 2016 */
+/* E3 2021 */
+/* E3's future */
+a.titleTag.e3-2016,
+a.titleTag.e3-2021,
+a.titleTag.e3s-future {
+    background-color: black;
+    background-image: url(img/ttag_e3.png);
+    background-size: 208px 24px;
+    background-position: left center;
+    background-repeat: no-repeat;
+    color: white;
+    text-shadow: 0 1px 4px black;
+}
+
+a.titleTag.e3-2016 img,
+a.titleTag.e3-2021 img,
+a.titleTag.e3s-future img {
+    filter: drop-shadow(0 1px 4px black);
+}
+
+/* #ForTheGaymers */
+a.titleTag.forthegaymers {
+    background-color: #750787;
+    color: white;
+    background-image: url(img/ttag_forthegaymers.png);
+    background-size: 157px 24px;
+    background-position: left center;
+    background-repeat: no-repeat;
+    text-shadow: 0 1px 4px black;
+}
+
+a.titleTag.forthegaymers img {
+    filter: drop-shadow(0 1px 4px black);
+}
+
+/* The Game Awards */
+a.titleTag.the-game-awards {
+    background-color: black;
+    color: white;
+    background-image: url(img/ttag_the-game-awards.png);
+    background-position: center center;
+    background-size: 208px 24px;
+    background-repeat: no-repeat;
+    text-shadow: 0 1px 4px black;
+}
+
+a.titleTag.the-game-awards img {
+    filter: drop-shadow(0 1px 4px black);
+}
+
+/* Nintendo Direct */
+/* Switch 2 */
+a.titleTag.nintendo-direct,
+a.titleTag.switch-2 {
+    background-color: var(--nintendo-red);
+    color: white;
+    text-shadow: 0 1px 0 black;
+}
+
+a.titleTag.nintendo-direct img,
+a.titleTag.switch-2 img {
+    filter: drop-shadow(0 1px 0 black);
+}
+
+/* Persona */
+a.titleTag.persona {
+    background-color: black;
+    color: white;
+    background-image: url(img/ttag_persona.png);
+    background-size: 24px 24px;
+    background-position: left center;
+    background-repeat: no-repeat;
+}
+
+/* Pokémon */
+/* Pokémon Presents */
+a.titleTag.pokemon,
+a.titleTag.pokemon-presents {
+    background-color: var(--pokemon-yellow);
+    color: var(--pokemon-grey);
+    background-image: url(img/ttag_pokemon.png);
+    background-size: 140px 24px;
+    background-position: right top;
+    background-repeat: no-repeat;
+    text-shadow: 0 1px 0 white;
+}
+
+a.titleTag.pokemon img,
+a.titleTag.pokemon-presents img {
+    filter: drop-shadow(0 1px 0 black);
+}
+
+/* State of PLay */
+a.titleTag.state-of-play {
+    background-color: black;
+    background-image: url(img/ttag_state-of-play.png);
+    background-size: 208px 24px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    color: white;
+    text-shadow: 0 1px 0 black;
+}
+
+a.titleTag.state-of-play img {
+    filter: drop-shadow(0 1px 0 black);
+}
+
+/* Summer Game Fest '24 */
+a.titleTag.summer-game-fest-2024 {
+    color: white;
+    background-color: var(--game-fest-pink);
+    background-image: url(img/ttag_summer-game-fest.png);
+    background-size: 176px 24px;
+    background-position: left center;
+    background-repeat: no-repeat;
+}
+
+/* Critical Chicken (fallback) */
+
+a.titleTag.critical-chicken {
+    background-color: var(--white);
+    color: var(--black);
 }

@@ -15,18 +15,7 @@ All other trademarks referred to are trademarks of their respective owners.
 :root {
     /* Main colour palette */
     --black: #000000;
-    --white: #ffffff;
-    --red: #d20202;
-    --orange: #f47614;
     --yellow: #ffdc17;
-    --lightgrey: #edecec;
-
-    --ko-fi-blue: #72A4F2;
-    --ko-fi-red: #FF5A16;
-    --pokemon-yellow: #ffe103;
-    --pokemon-grey: #5e5e5e;
-
-    --black50: rgba(0,0,0,0.5);
 }
 
 body {
