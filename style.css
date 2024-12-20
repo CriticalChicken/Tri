@@ -147,7 +147,7 @@ span.box-icon {
     background-size: 16px 16px;
     background-position: center center;
     background-repeat: no-repeat;
-    margin: 0 0 16px 16px;
+    margin-left: 16px;
 }
 
 #noscript {
@@ -169,20 +169,26 @@ span.box-icon {
 
 #noscript span.box-icon {
     background-image: url(img/icon64_warning.png);
+    margin-bottom: 16px;
 }
 
 #noscript a {
     color: var(--white);
+    text-decoration: underline;
 }
 
-#social-icons {
+#noscript a:hover {
+    text-decoration: none;
+}
+
+.social-icons {
     font-size: 0;
     margin-top: 16px;
     width: 100%;
     display: block;
 }
 
-#social-icons a {
+.social-icons a {
     margin: 0 8px 16px 8px;
     margin-bottom: 16px;
     border-radius: 24px;
@@ -191,11 +197,11 @@ span.box-icon {
     transition: all 0.12s;
 }
 
-#social-icons a:hover {
+.social-icons a:hover {
     box-shadow: 0 -1px 0 var(--black);
 }
 
-#social-icons a img {
+.social-icons a img {
     border-radius: 24px;
 }
 
@@ -227,11 +233,14 @@ a.button:hover {
     box-shadow: 0 -1px 0 var(--black);
 }
 
+a.button.heavy {
+    font-weight: 900;
+}
+
 a.button.ko-fi {
     background-color: var(--ko-fi-red);
     background-image: url(img/icon64_button_white.png);
     color: var(--white);
-    font-weight: 900;
     animation: button-highlight 2s ease-in-out;
     animation-iteration-count: infinite;
 }
@@ -486,6 +495,21 @@ a.titleTag.critical-chicken {
     color: var(--black);
 }
 
+span.box-title {
+    width: 136px;
+    font-size: 13px;
+    line-height: 24px;
+    font-weight: 800;
+    font-stretch: 75%;
+    text-transform: uppercase;
+    display: block;
+    height: 24px;
+    margin-bottom: 8px;
+    overflow: hidden;
+    text-shadow: 0 1px 0 black;
+    float: left;
+}
+
 /* Homepage */
 
 #featured-posts div {
@@ -577,7 +601,7 @@ a.titleTag.critical-chicken {
     background-image: url(img/icon64_ko-fi.png);
 }
 
-#homepage-posts h2 {
+.homepage-posts h2 {
     font-size: 32px;
     font-weight: 600;
     line-height: 40px;
@@ -587,7 +611,7 @@ a.titleTag.critical-chicken {
     margin-bottom: 16px;
 }
 
-#homepage-posts div {
+.homepage-posts div {
     width: 208px;
     padding: 16px;
     background-color: var(--structuregrey);
@@ -597,28 +621,93 @@ a.titleTag.critical-chicken {
     margin-bottom: 16px;
 }
 
-#homepage-posts div a.thumbnail {
+.homepage-posts div a.thumbnail {
     border-radius: 12px;
     margin-bottom: 8px;
     display: block;
 }
 
-#homepage-posts div a.thumbnail img {
+.homepage-posts div a.thumbnail img {
     box-shadow: 0 1px 0 var(--black);
     border-radius: 12px;
     display: block;
     transition: all 0.12s;
 }
 
-#homepage-posts div a.thumbnail:hover img {
+.homepage-posts div a.thumbnail:hover img {
     box-shadow: 0 -1px 0 var(--black);
 }
 
-#homepage-posts div a.headline {
+.homepage-posts div a.headline {
     font-weight: 600;
     text-decoration: none;
     color: var(--black);
     font-size: 19px;
     line-height: 24px;
     display: inline;
+}
+
+#poll {
+    width: 208px;
+    padding: 16px;
+    background-color: var(--blue);
+    display: block;
+    border-radius: 24px;
+    box-shadow: 0 1px 0 var(--black);
+    color: var(--white);
+}
+
+#poll span.box-icon {
+    background-image: url(img/icon64_poll.png);
+}
+
+#poll-thumbnail {
+    box-shadow: 0 1px 0 var(--black);
+    border-radius: 12px;
+    display: block;
+    margin-bottom: 8px;
+    width: 200px;
+    height: 24px;
+    clear: both;
+    background-image: url(img/temp/poll-thumb.png);
+    background-size: 208px 117px;
+    text-shadow: 0 1px 4px var(--black);
+    font-size: 13px;
+    line-height: 24px;
+    font-weight: 600;
+    font-stretch: 75%;
+    padding: 93px 0 0 8px;
+}
+
+#poll-thumbnail a {
+    color: var(--white);
+    text-decoration: underline;
+}
+
+#poll-thumbnail a:hover {
+    text-decoration: none;
+}
+
+.poll-question {
+    text-shadow: 0 1px 0 var(--black);
+    font-weight: 800;
+    font-size: 19px;
+    line-height: 24px;
+    display: inline-block;
+    margin-bottom: 16px;
+}
+
+.poll-option {
+    text-shadow: 0 1px 0 var(--black);
+    font-weight: 600;
+    font-size: 19px;
+    line-height: 24px;
+    display: inline-block;
+    margin-bottom: 8px;
+}
+
+/* TEMP */
+.poll-option img {
+    filter: drop-shadow(0 1px 0 var(--black));
+    margin-right: 8px;
 }
