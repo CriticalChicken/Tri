@@ -9,6 +9,7 @@ All other trademarks referred to are trademarks of their respective owners.
 
 <head>
 <meta charset="utf-8">
+<meta name="robots" content="noindex"><!--REMOVE BEFORE LAUNCHING-->
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -67,7 +68,7 @@ Our website doesn&rsquo;t work properly without JavaScript. Find out <a href="ht
 <a href="https://mastodon.world/@CriticalChicken" target="_blank" rel="external me" title="Mastodon"><img src="img/icon256_mastodon.png" alt="Mastodon" width="64" height="64"></a>
 <a href="https://ko-fi.com/criticalchicken" target="_blank" rel="external me" title="Ko-fi"><img src="img/icon256_ko-fi.png" alt="Ko-fi" width="64" height="64"></a>
 <a href="https://criticalchicken.tumblr.com" target="_blank" rel="external me" title="Tumblr"><img src="img/icon256_tumblr.png" alt="Tumblr" width="64" height="64"></a>
-</nav><!--/social-icons-->
+</nav><!--/social-icons-top-->
 <section id="homepage-posts-upper" class="homepage-posts">
 <h2>Posts we think you&rsquo;ll like</h2>
 <div class="featured news pokemon">
@@ -101,7 +102,7 @@ Our website doesn&rsquo;t work properly without JavaScript. Find out <a href="ht
 <div id="poll">
 <span class="box-title">This week&rsquo;s poll</span>
 <span class="box-icon"></span>
-<div id="poll-thumbnail">
+<div id="poll-thumbnail" aria-hidden="true">
 Pic: <a href="#">Giant Bomb</a>
 </div><!--/poll-thumbnail-->
 <span class="poll-question">What&rsquo;s your favourite play style?</span>
@@ -111,11 +112,62 @@ Pic: <a href="#">Giant Bomb</a>
 <a href="#" class="button">Previous poll results</a>
 </div><!--/poll-->
 <div id="maths">
-<span class="box title">We did the math(s)</span>
+<span class="box-title">We did the math(s)</span>
 <span class="box-icon"></span>
+<div class="thumbnail top" aria-hidden="true">
+</div><!--thumbnail-1-->
+<span class="figure top"><img src="img/icon64_ace-attorney.png" width="16" height="16" alt="">3,003</span>
+<span class="figure-label top">Days since the last mainline <b>Ace&nbsp;Attorney</b> game</b></span>
+<div class="thumbnail middle" aria-hidden="true">
+</div><!--thumbnail-2-->
+<span class="figure middle"><img src="img/icon64_ea.png" width="16" height="16" alt="">&pound;1,999</span>
+<span class="figure-label middle">Cost of the complete <b>Sims&nbsp;4</b> collection on EA&rsquo;s store</span>
+<div class="thumbnail bottom" aria-hidden="true">
+</div><!--thumbnail-3-->
+<span class="figure bottom"><img src="img/icon64_pokemon.png" width="16" height="16" alt="">1.3</span>
+<span class="figure-label bottom">Mainline <b>Pok&eacute;mon</b> games released per year since 1996</span>
 </div><!--/maths-->
 </section><!--/homepage-features-->
-<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<section id="homepage-posts-lower" class="homepage-posts">
+<div class="featured news pokemon">
+<a href="#" class="titleTag news"><img src="img/icon64_news.png" alt="" width="16" height="16">News</a>
+<a href="#" class="titleTag pokemon"><img src="img/icon64_pokemon.png" alt="" width="16" height="16">Pok&eacute;mon</a>
+<a href="#" class="thumbnail"><img src="img/temp/sleep-thumb.png" alt="" width="208" height="117"></a>
+<a href="#" class="headline">“Come stay in our Pokémon Sleep-themed suite, but don’t steal our Snorlax plushie”, urges Tokyo’s Grand Hyatt hotel</a>
+<a href="#" class="button comments-count">No comments yet</a>
+</div>
+</section><!--/homepage-posts-lower-->
+<nav id="looking-for-more">
+<span class="box-title">Looking for more?</span>
+<span class="box-icon"></span>
+<a href="#" class="button latest">Latest</a>
+<a href="#" class="button news">News</a>
+<a href="#" class="button reviews">Reviews</a>
+<a href="#" class="button features">Features</a>
+<a href="#" class="button heavy ko-fi">Support us on Ko-fi</a>
+</nav><!--/looking-for-more-->
+<footer>
+<nav id="social-icons-bottom" class="social-icons">
+<a href="https://bsky.app/profile/criticalchicken.com" target="_blank" rel="external me" title="Bluesky"><img src="img/icon256_bluesky.png" alt="Bluesky" width="32" height="32"></a>
+<a href="https://discord.gg/XtGUe4vaVm" target="_blank" rel="external me" title="Discord"><img src="img/icon256_discord.png" alt="Discord" width="32" height="32"></a>
+<a href="https://www.instagram.com/criticalchicken" target="_blank" rel="external me" title="Instagram"><img src="img/icon256_instagram.png" alt="Instagram" width="32" height="32"></a>
+<a href="https://mastodon.world/@CriticalChicken" target="_blank" rel="external me" title="Mastodon"><img src="img/icon256_mastodon.png" alt="Mastodon" width="32" height="32"></a>
+<a href="https://ko-fi.com/criticalchicken" target="_blank" rel="external me" title="Ko-fi"><img src="img/icon256_ko-fi.png" alt="Ko-fi" width="32" height="32"></a>
+<a href="https://criticalchicken.tumblr.com" target="_blank" rel="external me" title="Tumblr"><img src="img/icon256_tumblr.png" alt="Tumblr" width="32" height="32"></a>
+</nav><!--/social-icons-bottom-->
+<div id="footer">
+<img src="img/logo_forthegaymers.png" alt="#ForTheGaymers" width="208" height="26" class="tagline">
+<span class="copyright">Copyright &copy; 2016&ndash;2024 Critical&nbsp;Chicken. All rights reserved.</span>
+<span class="trademarks"><span class="red">Critical&nbsp;Chicken</span>, the Critical&nbsp;Chicken logo and wordmark, and <span class="orange">#</span><span class="red">ForTheGaymers</span> are trademarks of Critical&nbsp;Chicken. All other trademarks referred to are trademarks of their respective owners.</span>
+<a href="#" class="button">Privacy policy</a>
+<a href="#" class="button">Tidbyt applet</a>
+<a href="#" class="tri"><img src="img/logo_tri.png" width="72" height="33" alt="Tri"></a>
+<span class="load-time">This page was booed off stage at an open-mic night in 3.404 seconds.</span>
+<a href="#" class="not-by-ai"><img src="img/written-by-human.png" width="131" height="42" alt="Written by human, not by AI"></a>
+</div><!--/footer-->
+<a href="#" class="back-to-top" title="Back to top"></a>
+<div id="clearfix"></div>
+</footer>
 </main>
 </div><!--/container-->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
