@@ -564,8 +564,8 @@ a.titleTag.state-of-play img {
     filter: drop-shadow(0 1px 0 black);
 }
 
-/* Summer Game Fest '24 */
-a.titleTag.summer-game-fest-2024 {
+/* Summer Game Fest '25 */
+a.titleTag.summer-game-fest-2025 {
     color: white;
     background-color: var(--game-fest-pink);
     background-image: url(img/ttag_summer-game-fest.png);
@@ -598,12 +598,10 @@ span.box-title {
 
 /* Page headers */
 
-/* These are 1px taller than 16:9 to stay 'on grid', why is the world like this??? */
 div.page-header {
     width: 208px;
     height: 120px;
     padding: 16px 16px 0 16px;
-    background-color: var(--red);
     display: block;
     border-radius: 24px;
     box-shadow: 0 1px 0 var(--black);
@@ -616,9 +614,254 @@ div.page-header {
     text-shadow: 0 1px 0 var(--black);
 }
 
+div.page-header .box-icon {
+    margin: 0 0 16px 16px;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
 div.page-header h2 {
-    display: inline-block;
-    margin-top: 8px;
+    display: table-cell;
+    top: 0px;
+    position: relative;
+    width: 208px;
+    height: 112px;
+    vertical-align: bottom;
+}
+
+div.page-header h2 span {
+    font-weight: 600;
+}
+
+/* Features */
+div.page-header.feature {
+    background-color: var(--blue);
+}
+
+div.page-header.feature .box-icon {
+    background-image: url(img/icon64_feature_white.png);
+}
+
+/* News */
+div.page-header.news {
+    background-color: var(--red);
+}
+
+div.page-header.news .box-icon {
+    background-image: url(img/icon64_news_white.png);
+}
+
+/* Reviews */
+div.page-header.review {
+    background-color: var(--orange);
+}
+
+div.page-header.review .box-icon {
+    background-image: url(img/icon64_review_white.png);
+}
+
+/* Special */
+
+/* Ace Attorney */
+div.page-header.ace-attorney {
+    background-image: linear-gradient(to bottom, #744e2f, #623917 77%);
+    text-shadow: none;
+}
+
+div.page-header.ace-attorney .box-icon {
+    background-image: url(img/icon64_ace-attorney.png);
+}
+
+/* Best of */
+div.page-header.best-of {
+    background-color: var(--gold);
+    background-image: url(img/header_best-of.png);
+    background-size: 240px 136px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    text-shadow: 0 1px 4px var(--black);
+}
+
+div.page-header.best-of .box-icon {
+    background-image: url(img/icon64_best-of.png);
+}
+
+/* Bluesky */
+div.page-header.bluesky {
+    background-image: linear-gradient(180deg, #0b7afe 0%, #59b9fe 100%);
+    text-shadow: 0 0 3px rgba(0,0,0,0.1);
+}
+
+div.page-header.bluesky .box-icon {
+    background-image: url(img/icon64_bluesky.png);
+}
+
+/* Dungeons & Dragons */
+div.page-header.dungeons-and-dragons {
+    background-color: #007aa7;
+    background-image: url(img/header_dungeons-and-dragons.png);
+    background-size: 240px 136px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    text-shadow: 0 1px 4px var(--black);
+}
+
+div.page-header.dungeons-and-dragons .box-icon {
+    background-image: url(img/icon64_dungeons-and-dragons.png);
+}
+
+/* E3 2016 */
+/* E3 2021 */
+/* E3's future */
+div.page-header.e3-2016,
+div.page-header.e3-2021,
+div.page-header.e3s-future {
+    background-color: black;
+    background-image: url(img/header_e3.png);
+    background-size: 240px 136px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    text-shadow: 0 1px 4px var(--black);
+}
+
+div.page-header.e3-2016 .box-icon,
+div.page-header.e3-2021 .box-icon,
+div.page-header.e3s-future .box-icon {
+    background-image: url(img/icon64_e3_white.png);
+}
+
+/* Exclusives */
+div.page-header.exclusive {
+    background-color: var(--yellow);
+    text-shadow: none;
+    color: var(--black);
+}
+
+/* #ForTheGaymers */
+div.page-header.forthegaymers {
+    background-color: #750787;
+    background-image: url(img/header_forthegaymers.png);
+    background-size: 240px 136px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    font-size: 28px;
+    text-shadow: 0 1px 4px var(--black);
+}
+
+div.page-header.forthegaymers h2 {
+    height: 113px;
+}
+
+div.page-header.forthegaymers .box-icon {
+    background-image: url(img/icon64_forthegaymers.png);
+}
+
+/* The Game Awards */
+div.page-header.the-game-awards {
+    background-color: black;
+    background-image: url(img/header_the-game-awards.png);
+    background-size: 240px 136px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    text-shadow: 0 1px 4px var(--black);
+}
+
+div.page-header.the-game-awards .box-icon {
+    background-image: url(img/icon64_the-game-awards.png);
+}
+
+/* Nintendo Direct */
+div.page-header.nintendo-direct {
+    background-color: var(--nintendo-red);
+}
+
+div.page-header.nintendo-direct .box-icon {
+    background-image: url(img/icon64_nintendo-direct.png);
+}
+
+/* Persona */
+div.page-header.persona {
+    background-color: white;
+    background-image: url(img/header_persona.png);
+    background-size: 81px 72px;
+    background-position: center 16px;
+    background-repeat: no-repeat;
+    color: black;
+    text-shadow: none;
+}
+
+div.page-header.persona .box-icon {
+    background-image: url(img/icon64_persona.png);
+}
+
+/* Pokémon */
+div.page-header.pokemon {
+    background-color: var(--pokemon-yellow);
+    background-image: url(img/header_pokemon.png);
+    background-size: 240px 136px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    text-shadow: 0 1px 0 white;
+    color: var(--pokemon-grey);
+}
+
+div.page-header.pokemon .box-icon {
+    background-image: url(img/icon64_pokemon.png);
+}
+
+/* Pokémon Presents */
+div.page-header.pokemon-presents {
+    background-color: var(--pokemon-yellow);
+    background-image: url(img/header_pokemon.png);
+    background-size: 240px 136px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    text-shadow: 0 1px 0 white;
+    color: var(--pokemon-grey);
+}
+
+div.page-header.pokemon-presents .box-icon {
+    background-image: url(img/icon64_pokemon-presents.png);
+}
+
+/* State of Play */
+div.page-header.state-of-play {
+    background-color: black;
+    background-image: url(img/header_state-of-play.png);
+    background-size: 240px 136px;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+div.page-header.state-of-play .box-icon {
+    background-image: url(img/icon64_state-of-play.png);
+}
+
+/* Summer Game Fest '25 */
+div.page-header.summer-game-fest-2025 {
+    background-image: linear-gradient(90deg, var(--game-fest-purple) 0%, var(--game-fest-pink) 100%);
+    text-shadow: none;
+}
+
+div.page-header.summer-game-fest-2025 .box-icon {
+    background-image: url(img/icon64_summer-game-fest.png);
+}
+
+/* Switch 2 */
+div.page-header.switch-2 {
+    background-color: var(--nintendo-red);
+}
+
+div.page-header.switch-2 .box-icon {
+    background-image: url(img/icon64_switch-2.png);
+}
+
+/* Critical Chicken (fallback) */
+div.page-header.critical-chicken {
+    background-color: var(--white);
+    color: var(--black);
+    text-shadow: none;
 }
 
 /* Homepage */
@@ -974,3 +1217,51 @@ a.headline + a.button {
 }
 
 /* Listing pages */
+
+#post-listing div {
+    width: 208px;
+    padding: 16px;
+    background-color: var(--structuregrey);
+    display: block;
+    border-radius: 24px;
+    box-shadow: 0 1px 0 var(--black);
+    margin-bottom: 16px;
+}
+
+#post-listing div a.thumbnail {
+    border-radius: 12px;
+    margin-bottom: 8px;
+    display: block;
+}
+
+#post-listing div a.thumbnail img {
+    box-shadow: 0 1px 0 var(--black);
+    border-radius: 12px;
+    display: block;
+    transition: all 0.12s;
+}
+
+#post-listing div a.thumbnail:hover img {
+    box-shadow: 0 -1px 0 var(--black);
+}
+
+#post-listing div a.headline {
+    font-weight: 600;
+    text-decoration: none;
+    color: var(--black);
+    font-size: 19px;
+    line-height: 24px;
+    display: inline;
+}
+
+#post-listing div span.excerpt {
+    font-size: 13px;
+    line-height: 16px;
+    display: block;
+    margin: 6px 0 13px 0;
+}
+
+#post-listing div span.excerpt b,
+#post-listing div span.excerpt strong {
+    font-weight: 600;
+}
