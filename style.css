@@ -190,6 +190,10 @@ span.box-icon {
     box-shadow: 0 1px 0 var(--black);
 }
 
+.social-icons a:first-of-type {
+    margin-left: 24px;
+}
+
 .social-icons a img {
     border-radius: 12px;
 }
@@ -931,6 +935,10 @@ a.headline + a.button {
 #social-icons-top.social-icons a {
     margin: 0 8px 16px 8px;
     border-radius: 24px;
+}
+
+#social-icons-top.social-icons a:nth-of-type(4) {
+    margin-left: 48px;
 }
 
 #social-icons-top.social-icons a img {
