@@ -33,6 +33,7 @@ All other trademarks referred to are trademarks of their respective owners.
     --darkgrey: #717070;
     --lightgrey: #edecec;
     --structuregrey: #e1dfdf;
+    --shadowgrey: #9e9d9d;
     --gold: #be9e3a;
     --bluesky-blue: #1185fe;
     --game-fest-pink: #cd4298;
@@ -583,6 +584,44 @@ a.titleTag.summer-game-fest-2025 {
 a.titleTag.critical-chicken {
     background-color: var(--white);
     color: var(--black);
+}
+
+/* Post dates */
+
+span.dateTag {
+    width: 208px;
+    font-size: 13px;
+    line-height: 24px;
+    font-weight: 600;
+    font-stretch: 75%;
+    display: block;
+    height: 24px;
+    box-shadow: 0 1px 0 var(--shadowgrey);
+    border-radius: 12px;
+    text-decoration: none;
+    margin-bottom: 8px;
+    background-color: var(--white);
+    color: var(--black);
+}
+
+span.dateTag img {
+    margin: 0 8px 0 8px;
+    display: inline-block;
+    margin-bottom: -3px;
+}
+
+/* Post writers */
+
+a.titleTag.writer {
+    font-weight: 600;
+    box-shadow: 0 1px 0 var(--shadowgrey);
+    background-color: var(--white);
+    color: var(--black);
+    text-transform: none;
+}
+
+a.titleTag.writer:hover {
+    box-shadow: 0 -1px 0 var(--shadowgrey);
 }
 
 span.box-title {
@@ -1225,6 +1264,52 @@ a.headline + a.button {
 }
 
 /* Listing pages */
+
+/* More in this section */
+
+#more-in-section {
+    width: 208px;
+    padding: 16px;
+    background-color: var(--white);
+    display: block;
+    border-radius: 24px;
+    box-shadow: 0 1px 0 var(--black);
+    color: var(--white);
+    margin-bottom: 16px;
+}
+
+#more-in-section .box-title {
+    color: var(--black);
+    text-shadow: none;
+}
+
+/* Fallback */
+#more-in-section span.box-icon {
+    background-image: url(img/icon64_critical-chicken_white.png);
+}
+
+#more-in-section a.button:first-of-type {
+    background-image: url(img/button_latest.png);
+    background-size: 176px 24px;
+    background-position: 0 0;
+    background-repeat: no-repeat;
+    clear: both;
+    color: var(--white);
+}
+
+/* News */
+#more-in-section.news {
+    background-color: var(--red);
+}
+
+#more-in-section.news .box-title {
+    color: var(--white);
+    text-shadow: 0 1px 0 var(--black);
+}
+
+#more-in-section.news span.box-icon {
+    background-image: url(img/icon64_news_white.png);
+}
 
 #post-listing div {
     width: 208px;
