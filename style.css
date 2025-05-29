@@ -49,7 +49,7 @@ a {
 }
 
 #wrapper {
-    width: calc(100% - 42px);
+    width: calc(100% - 40px);
     /*max-width: 280px;*/
     height: 100%;
     margin: 0 auto;
@@ -60,16 +60,16 @@ header a.home-link {
     width: 280px;
     height: 125px;
     display: block;
-    margin: 0 auto;
+    margin: 3px auto 0 auto;
 }
 
 section#alert {
-    background-image: url(img/callout-red.png);
-    background-size: 16px 22px;
+    background-image: url(img/callout-red.svg);
+    background-size: 15px 20px;
     background-repeat: no-repeat;
-    background-position: calc(50% - 109px) 0;
+    background-position: calc(50% - 109px) 5px;
     padding-top: 20px;
-    margin-top: -5px;
+    margin-top: -8px;
 }
 
 section#alert div.outerbox span.box-title {
@@ -246,10 +246,10 @@ div.innerbox a.box-link:before {
     width: 16px;
     height: 16px;
     display: block;
-    background-image: url(img/icon-box-link-black-32px.png);
-    background-size: 16px 16px;
+    background-image: url(img/icon-link-black.svg);
+    background-size: contain;
     background-repeat: no-repeat;
-    background-position: 0 0;
+    background-position: center center;
     content: "";
     float: left;
     margin-top: 1px;
@@ -283,7 +283,7 @@ div.innerbox div.glass-highlight {
     border-radius: 0 8px 8px 0;
     background-image: url(img/glass-highlight.png);
     background-size: cover;
-    background-position: center center;
+    background-position: calc(50% + 1px) center;
     background-repeat: no-repeat;
     margin-bottom: -150px;
 }
@@ -309,4 +309,56 @@ div.innerbox div.post-meta a.headline-link{
     font-size: 30px;
     line-height: 40px;
     text-decoration: none;
+}
+
+div.innerbox ul.home-topics {
+    margin-top: 9px;
+}
+
+div.innerbox ul.home-topics li {
+    float: left;
+    margin-right: 2px;
+    margin-bottom: 2px;
+}
+
+div.innerbox ul.home-topics li a {
+    display: block;
+    padding: 5px 10px 0 10px;
+    height: 23px;
+    border-radius: 14px;
+    background-color: black;
+    color: white;
+    text-decoration: none;
+}
+
+div.innerbox ul.home-topics li a.more-topics {
+    background-color: unset;
+    color: black;
+    box-shadow: inset 0 0 0 1px #8a8a8a;
+}
+
+div.innerbox div.topics-splitter {
+    display: block;
+    width: 100%;
+    height: 1px;
+    clear: both;
+}
+
+div.innerbox a.comments-link {
+    margin-top: 5px;
+    display: inline-block;
+}
+
+div.innerbox a.comments-link:before {
+    width: 16px;
+    height: 16px;
+    display: block;
+    background-image: url(img/icon-comments-black.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+    content: "";
+    float: left;
+    margin-top: 1px;
+    margin-right: 5px;
 }
