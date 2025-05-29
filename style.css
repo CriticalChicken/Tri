@@ -18,8 +18,295 @@ Critical Chicken, the Critical Chicken logo and wordmark, and #ForTheGaymers are
 All other trademarks referred to are trademarks of their respective owners.
 */
 
+/* Animations */
+
+/* The animation code */
+@keyframes alert-title {
+    0%      {opacity: 1;}
+    60%     {opacity: 1;}
+    70%     {opacity: 0;}
+    80%     {opacity: 1;}
+    90%     {opacity: 0;}
+    100%    {opacity: 1;}
+}
+
+/* Main styles */
+
 body {
     background-color: #edecec;
     width: 100%;
     height: 100%;
+    font-optical-sizing: auto;
+}
+
+i,
+em {
+    font-style: italic;
+}
+
+a {
+    transition: all 0.2s;
+}
+
+#wrapper {
+    width: calc(100% - 42px);
+    /*max-width: 280px;*/
+    height: 100%;
+    margin: 0 auto;
+    padding: 20px 0 20px 0;
+}
+
+header a.home-link {
+    width: 280px;
+    height: 125px;
+    display: block;
+    margin: 0 auto;
+}
+
+section#alert {
+    background-image: url(img/callout-red.png);
+    background-size: 16px 22px;
+    background-repeat: no-repeat;
+    background-position: calc(50% - 109px) 0;
+    padding-top: 20px;
+    margin-top: -5px;
+}
+
+section#alert div.outerbox span.box-title {
+    animation: alert-title 4s ease-in-out infinite;
+}
+
+section#alert div.innerbox {
+    background-color: #FFDC17;
+    padding: 16px 18px 12px 18px;
+}
+
+div.outerbox {
+    border-radius: 12px;
+    background-color: black;
+    padding: 6px 2px 2px 2px;
+    margin-bottom: 10px;
+    box-shadow: 0 1px 0 black;
+}
+
+/* Colour-coding */
+.news div.outerbox {
+    background-color: #d20202;
+}
+.review div.outerbox {
+    background-color: #f47614;
+}
+.feature div.outerbox {
+    background-color: #1564dc;
+}
+
+div.outerbox img.box-icon {
+    float: right;
+    margin-right: 8px;
+    margin-top: 1px;
+    filter: drop-shadow(0 1px 0 black);
+}
+
+div.outerbox span.box-title {
+    font-family: "Sofia Sans", sans-serif;
+    font-weight: 800;
+    font-style: normal;
+    font-size: 15px;
+    line-height: 20px;
+    color: white;
+    text-shadow: 0 1px 0 black;
+    text-transform: uppercase;
+    display: block;
+    margin-left: 8px;
+    margin-bottom: 4px;
+}
+
+div.outerbox span.box-title span.box-title-splitter {
+    font-weight: 600;
+    color: #8a8a8a;
+}
+
+/* Colour-coding */
+.news div.outerbox span.box-title span.box-title-splitter {
+    color: #ea8b8b;
+}
+.review div.outerbox span.box-title span.box-title-splitter {
+    color: #fac093;
+}
+.feature div.outerbox span.box-title span.box-title-splitter {
+    color: #94b8ef;
+}
+
+div.outerbox span.box-title span.box-subtitle {
+    font-weight: 600;
+    text-transform: none;
+}
+
+div.outerbox span.box-slug {
+    font-family: "Sofia Sans Extra Condensed", sans-serif;
+    font-weight: 900;
+    font-style: normal;
+    font-size: 30px;
+    line-height: 40px;
+    text-transform: uppercase;
+    color: white;
+    text-shadow: 0 1px 0 black;
+    display: block;
+    margin-left: 8px;
+    margin-top: -9px;
+    margin-bottom: -1px;
+}
+
+div.outerbox span.box-distinction {
+    display: block;
+    width: calc(100% - 8px);
+    height: 23px;
+    background-color: white;
+    border-radius: 10px 10px 0 0;
+    padding: 7px 0 0 8px;
+    font-family: "Sofia Sans", sans-serif;
+    font-weight: 800;
+    font-style: normal;
+    font-size: 15px;
+    line-height: 20px;
+    color: black;
+    text-transform: uppercase;
+}
+
+/* Colour-coding */
+.news div.outerbox span.box-distinction {
+    color: #d20202;
+}
+.news div.outerbox span.box-distinction {
+    color: #f47614;
+}
+.feature div.outerbox span.box-distinction {
+    color: #1564dc;
+}
+
+div.outerbox span.box-distinction img {
+    margin-top: 1px;
+    margin-right: 5px;
+    float: left;
+}
+
+div.outerbox span.box-distinction + div.innerbox {
+    border-radius: 0 0 10px 10px;
+}
+
+div.innerbox {
+    background-color: white;
+    border-radius: 10px;
+    font-family: "Sofia Sans", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 15px;
+    line-height: 20px;
+    color: black;
+}
+
+div.innerbox b,
+div.innerbox strong {
+    font-weight: 800;
+}
+
+div.innerbox a {
+    color: black;
+    text-decoration: underline;
+    font-weight: 800;
+}
+
+div.innerbox a:hover {
+    text-decoration: none;;
+}
+
+div.innerbox a.button {
+    display: inline-block;
+    height: 24px;
+    padding: 4px 10px 0 10px;
+    background-color: rgba(0, 0, 0, 1);
+    color: white;
+    text-decoration: none;
+    font-weight: 800;
+    font-size: 20px;
+    margin-top: 14px;
+    border-radius: 5px;
+}
+
+div.innerbox a.button:hover {
+    background-color: rgba(0, 0, 0, 0.64);
+}
+
+div.innerbox a.box-link {
+    margin-top: 8px;
+    display: inline-block;
+}
+
+div.innerbox a.box-link:before {
+    width: 16px;
+    height: 16px;
+    display: block;
+    background-image: url(img/icon-box-link-black-32px.png);
+    background-size: 16px 16px;
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    content: "";
+    float: left;
+    margin-top: 1px;
+    margin-right: 5px;
+}
+
+div.innerbox a.thumbnail {
+    width: 267px;
+    display: block;
+    position: relative;
+    border-radius: 8px;
+    z-index: 2;
+}
+
+div.innerbox a.thumbnail img {
+    border: 2px white solid;
+    display: block;
+    width: 263px;
+    border-radius: 8px;
+}
+
+div.innerbox div.glass-highlight {
+    width: calc(100% - 266px);
+    height: 148px;
+    display: block;
+    background-color: black;
+    position: relative;
+    z-index: 1;
+    left: 264px;
+    top: -150px;
+    border-radius: 0 8px 8px 0;
+    background-image: url(img/glass-highlight.png);
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    margin-bottom: -150px;
+}
+
+/* Colour-coding */
+.news div.innerbox div.glass-highlight {
+    background-color: #d20202;
+}
+.review div.innerbox div.glass-highlight {
+    background-color: #f47614;
+}
+.feature div.innerbox div.glass-highlight {
+    background-color: #1564dc;
+}
+
+div.innerbox div.post-meta {
+    padding: 11px 18px 12px 18px;
+}
+
+div.innerbox div.post-meta a.headline-link{
+    font-family: "Sofia Sans Condensed", sans-serif;
+    font-weight: 800;
+    font-size: 30px;
+    line-height: 40px;
+    text-decoration: none;
 }
