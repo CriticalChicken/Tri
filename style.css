@@ -45,7 +45,7 @@ em {
 }
 
 a {
-    transition: all 0.2s;
+    transition: all 0.12s ease-in-out;
 }
 
 #wrapper {
@@ -79,6 +79,14 @@ section#alert div.outerbox span.box-title {
 section#alert div.innerbox {
     background-color: #FFDC17;
     padding: 16px 18px 12px 18px;
+}
+
+section#alert div.innerbox a.button {
+    color: #FFDC17;
+}
+
+section#alert div.innerbox a.button:hover {
+    color: black;
 }
 
 div.outerbox {
@@ -217,14 +225,14 @@ div.innerbox a {
 }
 
 div.innerbox a:hover {
-    text-decoration: none;;
+    text-decoration: none;
 }
 
 div.innerbox a.button {
     display: inline-block;
     height: 24px;
     padding: 4px 10px 0 10px;
-    background-color: rgba(0, 0, 0, 1);
+    background-color: black;
     color: white;
     text-decoration: none;
     font-weight: 800;
@@ -234,7 +242,9 @@ div.innerbox a.button {
 }
 
 div.innerbox a.button:hover {
-    background-color: rgba(0, 0, 0, 0.64);
+    background-color: white;
+    color: black;
+    box-shadow: inset 0 0 0 1px black;
 }
 
 div.innerbox a.box-link {
@@ -331,10 +341,20 @@ div.innerbox ul.home-topics li a {
     text-decoration: none;
 }
 
+div.innerbox ul.home-topics li a:hover {
+    background-color: white;
+    color: black;
+    box-shadow: inset 0 0 0 1px black;
+}
+
 div.innerbox ul.home-topics li a.more-topics {
     background-color: unset;
     color: black;
     box-shadow: inset 0 0 0 1px #8a8a8a;
+}
+
+div.innerbox ul.home-topics li a.more-topics:hover {
+    box-shadow: inset 0 0 0 1px black;
 }
 
 div.innerbox div.topics-splitter {
@@ -349,6 +369,17 @@ div.innerbox a.comments-link {
     display: inline-block;
 }
 
+/* Colour-coding */
+.news div.innerbox a.comments-link {
+    color: #d20202;
+}
+.review div.innerbox a.comments-link {
+    color: #f47614;
+}
+.feature div.innerbox a.comments-link {
+    color: #1564dc;
+}
+
 div.innerbox a.comments-link:before {
     width: 16px;
     height: 16px;
@@ -361,4 +392,89 @@ div.innerbox a.comments-link:before {
     float: left;
     margin-top: 1px;
     margin-right: 5px;
+}
+
+section#support div.innerbox {
+    padding: 11px 18px 12px 18px;
+    font-weight: 800;
+}
+
+section#support div.innerbox span.box-heading {
+    font-family: "Sofia Sans Condensed", sans-serif;
+    font-style: normal;
+    font-size: 30px;
+    line-height: 40px;
+    color: black;
+    display: block;
+}
+
+section#support div.innerbox span.box-blurb {
+    display: block;
+    margin-top: 5px;
+}
+
+section#support div.innerbox br.support-break {
+    display: none;
+}
+
+/* Cookie notice */
+
+#cookie-notice {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    z-index: 9999;
+    display: block;
+    width: 280px;
+    height: 138px;
+    background-color: white;
+    box-shadow: 0 0 20px black;
+    border-radius: 24px 0 0 0;
+    background-image: url(img/icon-cookies-black.svg);
+    background-size: 30px 30px;
+    background-position: 20px 20px;
+    background-repeat: no-repeat;
+    font-family: "Sofia Sans Condensed", sans-serif;
+    font-style: normal;
+    font-size: 15px;
+    line-height: 20px;
+}
+
+#cookie-notice span {
+    padding: 16px 20px 0 60px;
+    display: block;
+    font-weight: 600;
+}
+
+#cookie-notice span b {
+    font-weight: 800;
+}
+
+#cookie-notice a.cookie-button {
+    display: inline-block;
+    height: 23px;
+    padding: 5px 10px 0 10px;
+    background-color: black;
+    border-radius: 12px;
+    color: white;
+    font-weight: 800;
+    text-decoration: none;
+    margin-right: 9px;
+    margin-left: 60px;
+    margin-top: 14px;
+}
+
+#cookie-notice a.cookie-button:hover {
+    background-color: white;
+    color: black;
+    box-shadow: inset 0 0 0 1px black;
+}
+
+#cookie-notice a.cookie-link {
+    font-weight: 700;
+    color: black;
+}
+
+#cookie-notice a.cookie-link:hover {
+    text-decoration: none;
 }
