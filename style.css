@@ -417,9 +417,66 @@ section#support div.innerbox br.support-break {
     display: none;
 }
 
+nav#social-icons {
+    font-size: 0;
+    text-align: center;
+    margin-top: 20px;
+}
+
+nav#social-icons li {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+nav#social-icons li:last-of-type {
+    margin-right: 0;
+}
+
+nav#social-icons a {
+    border-radius: 18px;
+    box-shadow: 0 1px 0 black;
+    display: block;
+    width: 60px;
+    height: 60px;
+    background-size: 60px 60px;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+nav#social-icons a img {
+    border-radius: 18px;
+    opacity: 0.64;
+    transition: all 0.12s ease-in-out;
+}
+
+nav#social-icons a img:hover {
+    opacity: 1;
+}
+
+nav#social-icons a.bluesky {
+    background-image: url(img/button-bluesky.png);
+    background-color: #0085ff;
+}
+
+nav#social-icons a.discord {
+    background-image: url(img/button-discord.png);
+    background-color: #5865f2;
+}
+
+nav#social-icons a.ko-fi {
+    background-image: url(img/button-kofi.png);
+    background-color: #72a4f2;
+}
+
+nav#social-icons a.tumblr {
+    background-image: url(img/button-tumblr.png);
+    background-color: #001935;
+}
+
 /* Cookie notice */
 
 #cookie-notice {
+    display: none !important;
     position: fixed;
     bottom: 0;
     right: 0;

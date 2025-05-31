@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   width="744pt"
+   height="744pt"
+   version="1.1"
+   viewBox="0 0 744 743.99999"
+   id="svg1"
+   sodipodi:docname="icon-poll-white.svg"
+   inkscape:version="1.4-beta3 (01c8a1c, 2024-08-28, custom)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs1" />
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#717070"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="pt"
+     inkscape:zoom="0.509375"
+     inkscape:cx="496.68712"
+     inkscape:cy="480"
+     inkscape:window-width="1920"
+     inkscape:window-height="1017"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg1" />
+  <path
+     id="path1"
+     d="m 336,11.9995 c -66.121,0 -120,53.879 -120,120 v 26.39794 c -7.8008,-1.5586 -15.84,-2.39794 -24,-2.39794 h -72 c -66.121,0 -120,53.879 -120,120 v 10e-4 336 c 0,66.121 53.879,120 120,120 h 72 c 27,0 51.961,-9.1204 72,-24.2373 20.039,15.121 45,24.2373 72,24.2373 h 72 c 27,0 51.961,-9.1204 72,-24.2373 20.039,15.121 45,24.2373 72,24.2373 h 72 c 66.121,0 120,-53.879 120,-120 v -216 c 0,-66.121 -53.879,-120 -120,-120 h -72 c -8.1602,0 -16.199,0.83939 -24,2.39795 V 131.9995 c 0,-66.121 -53.879,-120 -120,-120 z m 0,96.00146 h 72 c 13.199,0 24,10.801 24,24 v 480 c 0,13.199 -10.801,24 -24,24 h -72 c -13.199,0 -24,-10.801 -24,-24 v -480 c 0,-13.199 10.801,-24 24,-24 z m -216,144 h 72 c 13.199,0 24,10.801 24,24 v 336 c 0,13.199 -10.801,24 -24,24 h -72 c -13.199,0 -24,-10.801 -24,-24 v -336 c 0,-13.199 10.801,-24 24,-24 z m 432,120 h 72 c 13.199,0 24,10.801 24,24 v 216 c 0,13.199 -10.801,24 -24,24 h -72 c -13.199,0 -24,-10.801 -24,-24 v -216 c 0,-13.199 10.801,-24 24,-24 z"
+     style="fill:#ffffff" />
+</svg>
