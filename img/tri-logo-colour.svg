@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   version="1.1"
+   width="683"
+   height="444"
+   style="clip-rule:evenodd;fill-rule:evenodd;image-rendering:optimizeQuality;shape-rendering:geometricPrecision;text-rendering:geometricPrecision"
+   id="svg5"
+   sodipodi:docname="tri-logo-colour.svg"
+   inkscape:version="1.4-beta3 (01c8a1c, 2024-08-28, custom)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs5" />
+  <sodipodi:namedview
+     id="namedview5"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:zoom="0.91779279"
+     inkscape:cx="321.42331"
+     inkscape:cy="109.50184"
+     inkscape:window-width="1920"
+     inkscape:window-height="1017"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg5" />
+  <path
+     style="clip-rule:evenodd;opacity:0.939;fill-rule:evenodd;image-rendering:optimizeQuality;shape-rendering:geometricPrecision;text-rendering:geometricPrecision"
+     fill="#1563dc"
+     d="m 613,0 c 0.667,0 1.333,0 2,0 22.346,12.1735 45.012,23.8402 68,35 0,0.3333 0,0.6667 0,1 -43.353,1.07 -86.686,1.9034 -130,2.5 C 572.895,25.3929 592.895,12.5596 613,0 Z"
+     id="path3" />
+  <path
+     style="clip-rule:evenodd;opacity:0.95;fill-rule:evenodd;image-rendering:optimizeQuality;shape-rendering:geometricPrecision;text-rendering:geometricPrecision"
+     fill="#f37613"
+     d="m 422,0 c 1.333,0 2.667,0 4,0 32.696,9.17646 65.363,18.6765 98,28.5 C 484.22,39.5249 444.553,50.0249 405,60 411.293,40.1588 416.96,20.1588 422,0 Z"
+     id="path2" />
+  <path
+     id="path1"
+     style="clip-rule:evenodd;opacity:0.981;fill:#d20202;fill-opacity:1;fill-rule:evenodd;image-rendering:optimizeQuality;shape-rendering:geometricPrecision;text-rendering:geometricPrecision"
+     d="M 100,0 C 97.344,17.7674 92.844,35.1007 86.5,52 70.9321,93.7356 42.0988,121.736 0,136 v 44 h 63 c -0.1667,52.668 0,105.334 0.5,158 0.6865,7.453 2.0199,14.786 4,22 17.2039,48.704 51.371,76.704 102.5,84 h 30 c 15.457,-1.988 30.623,-5.655 45.5,-11 0.833,-32.005 0.667,-64.005 -0.5,-96 -7.347,4.675 -15.014,8.842 -23,12.5 -14.947,7.436 -30.614,9.77 -47,7 -11.028,-3.863 -16.861,-11.696 -17.5,-23.5 -0.5,-50.999 -0.667,-101.999 -0.5,-153 16.67,0.167 33.337,0 50,-0.5 13,-25.667 26,-51.333 39,-77 33.667,-19.5 67.333,-39 101,-58.5 -0.333,-0.3333 -0.667,-0.6667 -1,-1 -35.594,3.9259 -71.261,7.2593 -107,10 1.52,16.0163 3.187,32.0163 5,48 H 157 V 0 Z m 374,95 c -30.402,2.9511 -55.235,16.284 -74.5,40 -0.5,-11.328 -0.667,-22.662 -0.5,-34 h -95 c -0.332,112.57 10e-4,225.07 1,337.5 31.238,0.829 62.405,0.662 93.5,-0.5 0.333,-60.667 0.667,-121.333 1,-182 1.039,-6.823 2.706,-13.49 5,-20 13.799,-32.139 37.966,-50.639 72.5,-55.5 15.33,-0.5 30.663,-0.667 46,-0.5 V 95 Z m 98,6 v 337 h 93 V 101 Z" />
+</svg>
