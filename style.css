@@ -30,7 +30,8 @@ All other trademarks referred to are trademarks of their respective owners.
     100%    {opacity: 1;}
 }
 
-/* Main styles */
+/* Base styles */
+/* 320px mobile layout */
 
 body {
     background-color: #edecec;
@@ -46,9 +47,6 @@ em {
 
 span.tooltip {
     display: inline !important;
-    text-decoration: underline;
-    text-decoration-color: rgba(0, 0, 0, 0.24);
-    cursor: help;
 }
 
 a {
@@ -57,7 +55,6 @@ a {
 
 a.fab {
     border-radius: 18px;
-    box-shadow: 0 1px 0 black;
     display: block;
     width: 60px;
     height: 60px;
@@ -80,13 +77,14 @@ a.fab img {
     transition: all 0.12s ease-in-out;
 }
 
-a.fab img:hover {
+a.fab:hover img {
     opacity: 1;
 }
 
 #wrapper {
     width: calc(100% - 40px);
     /*max-width: 280px;*/
+    min-width: 280px;
     height: 100%;
     margin: 0 auto;
     padding: 20px 0 20px 0;
@@ -105,6 +103,10 @@ header a.home-link img {
 
 header a.home-link:hover img {
     filter: brightness(136%);
+}
+
+nav#top-menu {
+    display: none;
 }
 
 section#alert {
@@ -632,6 +634,12 @@ nav.social-icons a.tumblr {
     background-color: #001935;
 }
 
+nav.social-icons.bottom .menu-pop,
+nav.social-icons.bottom .menu-top,
+nav.social-icons.bottom .search {
+    display: none;
+}
+
 h1.home-title {
     font-family: "Sofia Sans", sans-serif;
     font-weight: 800;
@@ -642,6 +650,10 @@ h1.home-title {
     text-align: center;
     margin-top: 11px;
     margin-bottom: 9px;
+}
+
+h1.home-title span {
+    display: none;
 }
 
 section#home-posts-top {
@@ -1028,4 +1040,113 @@ section#poll input.vote-now:hover {
 
 #cookie-notice a.cookie-link:hover {
     text-decoration: none;
+}
+
+@media (min-width: 480px) /* and (max-width: 759px) */ {
+    /* 480px tablet layout */
+
+    span.tooltip {
+        text-decoration: underline;
+        text-decoration-color: rgba(0, 0, 0, 0.24);
+        cursor: help;
+    }
+
+    a.fab {
+        display: none;
+    }
+
+    nav#top-menu {
+        display: block;
+        position: absolute;
+        z-index: 60;
+        width: 440px;
+        height: 61px;
+        top: 80px;
+        left: calc(50% - 220px);
+        font-size: 0;
+        pointer-events: none;
+    }
+
+    nav#top-menu ul li {
+        display: inline-block;
+    }
+
+    nav#top-menu ul li.latest,
+    nav#top-menu ul li.news,
+    nav#top-menu ul li.reviews,
+    nav#top-menu ul li.features,
+    nav#top-menu ul li.explore,
+    nav#top-menu ul li.about,
+    nav#top-menu ul li.contact {
+        display: none;
+    }
+
+    nav#top-menu ul li.menu {
+        margin-right: 320px;
+    }
+
+    nav#top-menu ul li a {
+        display: block;
+        width: 60px;
+        height: 60px;
+        background-size: 60px 60px;
+        background-position: 0 0;
+        background-repeat: no-repeat;
+        border-radius: 18px;
+        box-shadow: 0 1px 0 black;
+        pointer-events: all;
+    }
+
+    nav#top-menu ul li a img {
+        border-radius: 18px;
+        opacity: 0.64;
+        transition: all 0.12s ease-in-out;
+        /* To prevent weird flickering issue */
+        backface-visibility: hidden;
+        -webkit-backface-visibility: hidden;
+        -moz-backface-visibility: hidden;
+        -o-backface-visibility: hidden;
+        -ms-backface-visibility: hidden;
+    }
+
+    nav#top-menu ul li a img:hover {
+        opacity: 1;
+    }
+
+    nav#top-menu ul li a.menu {
+        background-image: url(img/button-menu.png);
+    }
+
+    nav#top-menu ul li a.search {
+        background-image: url(img/button-search-white.png);
+    }
+
+    h1.home-title br {
+        display: none;
+    }
+
+    h1.home-title span {
+        display: inline;
+    }
+
+    nav.social-icons.bottom .menu-pop,
+    nav.social-icons.bottom .search {
+        display: inline-block;
+    }
+
+    nav.social-icons.bottom .menu-pop a {
+        background-image: url(img/button-menu.png);
+    }
+
+    nav.social-icons.bottom .search a {
+        background-image: url(img/button-search-white.png);
+    }
+
+    footer span.box-title br {
+        display: none;
+    }
+
+    div#button-area {
+        margin-top: -290px;
+    }
 }
