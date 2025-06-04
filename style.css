@@ -392,7 +392,7 @@ div.innerbox div.glass-highlight {
     background-color: black;
     position: relative;
     z-index: 1;
-    left: 262px;
+    right: -262px;
     top: -150px;
     border-radius: 0 8.5px 8.5px 0;
     background-image: url(img/highlight-surround.png);
