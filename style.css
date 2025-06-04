@@ -92,11 +92,19 @@ header a.home-link {
     margin: 3px auto 0 auto;
 }
 
+header a.home-link img {
+    transition: all 0.12s ease-in-out;
+}
+
+header a.home-link:hover img {
+    filter: brightness(136%);
+}
+
 section#alert {
     background-image: url(img/callout-red.svg);
     background-size: 15px 20px;
     background-repeat: no-repeat;
-    background-position: calc(50% - 108px) 5px;
+    background-position: calc(50% - 108.5px) 5px;
     padding-top: 20px;
     margin-top: -8px;
 }
@@ -116,6 +124,11 @@ section#alert div.innerbox a.button {
 
 section#alert div.innerbox a.button:hover {
     color: black;
+}
+
+/* We only display the hero blurb on the 1024px wide layout */
+section#hero span.hero-blurb {
+    display: none;
 }
 
 div.outerbox {
@@ -158,6 +171,15 @@ div.outerbox a.box-title {
     margin-left: 8px;
     margin-bottom: 4px;
     text-decoration: none;
+    background-image: url(img/highlight-boxtitle.png);
+    background-size: 0 2px;
+    background-repeat: no-repeat;
+    background-position: center 16px;
+    transition: all 0.12s ease-in-out;
+}
+
+div.outerbox a.box-title:hover {
+    background-size: 100% 2px;
 }
 
 div.outerbox span.box-title-splitter {
@@ -192,6 +214,15 @@ div.outerbox a.box-subtitle {
     color: white;
     text-shadow: 0 1px 0 black;
     text-decoration: none;
+    background-image: url(img/highlight-boxtitle.png);
+    background-size: 0 2px;
+    background-repeat: no-repeat;
+    background-position: center 16px;
+    transition: all 0.12s ease-in-out;
+}
+
+div.outerbox a.box-subtitle:hover {
+    background-size: 100% 2px;
 }
 
 div.outerbox span.box-slug {
@@ -265,11 +296,12 @@ div.innerbox strong {
 div.innerbox a {
     color: black;
     text-decoration: underline;
+    text-decoration-color: rgba(0, 0, 0, 1);
     font-weight: 800;
 }
 
 div.innerbox a:hover {
-    text-decoration: none;
+    text-decoration-color: rgba(0, 0, 0, 0);
 }
 
 div.innerbox a.button {
@@ -314,30 +346,58 @@ div.innerbox a.thumbnail {
     width: 267px;
     display: block;
     position: relative;
-    border-radius: 8px;
+    border-radius: 10px;
     z-index: 2;
+}
+
+div.innerbox a.thumbnail:after {
+    width: 263px;
+    height: 148px;
+    display: block;
+    position: relative;
+    border-radius: 8px;
+    z-index: 3;
+    content: "";
+    top: -150px;
+    left: 2px;
+    float: left;
+    margin-bottom: -150px;
+    background-image: url(img/highlight-thumbnail.png);
+    background-size: 526px 148px;
+    background-position: -263px 0;
+    transition: all 0.12s ease-in-out;
+    opacity: 0;
+}
+
+div.innerbox a.thumbnail:hover:after {
+    background-position: 0 0;
+    opacity: 1;
+}
+
+div.innerbox a.thumbnail.non-linked:after {
+    background-image: none;
 }
 
 div.innerbox a.thumbnail img {
     border: 2px white solid;
     display: block;
     width: 263px;
-    border-radius: 8px;
+    border-radius: 10px;
 }
 
 div.innerbox div.glass-highlight {
-    width: calc(100% - 266px);
+    width: calc(100% - 264px);
     height: 148px;
     display: block;
     background-color: black;
     position: relative;
     z-index: 1;
-    left: 264px;
+    left: 262px;
     top: -150px;
-    border-radius: 0 8px 8px 0;
-    background-image: url(img/glass-highlight.png);
+    border-radius: 0 8.5px 8.5px 0;
+    background-image: url(img/highlight-surround.png);
     background-size: cover;
-    background-position: calc(50% + 1px) center;
+    background-position: 50% center;
     background-repeat: no-repeat;
     margin-bottom: -150px;
 }
@@ -357,12 +417,37 @@ div.innerbox div.post-meta {
     padding: 11px 18px 12px 18px;
 }
 
-div.innerbox div.post-meta a.headline-link{
+div.innerbox div.post-meta a.headline-link {
     font-family: "Sofia Sans Condensed", sans-serif;
     font-weight: 800;
     font-size: 30px;
     line-height: 40px;
-    text-decoration: none;
+    text-decoration: underline;
+    text-decoration-color: rgba(0, 0, 0, 0);
+}
+
+div.innerbox div.post-meta a.headline-link:hover {
+    text-decoration-color: rgba(0, 0, 0, 1);
+}
+
+/* Colour-coding */
+.news div.innerbox div.post-meta a.headline-link {
+    text-decoration-color: rgba(210, 2, 2, 0);
+}
+.news div.innerbox div.post-meta a.headline-link:hover {
+    text-decoration-color: rgba(210, 2, 2, 1);
+}
+.review div.innerbox div.post-meta a.headline-link {
+    text-decoration-color: rgba(244, 118, 20, 0);
+}
+.review div.innerbox div.post-meta a.headline-link:hover {
+    text-decoration-color: rgba(244, 118, 20, 1);
+}
+.feature div.innerbox div.post-meta a.headline-link {
+    text-decoration-color: rgba(21, 100, 220, 0);
+}
+.feature div.innerbox div.post-meta a.headline-link:hover {
+    text-decoration-color: rgba(21, 100, 220, 1);
 }
 
 div.innerbox ul.home-topics {
@@ -411,6 +496,12 @@ div.innerbox div.topics-splitter {
 div.innerbox a.comments-link {
     margin-top: 5px;
     display: inline-block;
+    color: black;
+    text-decoration-color: rgba(0, 0, 0, 1);
+}
+
+div.innerbox a.comments-link:hover {
+    text-decoration-color: rgba(0, 0, 0, 0);
 }
 
 div.innerbox a.headline-link + div.topics-splitter + a.comments-link {
@@ -420,12 +511,24 @@ div.innerbox a.headline-link + div.topics-splitter + a.comments-link {
 /* Colour-coding */
 .news div.innerbox a.comments-link {
     color: #d20202;
+    text-decoration-color: rgba(210, 2, 2, 1);
+}
+.news div.innerbox a.comments-link:hover {
+    text-decoration-color: rgba(210, 2, 2, 0);
 }
 .review div.innerbox a.comments-link {
     color: #f47614;
+    text-decoration-color: rgba(244, 118, 20, 1);
+}
+.review div.innerbox a.comments-link:hover {
+    text-decoration-color: rgba(244, 118, 20, 0);
 }
 .feature div.innerbox a.comments-link {
     color: #1564dc;
+    text-decoration-color: rgba(21, 100, 220, 1);
+}
+.feature div.innerbox a.comments-link:hover {
+    text-decoration-color: rgba(21, 100, 220, 0);
 }
 
 div.innerbox a.comments-link:before {
@@ -447,13 +550,14 @@ section#support div.innerbox {
     font-weight: 800;
 }
 
-section#support div.innerbox span.box-heading {
+div.innerbox span.box-heading {
     font-family: "Sofia Sans Condensed", sans-serif;
     font-style: normal;
     font-size: 30px;
     line-height: 40px;
     color: black;
     display: block;
+    font-weight: 800;
 }
 
 section#support div.innerbox span.box-blurb {
@@ -760,6 +864,75 @@ a.back-to-top img {
 
 a.back-to-top img:hover {
     opacity: 1;
+}
+
+section#poll input.radio-button {
+    width: 0;
+    height: 0;
+    pointer-events: none;
+    margin: 0 0 16px 0;
+    padding: 0;
+    cursor: pointer;
+}
+
+section#poll input.radio-button:after {
+    content: "";
+    width: 14px;
+    height: 14px;
+    display: block;
+    position: relative;
+    border-radius: 7.5px;
+    border: 1px #8a8a8a solid;
+    top: -8px;
+    z-index: 10;
+    background-image: linear-gradient(rgba(255, 255, 255, 0.52), rgba(255, 255, 255, 0.52)), url(img/radio-button.svg);
+    background-size: 0 0;
+    background-position: center center;
+    background-repeat: no-repeat;
+    transition: all 0.12s ease-in-out;
+    pointer-events: all;
+}
+
+section#poll input.radio-button:hover:after {
+    background-image: linear-gradient(rgba(255, 255, 255, 0.52), rgba(255, 255, 255, 0.52)), url(img/radio-button.svg);
+    background-size: 10px 10px;
+}
+
+section#poll input:checked.radio-button:after {
+    border: 1px black solid;
+    background-size: 10px 10px;
+    background-image: linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0)), url(img/radio-button.svg);
+}
+
+section#poll label {
+    left: 30px;
+    position: relative;
+    top: 5px;
+    font-weight: 800;
+    cursor: pointer;
+}
+
+section#poll input.vote-now {
+    display: inline-block;
+    height: 28px;
+    padding: 0px 10px 0 10px;
+    background-color: black;
+    color: white;
+    text-decoration: none;
+    font-weight: 800;
+    font-size: 20px;
+    margin: 9px 0 0 0;
+    border-radius: 5px;
+    font-family: "Sofia Sans", sans-serif;
+    border: none;
+    transition: all 0.12s ease-in-out;
+    cursor: pointer;
+}
+
+section#poll input.vote-now:hover {
+    background-color: white;
+    color: black;
+    box-shadow: inset 0 0 0 1px black;
 }
 
 /* Cookie notice */
