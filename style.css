@@ -44,6 +44,13 @@ em {
     font-style: italic;
 }
 
+span.tooltip {
+    display: inline !important;
+    text-decoration: underline;
+    text-decoration-color: rgba(0, 0, 0, 0.24);
+    cursor: help;
+}
+
 a {
     transition: all 0.12s ease-in-out;
 }
