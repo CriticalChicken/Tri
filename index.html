@@ -43,8 +43,12 @@ All other trademarks referred to are trademarks of their respective owners.
                 </ul>
             </nav><!--/top-menu-->
         </header>
+        <aside id="sidebar">
+            <!--Only used on desktop layouts-->
+        </aside>
         <main>
-            <section id="alert" class="news">
+            <div class="marker alert"></div>
+            <section id="alert" class="news" data-sidebar>
                 <div class="outerbox">
                     <img src="img/icon-news-white.svg" width="16" height="16" alt="" class="box-icon">
                     <span class="box-title flashing">News alert</span>
@@ -58,26 +62,32 @@ All other trademarks referred to are trademarks of their respective owners.
             </section><!--/alert-->
             <section id="hero" class="feature">
                 <div class="outerbox">
-                    <img src="img/icon-feature-white.svg" width="16" height="16" alt="" class="box-icon">
                     <a href="#" class="box-title" title="Features section">Feature</a><span class="box-title-splitter">&nbsp;&vert;&nbsp;</span><a href="#" class="box-subtitle" title="Opinions section">Opinion</a>
+                    <!--<span class="box-slug">Two Point conspiracy</span>-->
+                    <img src="img/icon-feature-white.svg" width="16" height="16" alt="" class="box-icon">
                     <span class="box-distinction"><img src="img/icon-topstory-blue.svg" width="16" height="16" alt="" class="thumbnail">Top story</span>
+                    <img src="img/icon-feature-white.svg" width="16" height="16" alt="" class="box-icon-alt">
                     <div class="innerbox">
                         <a href="#" class="thumbnail"><img src="img/temp/festival_feature_2-png.avif" width="263" height="148" alt=""></a>
                         <div class="glass-highlight"></div>
                         <div class="post-meta">
                             <a href="#" class="headline-link">Five reasons why &ldquo;Two Point Festival&rdquo; will be next in the series</a>
                             <span class="hero-blurb">Did <b>Two Point Museum&rsquo;s</b> developers include a subtle clue to the identity of their next game? And if they didn&rsquo;t, could they please start making it anyway? It sounds really good&hellip;</span>
+                        </div><!--/post-meta-->
+                        <div class="hero-meta">
                             <ul class="home-topics">
                                 <li><a href="#">Best of</a></li>
                                 <li><a href="#" class="more-topics">&plus;15 more topics</a></li>
                             </ul><!--/home-topics-->
                             <div class="topics-splitter"></div>
                             <a href="#" class="comments-link">No comments, yet</a>
-                        </div><!--/post-meta-->
+                        </div><!--/hero-meta-->
+                        <div class="hero-clearer"></div>
                     </div><!--/innerbox-->
                 </div><!--/outerbox-->
             </section><!--/hero-->
-            <section id="support">
+            <div class="marker support"></div>
+            <section id="support" data-sidebar>
                 <div class="outerbox">
                     <img src="img/icon-support-white.svg" width="16" height="16" alt="" class="box-icon">
                     <span class="box-title">Help us keep going</span>
@@ -89,7 +99,8 @@ All other trademarks referred to are trademarks of their respective owners.
                     </div><!--/innerbox-->
                 </div><!--/outerbox-->
             </section><!--/support-->
-            <nav class="social-icons top">
+            <div class="marker social-icons-top"></div>
+            <nav class="social-icons top" id="social-icons-top" data-sidebar>
                 <ul>
                     <li><a href="#" class="bluesky" title="Bluesky"><img src="img/highlight-button.png" alt="" width="60" height="60"></a></li>
                     <li><a href="#" class="discord" title="Discord"><img src="img/highlight-button.png" alt="" width="60" height="60"></a></li>
@@ -101,9 +112,11 @@ All other trademarks referred to are trademarks of their respective owners.
             <section id="home-posts-top">
                 <div class="news">
                     <div class="outerbox">
-                        <img src="img/icon-news-white.svg" width="16" height="16" alt="" class="box-icon">
-                        <a href="#" class="box-title" title="News section">News</a><span class="box-title-splitter">&nbsp;&vert;&nbsp;</span><a href="#" class="box-subtitle" title="Links section">Link</a>
-                        <span class="box-distinction">Updated</span>
+                        <div class="title-bar">
+                            <img src="img/icon-news-white.svg" width="16" height="16" alt="" class="box-icon">
+                            <a href="#" class="box-title" title="News section">News</a><span class="box-title-splitter">&nbsp;&vert;&nbsp;</span><a href="#" class="box-subtitle" title="Links section">Link</a>
+                            <span class="box-distinction">Updated</span>
+                        </div><!--/title-bar-->
                         <div class="innerbox">
                             <a href="#" class="thumbnail"><img src="img/temp/claudethumb-png.avif" width="263" height="148" alt=""></a>
                             <div class="glass-highlight"></div>
@@ -121,9 +134,11 @@ All other trademarks referred to are trademarks of their respective owners.
                 </div>
                 <div class="news">
                     <div class="outerbox">
-                        <img src="img/icon-news-white.svg" width="16" height="16" alt="" class="box-icon">
-                        <a href="#" class="box-title" title="News section">News</a>
-                        <span class="box-slug">Switch 2 launch</span>
+                        <div class="title-bar">
+                            <img src="img/icon-news-white.svg" width="16" height="16" alt="" class="box-icon">
+                            <a href="#" class="box-title" title="News section">News</a>
+                            <span class="box-slug">Switch 2 launch</span>
+                        </div><!--/title-bar-->
                         <div class="innerbox">
                             <a href="#" class="thumbnail"><img src="img/temp/switch2-thumb-png.avif" width="263" height="148" alt=""></a>
                             <div class="glass-highlight"></div>
@@ -141,8 +156,10 @@ All other trademarks referred to are trademarks of their respective owners.
                 </div>
                 <div class="feature">
                     <div class="outerbox">
-                        <img src="img/icon-feature-white.svg" width="16" height="16" alt="" class="box-icon">
-                        <a href="#" class="box-title" title="Features section">Feature</a>
+                        <div class="title-bar">
+                            <img src="img/icon-feature-white.svg" width="16" height="16" alt="" class="box-icon">
+                            <a href="#" class="box-title" title="Features section">Feature</a>
+                        </div><!--/title-bar-->
                         <div class="innerbox">
                             <a href="#" class="thumbnail"><img src="img/temp/bsky30-thumb-png.avif" width="263" height="148" alt=""></a>
                             <div class="glass-highlight"></div>
@@ -163,8 +180,10 @@ All other trademarks referred to are trademarks of their respective owners.
                 </div>
                 <div class="review">
                     <div class="outerbox">
-                        <img src="img/icon-review-white.svg" width="16" height="16" alt="" class="box-icon">
-                        <a href="#" class="box-title" title="Reviews section">Review</a>
+                        <div class="title-bar">
+                            <img src="img/icon-review-white.svg" width="16" height="16" alt="" class="box-icon">
+                            <a href="#" class="box-title" title="Reviews section">Review</a>
+                        </div><!--/title-bar-->
                         <div class="innerbox">
                             <a href="#" class="thumbnail"><img src="img/temp/tcgp-thumb-png.avif" width="263" height="148" alt=""></a>
                             <div class="glass-highlight"></div>
@@ -182,8 +201,10 @@ All other trademarks referred to are trademarks of their respective owners.
                 </div>
                 <div class="news">
                     <div class="outerbox">
-                        <img src="img/icon-news-white.svg" width="16" height="16" alt="" class="box-icon">
-                        <a href="#" class="box-title" title="News section">News</a>
+                        <div class="title-bar">
+                            <img src="img/icon-news-white.svg" width="16" height="16" alt="" class="box-icon">
+                            <a href="#" class="box-title" title="News section">News</a>
+                        </div><!--/title-bar-->
                         <div class="innerbox">
                             <a href="#" class="thumbnail"><img src="img/temp/sleep1-thumb.png" width="263" height="148" alt=""></a>
                             <div class="glass-highlight"></div>
@@ -201,8 +222,10 @@ All other trademarks referred to are trademarks of their respective owners.
                 </div>
                 <div class="news">
                     <div class="outerbox">
-                        <img src="img/icon-news-white.svg" width="16" height="16" alt="" class="box-icon">
-                        <a href="#" class="box-title" title="News section">News</a>
+                        <div class="title-bar">
+                            <img src="img/icon-news-white.svg" width="16" height="16" alt="" class="box-icon">
+                            <a href="#" class="box-title" title="News section">News</a>
+                        </div><!--/title-bar-->
                         <div class="innerbox">
                             <a href="#" class="thumbnail"><img src="img/temp/lumiose-thumb.png" width="263" height="148" alt=""></a>
                             <div class="glass-highlight"></div>
@@ -220,7 +243,8 @@ All other trademarks referred to are trademarks of their respective owners.
                     </div><!--/outerbox-->
                 </div>
             </section><!--/home-posts-top-->
-            <section id="poll">
+            <div class="marker poll"></div>
+            <section id="poll" data-sidebar>
                 <div class="outerbox">
                     <img src="img/icon-poll-white.svg" width="16" height="16" alt="" class="box-icon">
                     <span class="box-title">This week&rsquo;s poll</span>
@@ -241,7 +265,8 @@ All other trademarks referred to are trademarks of their respective owners.
                     </div><!--/innerbox-->
                 </div><!--/outerbox-->
             </section><!--/poll-->
-            <section id="ace-attorney">
+            <div class="marker ace-attorney"></div>
+            <section id="ace-attorney" data-sidebar>
                 <div class="outerbox">
                     <img src="img/icon-aceattorney-white.svg" width="16" height="16" alt="" class="box-icon">
                     <span class="box-title">This is&hellip; objectionable</span>
@@ -258,8 +283,10 @@ All other trademarks referred to are trademarks of their respective owners.
             <section id="home-posts-bottom">
                 <div class="news">
                     <div class="outerbox">
-                        <img src="img/icon-news-white.svg" width="16" height="16" alt="" class="box-icon">
-                        <a href="#" class="box-title" title="News section">News</a>
+                        <div class="title-bar">
+                            <img src="img/icon-news-white.svg" width="16" height="16" alt="" class="box-icon">
+                            <a href="#" class="box-title" title="News section">News</a>
+                        </div><!--/title-bar-->
                         <div class="innerbox">
                             <a href="#" class="thumbnail"><img src="img/temp/e3-funeral-jpeg-jpg.webp" width="263" height="148" alt=""></a>
                             <div class="glass-highlight"></div>
@@ -276,8 +303,10 @@ All other trademarks referred to are trademarks of their respective owners.
                 </div>
                 <div class="news">
                     <div class="outerbox">
-                        <img src="img/icon-news-white.svg" width="16" height="16" alt="" class="box-icon">
-                        <a href="#" class="box-title" title="News section">News</a>
+                        <div class="title-bar">
+                            <img src="img/icon-news-white.svg" width="16" height="16" alt="" class="box-icon">
+                            <a href="#" class="box-title" title="News section">News</a>
+                        </div><!--/title-bar-->
                         <div class="innerbox">
                             <a href="#" class="thumbnail"><img src="img/temp/holland-thumb-jpg.webp" width="263" height="148" alt=""></a>
                             <div class="glass-highlight"></div>
@@ -291,8 +320,10 @@ All other trademarks referred to are trademarks of their respective owners.
                 </div>
                 <div class="news">
                     <div class="outerbox">
-                        <img src="img/icon-news-white.svg" width="16" height="16" alt="" class="box-icon">
-                        <a href="#" class="box-title" title="News section">News</a>
+                        <div class="title-bar">
+                            <img src="img/icon-news-white.svg" width="16" height="16" alt="" class="box-icon">
+                            <a href="#" class="box-title" title="News section">News</a>
+                        </div><!--/title-bar-->
                         <div class="innerbox">
                             <a href="#" class="thumbnail"><img src="img/temp/kevinthumb.png" width="263" height="148" alt=""></a>
                             <div class="glass-highlight"></div>
@@ -310,8 +341,10 @@ All other trademarks referred to are trademarks of their respective owners.
                 </div>
                 <div class="news">
                     <div class="outerbox">
-                        <img src="img/icon-news-white.svg" width="16" height="16" alt="" class="box-icon">
-                        <a href="#" class="box-title" title="News section">News</a>
+                        <div class="title-bar">
+                            <img src="img/icon-news-white.svg" width="16" height="16" alt="" class="box-icon">
+                            <a href="#" class="box-title" title="News section">News</a>
+                        </div><!--/title-bar-->
                         <div class="innerbox">
                             <a href="#" class="thumbnail"><img src="img/temp/trump-asus-gif.gif" width="263" height="148" alt=""></a>
                             <div class="glass-highlight"></div>
@@ -330,8 +363,10 @@ All other trademarks referred to are trademarks of their respective owners.
                 </div>
                 <div class="news">
                     <div class="outerbox">
-                        <img src="img/icon-news-white.svg" width="16" height="16" alt="" class="box-icon">
-                        <a href="#" class="box-title" title="News section">News</a>
+                        <div class="title-bar">
+                            <img src="img/icon-news-white.svg" width="16" height="16" alt="" class="box-icon">
+                            <a href="#" class="box-title" title="News section">News</a>
+                        </div><!--/title-bar-->
                         <div class="innerbox">
                             <a href="#" class="thumbnail"><img src="img/temp/polly-thumb-jpg.webp" width="263" height="148" alt=""></a>
                             <div class="glass-highlight"></div>
@@ -349,8 +384,10 @@ All other trademarks referred to are trademarks of their respective owners.
                 </div>
                 <div class="news">
                     <div class="outerbox">
-                        <img src="img/icon-news-white.svg" width="16" height="16" alt="" class="box-icon">
-                        <a href="#" class="box-title" title="News section">News</a><span class="box-title-splitter">&nbsp;&vert;&nbsp;</span><a href="#" class="box-subtitle" title="Rumours section">Rumour</a>
+                        <div class="title-bar">
+                            <img src="img/icon-news-white.svg" width="16" height="16" alt="" class="box-icon">
+                            <a href="#" class="box-title" title="News section">News</a><span class="box-title-splitter">&nbsp;&vert;&nbsp;</span><a href="#" class="box-subtitle" title="Rumours section">Rumour</a>
+                        </div><!--/title-bar-->
                         <div class="innerbox">
                             <a href="#" class="thumbnail"><img src="img/temp/p6-thumb-jpg.webp" width="263" height="148" alt=""></a>
                             <div class="glass-highlight"></div>
@@ -382,7 +419,8 @@ All other trademarks referred to are trademarks of their respective owners.
                 </div><!--/outerbox-->
             </nav><!--/want-more-->
         </main>
-        <nav class="social-icons bottom">
+        <div class="marker social-icons-bottom"></div>
+        <nav class="social-icons bottom" id="social-icons-bottom" data-footer>
             <ul>
                 <li class="menu-pop"><a href="#" class="menu-pop" title="Menu"><img src="img/highlight-button.png" alt="" width="60" height="60"></a></li>
                 <li class="menu-top"><a href="#" class="menu-top" title="Menu"><img src="img/highlight-button.png" alt="" width="60" height="60"></a></li>
@@ -396,7 +434,7 @@ All other trademarks referred to are trademarks of their respective owners.
         <footer>
             <div class="outerbox">
                 <span class="box-title">Copyright &copy; 2016&ndash;2025&nbsp;<br>Critical Chicken. All rights reserved.</span>
-                <div class="innerbox">
+                <div class="innerbox" id="footer-innerbox">
                     <span class="trademarks-top"><span class="red">Critical Chicken</span>, the Critical Chicken logo and wordmark, and <span class="orange">&num;</span><span class="red">ForTheGaymers</span> are trademarks of Critical Chicken.</span>
                     <span class="trademarks-bottom">All other trademarks referred to are trademarks of their respective owners.</span>
                     <a href="#" class="not-by-ai"><img src="img/notbyai-white.svg" width="131" height="42" alt="Written by Humans, Not by AI"></a>
