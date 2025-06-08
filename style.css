@@ -20,7 +20,6 @@ All other trademarks referred to are trademarks of their respective owners.
 
 /* Animations */
 
-/* The animation code */
 @keyframes alert-title {
     0%      {opacity: 1;}
     60%     {opacity: 1;}
@@ -28,6 +27,26 @@ All other trademarks referred to are trademarks of their respective owners.
     80%     {opacity: 1;}
     90%     {opacity: 0;}
     100%    {opacity: 1;}
+}
+
+@keyframes modal-blur-background {
+    0%      {backdrop-filter: blur(0px); background-color: rgba(237, 236, 236, 0);}
+    100%    {backdrop-filter: blur(10px); background-color: rgba(237, 236, 236, 0.76);}
+}
+
+@keyframes modal-blur-background-closing {
+    0%      {backdrop-filter: blur(10px); background-color: rgba(237, 236, 236, 0.76);}
+    100%    {backdrop-filter: blur(0px); background-color: rgba(237, 236, 236, 0);}
+}
+
+@keyframes modal-fade-in {
+    0%      {opacity: 0; top: 50px;}
+    100%    {opacity: 1; top: 30px;}
+}
+
+@keyframes modal-fade-out {
+    0%      {opacity: 1; top: 30px;}
+    100%    {opacity: 0; top: 50px;}
 }
 
 /* Base styles */
@@ -824,7 +843,7 @@ footer a.not-by-ai:hover img {
     opacity: 0;
 }
 
-footer a.mode-switch {
+a.mode-switch {
     display: block;
     width: 52px;
     height: 28px;
@@ -838,7 +857,7 @@ footer a.mode-switch {
     background-repeat: no-repeat;
 }
 
-footer a.mode-switch span {
+a.mode-switch span {
     width: 24px;
     height: 24px;
     border-radius: 12px;
@@ -854,7 +873,7 @@ footer a.mode-switch span {
     transition: all 0.12s ease-in-out;
 }
 
-footer a.mode-switch:hover span {
+a.mode-switch:hover span {
     left: 2px;
     background-position: 28px center;
 }
@@ -1089,8 +1108,26 @@ section#poll input.vote-now:hover {
     text-decoration: none;
 }
 
-nav#menu-modal {
+a.modal-close,
+nav#menu-modal,
+nav#menu-modal div.modal-inner {
     display: none;
+    pointer-events: none;
+}
+
+a.modal-close.enabled {
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    pointer-events: all;
+    z-index: 99997;
+}
+
+nav#menu-modal.enabled {
+    display: block;
     position: fixed;
     width: 100%;
     height: 100%;
@@ -1099,26 +1136,49 @@ nav#menu-modal {
     left: 0;
     margin: 0;
     padding: 0;
-    z-index: 99999;
+    z-index: 99998;
     backdrop-filter: blur(10px);
     overflow-y: scroll;
-    pointer-events: all;
+    /* Ensure the hover icon is preloaded */
+    background-image: url(img/icon-close-black.svg);
+    background-size: 1px 1px;
+    background-position: 0 0;
+    background-repeat: no-repeat;
+    animation: modal-blur-background 0.48s ease-in-out;
 }
 
-nav#menu-modal div.modal-inner {
+nav#menu-modal.closing {
+    pointer-events: none;
+    background-color: rgba(237, 236, 236, 0);
+    backdrop-filter: blur(0px);
+    animation: modal-blur-background-closing 0.24s ease-in-out;
+}
+
+nav#menu-modal.enabled div.modal-inner {
     display: block;
-    width: 220px;
+    width: calc(100% - 100px);
+    max-width: 435px;
     padding: 20px;
     position: relative;
-    top: 60px;
-    left: calc(50% - 130px);
-    margin-bottom: 120px;
+    top: 30px;
+    margin: 0 auto 120px auto;
     background-color: white;
     border-radius: 24px;
     border-bottom: 1px black solid;
     box-shadow: 0 1px 20px rgba(0, 0, 0, 0.32);
-    font-family: "Sofia Sans Condensed", sans-serif;
+    font-family: "Sofia Sans", sans-serif;
     font-style: normal;
+    cursor: default;
+    animation: modal-fade-in 0.48s ease-in-out;
+    pointer-events: all;
+    z-index: 99999;
+}
+
+nav#menu-modal.closing div.modal-inner {
+    pointer-events: none;
+    top: 50px;
+    opacity: 0;
+    animation: modal-fade-out 0.24s ease-in-out;
 }
 
 nav#menu-modal span.modal-title {
@@ -1129,12 +1189,12 @@ nav#menu-modal span.modal-title {
     color: black;
     text-transform: uppercase;
     margin-left: 10px;
-    margin-top: 10px;
+    margin-top: 6px;
 }
 
 nav#menu-modal a.modal-button {
-    height: 23px;
-    padding: 5px 10px 0 31px;
+    height: 21px;
+    padding: 7px 10px 0 31px;
     background-color: black;
     border-radius: 12px;
     color: white;
@@ -1146,7 +1206,270 @@ nav#menu-modal a.modal-button {
     background-position: 10px center;
     background-repeat: no-repeat;
     float: right;
-    margin-top: -23px;
+    margin-top: -25px;
+}
+
+nav#menu-modal a.modal-button:hover {
+    background-color: white;
+    color: black;
+    background-image: url(img/icon-close-black.svg);
+    box-shadow: inset 0 0 0 1px black;
+}
+
+nav#menu-modal div.search-border,
+nav#search-modal div.search-border {
+    display: block;
+    width: calc(100% - 4px);
+    height: 26px;
+    border: 2px black solid;
+    border-radius: 15px;
+    margin-top: 14px;
+    /* Ensure the hover icon is preloaded */
+    background-image: url(img/icon-search-black.svg);
+    background-size: 1px 1px;
+    background-position: 0 0;
+    background-repeat: no-repeat;
+}
+
+nav#menu-modal input#search,
+nav#search-modal input#search {
+    display: block;
+    width: calc(100% - 32px);
+    height: 26px;
+    padding: 0 0 0 8px;
+    border-radius: 13px 0 0 13px;
+    border: 0;
+    -webkit-appearance: none;
+	-moz-appearance: none;
+	-o-appearance: none;
+	appearance: none;
+    outline: none !important;
+    font-family: "Sofia Sans", sans-serif;
+    font-style: normal;
+    font-size: 15px;
+    line-height: 20px;
+    font-weight: 600;
+    background-color: white;
+    color: black;
+}
+
+nav#menu-modal input.search-button,
+nav#search-modal input.search-button {
+    border: 0;
+    -webkit-appearance: none;
+	-moz-appearance: none;
+	-o-appearance: none;
+	appearance: none;
+    outline: none !important;
+    width: 22px;
+    height: 22px;
+    display: block;
+    font-size: 0;
+    line-height: 0;
+    border-radius: 11px;
+    background-color: black;
+    float: right;
+    position: relative;
+    top: -24px;
+    left: -2px;
+    background-image: url(img/icon-search-white.svg);
+    background-size: 14px 14px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    transition: all 0.12s ease-in-out;
+}
+
+nav#menu-modal input.search-button:hover,
+nav#search-modal input.search-button:hover {
+    background-color: white;
+    background-image: url(img/icon-search-black.svg);
+    box-shadow: inset 0 0 0 1px black;
+}
+
+nav#menu-modal ul {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    column-gap: 15px;
+    row-gap: 10px;
+    justify-content: left;
+    width: 210px;
+    position: relative;
+    left: calc(50% - 105px);
+    margin-top: 20px;
+}
+
+nav#menu-modal ul li {
+    display: block;
+    width: 60px;
+    height: 80px;
+}
+
+nav#menu-modal ul li:after {
+    content: "???";
+    display: block;
+    width: 60px;
+    height: 10px;
+    margin-top: 4px;
+    pointer-events: none;
+    text-align: center;
+    font-size: 15px;
+    line-height: 20px;
+    color: black;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-family: "Sofia Sans Condensed", sans-serif;
+}
+
+nav#menu-modal ul li a {
+    border-radius: 18px;
+    box-shadow: 0 1px 0 black;
+    display: block;
+    width: 60px;
+    height: 60px;
+    background-size: 60px 60px;
+    background-position: 0 0;
+    background-repeat: no-repeat;
+    background-color: black;
+}
+
+nav#menu-modal ul li a img {
+    border-radius: 18px;
+    opacity: 0.64;
+    transition: all 0.12s ease-in-out;
+}
+
+nav#menu-modal ul li a img:hover {
+    opacity: 1;
+}
+
+nav#menu-modal ul li.home a {
+    background-image: url(img/button-home-black.png);
+}
+nav#menu-modal ul li.home:after {
+    content: "Home";
+}
+nav#menu-modal ul li.latest a {
+    background-color: #1564dc;
+    background-image: url(img/button-latest.png);
+}
+nav#menu-modal ul li.latest:after {
+    content: "Latest";
+}
+nav#menu-modal ul li.news a {
+    background-color: #d20202;
+    background-image: url(img/button-news.png);
+}
+nav#menu-modal ul li.news:after {
+    content: "News";
+}
+nav#menu-modal ul li.reviews a {
+    background-color: #f47614;
+    background-image: url(img/button-reviews.png);
+}
+nav#menu-modal ul li.reviews:after {
+    content: "Reviews";
+}
+nav#menu-modal ul li.features a {
+    background-color: #1564dc;
+    background-image: url(img/button-features.png);
+}
+nav#menu-modal ul li.features:after {
+    content: "Features";
+}
+nav#menu-modal ul li.explore a {
+    background-image: url(img/button-explore-black.png);
+}
+nav#menu-modal ul li.explore:after {
+    content: "Explore";
+}
+nav#menu-modal ul li.about a {
+    background-image: url(img/button-about-black.png);
+}
+nav#menu-modal ul li.about:after {
+    content: "About";
+}
+nav#menu-modal ul li.contact a {
+    background-image: url(img/button-contact-black.png);
+}
+nav#menu-modal ul li.contact:after {
+    content: "Contact";
+}
+nav#menu-modal ul li.bluesky a {
+    background-color: #0085ff;
+    background-image: url(img/button-bluesky.png);
+}
+nav#menu-modal ul li.bluesky:after {
+    content: "Bluesky";
+}
+nav#menu-modal ul li.discord a {
+    background-color: #5865f2;
+    background-image: url(img/button-discord.png);
+}
+nav#menu-modal ul li.discord:after {
+    content: "Discord";
+}
+nav#menu-modal ul li.ko-fi a {
+    background-color: #72a4f2;
+    background-image: url(img/button-kofi.png);
+}
+nav#menu-modal ul li.ko-fi:after {
+    content: "Ko-fi";
+}
+nav#menu-modal ul li.tumblr a {
+    background-color: #001935;
+    background-image: url(img/button-tumblr.png);
+}
+nav#menu-modal ul li.tumblr:after {
+    content: "Tumblr";
+}
+
+nav#menu-modal a.mode-switch {
+    margin-top: 21px;
+    margin-right: 10px;
+}
+
+nav#menu-modal a.modal-link {
+    margin-top: 28px;
+    margin-bottom: 16px;
+    margin-left: 10px;
+    display: inline-block;
+    font-weight: 800;
+    color: black;
+    text-decoration-color: rgba(0, 0, 0, 1);
+}
+
+nav#menu-modal a.modal-link:hover {
+    text-decoration-color: rgba(0, 0, 0, 0);
+}
+
+nav#menu-modal a.modal-link:before {
+    width: 16px;
+    height: 16px;
+    display: block;
+    background-image: url(img/icon-link-black.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+    content: "";
+    float: left;
+    margin-top: -1px;
+    margin-right: 5px;
+}
+
+/* Keep modal icons in an even grid */
+@media (min-width: 385px) {
+    nav#menu-modal ul {
+        width: 285px;
+        left: calc(50% - 142.5px);
+    }
+}
+@media (min-width: 535px) {
+    nav#menu-modal ul {
+        width: 435px;
+        left: calc(50% - 217.5px);
+    }
 }
 
 @media (min-width: 480px) and (max-width: 759px) {

@@ -25,27 +25,30 @@ All other trademarks referred to are trademarks of their respective owners.
         <span><b>We use cookies to save your preferences.</b> But we don&rsquo;t use them for ads or to collect your data.</span>
         <a href="#" class="cookie-button">Got it</a><a href="#" class="cookie-link">Privacy policy</a>
     </div><!--/cookie-notice-->
+    <a href="javascript:void(0);" onclick="closeMenuModal();" class="modal-close"></a>
     <nav id="menu-modal">
         <div class="modal-inner">
             <span class="modal-title">Main menu</span>
-            <a href="#" class="modal-button">Close</a>
-            <form>
-                <input type="search" name="search" id="search" placeholder="Search&hellip;">
-                <input type="submit" value="Search" class="search-button">
-            </form>
+            <a href="javascript:void(0);" onclick="closeMenuModal();" class="modal-button">Close</a>
+            <div class="search-border">
+                <form>
+                    <input type="text" name="search" id="search" placeholder="Search&hellip;">
+                    <input type="submit" value="Search" class="search-button">
+                </form>
+            </div><!--/search-border-->
             <ul>
-                <li><a href="#" class="home"><img src="img/highlight-button.png" width="45" height="45" alt=""></a></li>
-                <li><a href="#" class="latest"><img src="img/highlight-button.png" width="45" height="45" alt=""></a></li>
-                <li><a href="#" class="news"><img src="img/highlight-button.png" width="45" height="45" alt=""></a></li>
-                <li><a href="#" class="reviews"><img src="img/highlight-button.png" width="45" height="45" alt=""></a></li>
-                <li><a href="#" class="features"><img src="img/highlight-button.png" width="45" height="45" alt=""></a></li>
-                <li><a href="#" class="explore"><img src="img/highlight-button.png" width="45" height="45" alt=""></a></li>
-                <li><a href="#" class="about"><img src="img/highlight-button.png" width="45" height="45" alt=""></a></li>
-                <li><a href="#" class="contact"><img src="img/highlight-button.png" width="45" height="45" alt=""></a></li>
-                <li><a href="#" class="bluesky"><img src="img/highlight-button.png" width="45" height="45" alt=""></a></li>
-                <li><a href="#" class="discord"><img src="img/highlight-button.png" width="45" height="45" alt=""></a></li>
-                <li><a href="#" class="ko-fi"><img src="img/highlight-button.png" width="45" height="45" alt=""></a></li>
-                <li><a href="#" class="tumblr"><img src="img/highlight-button.png" width="45" height="45" alt=""></a></li>
+                <li class="home"><a href="#"><img src="img/highlight-button.png" width="60" height="60" alt="Home"></a></li>
+                <li class="latest"><a href="#"><img src="img/highlight-button.png" width="60" height="60" alt="Latest"></a></li>
+                <li class="news"><a href="#"><img src="img/highlight-button.png" width="60" height="60" alt="News"></a></li>
+                <li class="reviews"><a href="#"><img src="img/highlight-button.png" width="60" height="60" alt="Reviews"></a></li>
+                <li class="features"><a href="#"><img src="img/highlight-button.png" width="60" height="60" alt="Features"></a></li>
+                <li class="explore"><a href="#"><img src="img/highlight-button.png" width="60" height="60" alt="Explore"></a></li>
+                <li class="about"><a href="#"><img src="img/highlight-button.png" width="60" height="60" alt="About"></a></li>
+                <li class="contact"><a href="#"><img src="img/highlight-button.png" width="60" height="60" alt="Contact"></a></li>
+                <li class="bluesky"><a href="#"><img src="img/highlight-button.png" width="60" height="60" alt="Bluesky"></a></li>
+                <li class="discord"><a href="#"><img src="img/highlight-button.png" width="60" height="60" alt="Discord"></a></li>
+                <li class="ko-fi"><a href="#"><img src="img/highlight-button.png" width="60" height="60" alt="Ko-fi"></a></li>
+                <li class="tumblr"><a href="#"><img src="img/highlight-button.png" width="60" height="60" alt="Tumblr"></a></li>
             </ul>
             <a href="#" class="modal-link">Privacy policy</a>
             <a href="#" class="mode-switch" title="Switch to dark mode"><span></span></a>
@@ -53,13 +56,13 @@ All other trademarks referred to are trademarks of their respective owners.
     </nav><!--/menu-modal-->
     <nav id="search-modal">
     </nav><!--/search-modal-->
-    <a href="#" class="fab" title="Menu"><img src="img/highlight-button.png" alt="" width="60" height="60"></a>
+    <a href="javascript:void(0);" onclick="openMenuModal();" class="fab" title="Menu"><img src="img/highlight-button.png" alt="" width="60" height="60"></a>
     <div id="wrapper">
         <header>
             <a href="index.html" class="home-link" title="Home"><img src="img/logo.svg" alt="Critical Chicken - &num;ForTheGaymers" width="280" height="122"></a>
             <nav id="top-menu">
                 <ul>
-                    <li class="menu"><a href="#" class="menu" title="Menu"><img src="img/highlight-button.png" width="60" height="60" alt=""></a></li>
+                    <li class="menu"><a href="javascript:void(0);" onclick="openMenuModal();" class="menu" title="Menu"><img src="img/highlight-button.png" width="60" height="60" alt=""></a></li>
                     <li class="latest"><a href="#" class="latest" title="Latest"><img src="img/highlight-button.png" width="60" height="60" alt=""></a></li>
                     <li class="news"><a href="#" class="news" title="News"><img src="img/highlight-button.png" width="60" height="60" alt=""></a></li>
                     <li class="reviews"><a href="#" class="reviews" title="Reviews"><img src="img/highlight-button.png" width="60" height="60" alt=""></a></li>
@@ -450,7 +453,7 @@ All other trademarks referred to are trademarks of their respective owners.
         <div class="marker social-icons-bottom"></div>
         <nav class="social-icons bottom" id="social-icons-bottom" data-footer>
             <ul>
-                <li class="menu-pop"><a href="#" class="menu-pop" title="Menu"><img src="img/highlight-button.png" alt="" width="60" height="60"></a></li>
+                <li class="menu-pop"><a href="javascript:void(0);" onclick="openMenuModal();" class="menu-pop" title="Menu"><img src="img/highlight-button.png" alt="" width="60" height="60"></a></li>
                 <li class="menu-top"><a href="#" class="menu-top" title="Menu"><img src="img/highlight-button.png" alt="" width="60" height="60"></a></li>
                 <li class="search"><a href="#" class="search" title="Search"><img src="img/highlight-button.png" alt="" width="60" height="60"></a></li>
                 <li><a href="#" class="bluesky" title="Bluesky"><img src="img/highlight-button.png" alt="" width="60" height="60"></a></li>
@@ -474,10 +477,10 @@ All other trademarks referred to are trademarks of their respective owners.
         </footer>
         <div id="tri">
             <a href="#" title="Tri theme on GitHub"><img src="img/tri-logo-bw.svg" width="38" height="25" alt="Tri"></a>
-            <span>This page was booed off stage at an open-mic night in 0.783 seconds.</span>
+            <span class="load_time">Still loading&hellip;</span>
         </div><!--/tri-->
         <div id="button-area">
-            <a href="#" class="back-to-top" title="Back to top"><img src="img/highlight-button.png" alt="" width="60" height="60"></a>
+            <a href="javascript:void(0);" class="back-to-top" title="Back to top"><img src="img/highlight-button.png" alt="" width="60" height="60"></a>
         </div><!--/button-area-->
     </div><!--/wrapper-->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
