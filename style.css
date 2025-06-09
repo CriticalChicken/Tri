@@ -1458,6 +1458,14 @@ nav#menu-modal a.modal-link:before {
     margin-right: 5px;
 }
 
+iframe {
+    width: calc(100% - 4px);
+    border: 2px black solid;
+    box-shadow: 0 1px 0 black;
+    border-radius: 12px;
+    margin-bottom: -3px;
+}
+
 /* Keep modal icons in an even grid */
 @media (min-width: 385px) {
     nav#menu-modal ul {
@@ -1834,6 +1842,11 @@ nav#menu-modal a.modal-link:before {
 
     div#button-area {
         display: none;
+    }
+
+    iframe {
+        margin-top: -10px;
+        margin-bottom: 27px;
     }
 }
 
@@ -2308,5 +2321,10 @@ nav#menu-modal a.modal-link:before {
 
     div#button-area {
         display: none;
+    }
+    
+    iframe {
+        margin-top: -10px;
+        margin-bottom: 27px;
     }
 }
