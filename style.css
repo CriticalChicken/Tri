@@ -1466,6 +1466,15 @@ iframe {
     margin-bottom: -3px;
 }
 
+#webring div.innerbox span {
+    display: block;
+    margin-top: 5px;
+}
+
+#webring div.webring-splitter {
+    width: 100%;
+}
+
 /* Keep modal icons in an even grid */
 @media (min-width: 385px) {
     nav#menu-modal ul {
