@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   width="768.37079pt"
+   height="768.36273pt"
+   version="1.1"
+   viewBox="0 0 768.37079 768.36273"
+   id="svg1"
+   sodipodi:docname="icon-search-white.svg"
+   inkscape:version="1.4-beta3 (01c8a1c, 2024-08-28, custom)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs1" />
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#717070"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="pt"
+     inkscape:zoom="0.509375"
+     inkscape:cx="514.35583"
+     inkscape:cy="513.37423"
+     inkscape:window-width="1920"
+     inkscape:window-height="1017"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg1" />
+  <path
+     id="path1"
+     d="m 327.15833,0.01542694 c -5.08651,-0.0495 -10.18504,0.0197 -15.29004,0.21094 C 230.19229,3.2888669 152.68857,37.106217 94.898572,94.899217 37.108572,152.69222 3.290182,230.18895 0.227182,311.86895 c -3.0586,81.676 24.85906,161.4902 78.16406,223.4502 53.308998,61.957 128.059298,101.47964 209.279298,110.63964 81.215,9.1641 162.88943,-12.70314 228.66943,-61.22314 L 686.3805,754.29571 c 12.133,12.133 29.8166,16.8702 46.3916,12.4292 16.574,-4.4414 29.51994,-17.38694 33.96094,-33.96094 4.4414,-16.574 -0.29754,-34.25714 -12.43066,-46.39014 L 584.73499,516.34063 c 48.52,-65.773 70.38715,-147.44943 61.22315,-228.66943 C 636.79014,206.4522 597.27049,131.70043 535.31849,78.390427 477.2338,28.416997 403.45599,0.75726694 327.15833,0.01542694 Z M 324.33704,96.339167 c 60.47,0 118.45924,24.019763 161.21924,66.780763 42.762,42.758 66.78076,100.7507 66.78076,161.2207 0,60.47 -24.01976,118.4607 -66.78076,161.2207 -42.758,42.762 -100.74924,66.78076 -161.21924,66.78076 -60.47,0 -118.4607,-24.01976 -161.2207,-66.78076 -42.762,-42.758 -66.780758,-100.7507 -66.780758,-161.2207 0,-60.469 24.019758,-118.4607 66.780758,-161.2207 42.758,-42.762 100.7507,-66.780763 161.2207,-66.780763 z"
+     style="fill:#ffffff" />
+</svg>
