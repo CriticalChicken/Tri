@@ -555,7 +555,7 @@ function tri_alert_editor_title_bar_text() {
 ?>
     <p><b>Text:</b></p>
     <input type="text" name="tri_alert_title_bar_text" id="tri_alert_title_bar_text" value="<?php echo get_option('tri_alert_title_bar_text'); ?>">
-    <p class="explanatory"><span class="important">Important:</span> Write in sentence case (even though the text will be displayed in uppercase).</p>
+    <p class="explanatory"><span class="important">Important:</span> Write in sentence case (the text will be displayed in uppercase).</p>
 
 <?php
 }
@@ -586,10 +586,9 @@ function tri_alert_editor_title_bar_icon() {
 
 function tri_alert_editor_title_bar_slug() {
 ?>
-    <p><b>Slug:</b> <span class="optional">(Leave blank to disable)</span></p>
+    <p><b>slugTag:</b> <span class="optional">(Leave blank to disable)</span></p>
     <input type="text" name="tri_alert_title_bar_slug" id="tri_alert_title_bar_slug" value="<?php echo get_option('tri_alert_title_bar_slug'); ?>">
-    <p class="explanatory"><span class="important">Important:</span> Write in sentence case (even though the text will be displayed in uppercase).</p>
-    <p><a href="https://en.wikipedia.org/wiki/Slug_(publishing)" target="_blank" rel="external nofollow help"><b>What&rsquo;s a slug? &raquo;</b></a></p>
+    <p class="explanatory"><span class="important">Important:</span> Write in sentence case (the text will be displayed in uppercase).</p>
 
 <?php
 }
@@ -598,7 +597,7 @@ function tri_alert_editor_distinction_text() {
 ?>
     <p><b>Text: <span class="optional">(Leave blank to disable)</span></b></p>
     <input type="text" name="tri_alert_distinction_text" id="tri_alert_distinction_text" value="<?php echo get_option('tri_alert_distinction_text'); ?>">
-    <p class="explanatory"><span class="important">Important:</span> Write in sentence case (even though the text will be displayed in uppercase).</p>
+    <p class="explanatory"><span class="important">Important:</span> Write in sentence case (the text will be displayed in uppercase).</p>
 
 <?php
 }

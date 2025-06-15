@@ -12,7 +12,7 @@ jQuery(document).ready(function() {
         if (!jQuery(this).text().trim().length) {
             jQuery(this).addClass('empty');
         }
-        if (jQuery('.distinction-icon').attr('src') == ('http://localhost/Tri/wp-content/themes/Tri/img/icon-none-' + scheme + '.svg')) {
+        if (jQuery('.distinction-icon').attr('src') == ('https://www.criticalchicken.com/wp-content/themes/Tri/img/icon-none-' + scheme + '.svg')) {
             jQuery('.distinction-icon').addClass('empty');
         }
     });
@@ -50,7 +50,7 @@ jQuery(document).ready(function() {
         var value = jQuery(this).val();
         var distinctionIcon = jQuery('#tri_alert_distinction_icon').val();
         jQuery('section#alert').removeClass('red').removeClass('orange').removeClass('blue').addClass(value);
-        jQuery('.distinction-icon').attr('src','http://localhost/Tri/wp-content/themes/Tri/img/icon-' + distinctionIcon + '-' + value + '.svg');
+        jQuery('.distinction-icon').attr('src','https://www.criticalchicken.com/wp-content/themes/Tri/img/icon-' + distinctionIcon + '-' + value + '.svg');
     });
 
     //Use a yellow background for the body text?
@@ -83,7 +83,7 @@ jQuery(document).ready(function() {
     // Title bar icon
     jQuery('#tri_alert_title_bar_icon').on('mouseup', function() {
         var value = jQuery(this).val();
-        jQuery('.content-box-icon').attr('src','http://localhost/Tri/wp-content/themes/Tri/img/icon-' + value + '-white.svg');
+        jQuery('.content-box-icon').attr('src','https://www.criticalchicken.com/wp-content/themes/Tri/img/icon-' + value + '-white.svg');
     });
 
     // Title bar slug
@@ -108,7 +108,7 @@ jQuery(document).ready(function() {
             jQuery('.empty-watch-distinction').removeClass('empty');
             jQuery('.content-box-content').removeClass('no-distinction');
         }
-        if (jQuery('.distinction-icon').attr('src') == ('http://localhost/Tri/wp-content/themes/Tri/img/icon-none-' + scheme + '.svg')) {
+        if (jQuery('.distinction-icon').attr('src') == ('https://www.criticalchicken.com/wp-content/themes/Tri/img/icon-none-' + scheme + '.svg')) {
             jQuery('.distinction-icon').addClass('empty');
         } else {
             jQuery('.distinction-icon').removeClass('empty');
@@ -119,8 +119,8 @@ jQuery(document).ready(function() {
     jQuery('#tri_alert_distinction_icon').on('mouseup', function() {
         var value = jQuery(this).val();
         var scheme = jQuery('#tri_alert_colour').val();
-        jQuery('.distinction-icon').attr('src','http://localhost/Tri/wp-content/themes/Tri/img/icon-' + value + '-' + scheme + '.svg');
-        if (jQuery('.distinction-icon').attr('src') == ('http://localhost/Tri/wp-content/themes/Tri/img/icon-none-' + scheme + '.svg')) {
+        jQuery('.distinction-icon').attr('src','https://www.criticalchicken.com/wp-content/themes/Tri/img/icon-' + value + '-' + scheme + '.svg');
+        if (jQuery('.distinction-icon').attr('src') == ('https://www.criticalchicken.com/wp-content/themes/Tri/img/icon-none-' + scheme + '.svg')) {
             jQuery('.distinction-icon').addClass('empty');
         } else {
             jQuery('.distinction-icon').removeClass('empty');

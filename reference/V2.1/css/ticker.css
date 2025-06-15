@@ -1,0 +1,86 @@
+/*
+Copyright (C) Critical Chicken. All rights reserved.
+Critical Chicken, the Critical Chicken logo and wordmark, and #ForTheGaymers are trademarks of Critical Chicken.
+All other trademarks referred to are trademarks of their respective owners.
+*/
+
+nav.top ul#nav_iconic {
+    top: 512px !important;
+}
+
+#ticker_inner {
+    background-color: var(--yellow);
+    height: 64px;
+    display: block;
+    box-shadow: 0 2px var(--black);
+    margin-top: 16px;
+    margin-bottom: 16px;
+}
+
+#ticker_top-layer {
+    position: relative;
+    display: block;
+    z-index: 100;
+    width: calc(100% - 32px);
+    height: 64px;
+    left: 32px;
+}
+
+#ticker_bottom-layer {
+    position: relative;
+    display: block;
+    z-index: 50;
+    width: calc(100% - 42px);
+    height: 64px;
+    left: 42px;
+    top: -64px;
+}
+
+#ticker_top-layer a {
+    position: absolute;
+    display: block;
+    z-index: 200;
+    width: calc(100% + 32px);
+    height: 64px;
+    background-color: var(--yellow);
+    opacity: 0;
+    transition: opacity 0.12s ease-out;
+    border-radius: 16px;
+    left: -32px;
+}
+
+#ticker_top-layer a:hover {
+    opacity: 0.32;
+}
+
+#ticker-contents {
+	font-family: "Noto Sans Display", sans-serif !important;
+	font-size: 22px !important;
+	line-height: 63px !important;
+	font-weight: 500 !important;
+	color: var(--black) !important;
+    position: relative !important;
+    top: 0.4px !important;
+}
+
+#ticker-contents b,
+#ticker-contents strong {
+	font-weight: 700 !important;
+}
+
+#ticker-contents li {
+    padding: 0 !important;
+    margin: 0 32px 0 0 !important;
+}
+
+#ticker-contents li:after {
+    content: "-" !important;
+    position: relative !important;
+    margin-left: 32px !important;
+    font-family: "icon-ticker-bullet", "Noto Sans Display", sans-serif !important;
+    font-weight: 400 !important;
+    font-size: 20px !important;
+    position: relative !important;
+    top: -2px !important;
+    line-height: 0 !important;
+}

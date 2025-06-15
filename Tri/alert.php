@@ -1,3 +1,4 @@
+<div class="teleport-marker alert"></div>
 <section id="alert" class="content-box listing-item home-listing-item <?php echo get_option('tri_alert_colour'); if(get_option('tri_alert_classes')) { echo ' '; echo get_option('tri_alert_classes'); } if(get_option('tri_alert_yellow_background')=='on') { echo ' yellow-background'; } ?>" role="alert" data-sidebar>
     <div class="content-box-title-bar">
         <span class="content-box-title<?php if(get_option('tri_alert_title_bar_text_flash')=='on') { echo ' flashing'; } ?>" role="sectionhead"><?php if(get_option('tri_alert_title_bar_text')) { echo get_option('tri_alert_title_bar_text'); } else { echo 'Critical Chicken'; } ?></span>

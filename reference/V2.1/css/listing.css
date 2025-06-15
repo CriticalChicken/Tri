@@ -1,0 +1,983 @@
+/*
+Copyright (C) Critical Chicken. All rights reserved.
+Critical Chicken, the Critical Chicken logo and wordmark, and #ForTheGaymers are trademarks of Critical Chicken.
+All other trademarks referred to are trademarks of their respective owners.
+*/
+
+/* Listing page styles */
+
+#listing-container {
+    width: 736px;
+    float: left;
+    padding-top: 32px;
+    padding-bottom: 18px;
+}
+
+#listing-container .a-listing-post {
+    margin-bottom: 32px;
+    background-color: var(--structure-background);
+    padding-left: 16px;
+    padding-right: 16px;
+    padding-top: 15px;
+    padding-bottom: 24px;
+    border-radius: 16px;
+    box-shadow: 0 2px var(--structure-shadow);
+}
+
+#listing-container .a-listing-post .thumbnail-and-headline {
+    padding-bottom: 10px;
+    display: block;
+}
+
+#listing-container .a-listing-post .thumbnail-and-headline .listing-post-title {
+    width: calc(100% - 32px);
+    font-size: 22px;
+    line-height: 32px;
+    font-weight: 700;
+    display: block;
+    clear: both;
+    margin-bottom: 17px;
+    text-wrap: balance;
+}
+
+#listing-container .a-listing-post .thumbnail-and-headline .listing-post-title a {
+    color: var(--black);
+    text-decoration: none;
+}
+
+#listing-container .listing-stats {
+    width: 464px;
+    height: 42px;
+    display: block;
+    float: right;
+    margin-top: -4px;
+}
+
+#listing-container .listing-stats span.date,
+#listing-container .listing-stats span.comments,
+#listing-container .listing-stats span.author {
+    width: 149.3333333333333px;
+    font-size: 16px;
+    line-height: 24px;
+    height: 24px;
+    display: inline-block;
+    margin-left: 8px;
+    background-color: var(--not-black);
+    border-radius: 4px;
+    font-weight: 500;
+    margin-top: 4px;
+    text-align: center;
+    box-shadow: 0 2px var(--black);
+    color: var(--white);
+}
+
+#listing-container .listing-stats span.date {
+    margin-left: 0;
+}
+
+#listing-container .listing-stats span.date a,
+#listing-container .listing-stats span.comments a,
+#listing-container .listing-stats span.author a {
+    color: var(--white);
+    font-weight: 700;
+    text-decoration: none;
+    width: 149.3333333333333px;
+    height: 24px;
+    display: block;
+    border-radius: 4px;
+}
+
+#listing-container .listing-stats span.author a[href*="mike-and-matthew"] {
+    font-size: 15px !important;
+}
+
+#listing-container .listing-stats span.date img,
+#listing-container .listing-stats span.comments a img,
+#listing-container .listing-stats span.author a img {
+    margin-right: 6px;
+}
+
+#listing-container .listing-stats span.author img {
+    width: 11.5px;
+}
+
+#listing-container div.titletags {
+    width: 100%;
+    display: block;
+    margin-top: -8px;
+}
+
+#listing-container span.excerpt {
+    font-size: 18px;
+    line-height: 32px;
+    color: var(--black);
+    font-weight: 400;
+    width: 464px;
+    display: block;
+    float: right;
+    height: 96px;
+    margin-top: 9px;
+}
+
+#listing-container span.excerpt strong,
+#listing-container span.excerpt b {
+    font-weight: 700;
+}
+
+#listing-container a.thumb-link {
+    display: inline-block;
+    border-radius: 8px;
+}
+
+#listing-container a.thumb-link img {
+    border-radius: 8px;
+    box-shadow: 0 2px var(--black);
+}
+
+/* Section styles */
+
+h1.listing-header {
+    display: inline-block;
+    height: 60px;
+    background-color: var(--not-black);
+    border-radius: 16px;
+    box-shadow: 0 2px var(--black);
+    margin-top: 16px;
+    background-image: url(../img/sections/fallback-header.png);
+    background-size: 229.5px 60px;
+    background-position: 16px 0;
+    background-repeat: no-repeat;
+    width: 261.5px;
+    margin-bottom: 4px;
+}
+
+h1.listing-header.latest {
+    background-color: var(--red);
+    background-image: url(../img/sections/latest-header.png);
+    background-size: 196px 60px;
+    background-position: 0 0;
+    width: 196px;
+}
+
+section.ace-attorney h1.listing-header {
+    background-image: url(../img/sections/ace-attorney-header.png);
+    background-size: 340.5px 60px;
+    background-position: 0 0;
+    width: 340.5px;
+}
+
+section.dungeons-and-dragons h1.listing-header {
+    background-image: url(../img/sections/dungeons-and-dragons-header.png);
+    background-size: 481.5px 60px;
+    background-position: 0 0;
+    width: 481.5px;
+}
+
+section.e3-2016 h1.listing-header {
+    background-color: var(--e3-murky);
+    background-image: url(../img/sections/e3-2016-header.png);
+    background-size: 231px 60px;
+    background-position: 0 0;
+    width: 231px;
+}
+
+section.e3-2021 h1.listing-header {
+    background-color: var(--e3-murky);
+    background-image: url(../img/sections/e3-2021-header.png);
+    background-size: 227.5px 60px;
+    background-position: 0 0;
+    width: 227.5px;
+}
+
+section.e3-2023 h1.listing-header {
+    background-color: var(--e3-murky);
+    background-image: url(../img/sections/e3s-future-header.png);
+    background-size: 294px 60px;
+    background-position: 0 0;
+    width: 294px;
+}
+
+section.exclusives h1.listing-header {
+    background-color: var(--yellow);
+    background-image: url(../img/sections/exclusives-header.png);
+    background-size: 239.5px 60px;
+    background-position: 16px 0;
+    width: 271.5px;
+}
+
+section.videos h1.listing-header {
+    background-color: var(--red);
+    background-image: url(../img/sections/videos-header.png);
+    background-size: 196.5px 60px;
+    background-position: 16px 0;
+    width: 228.5px;
+}
+
+section.updates h1.listing-header {
+    background-color: var(--red);
+    background-image: url(../img/sections/updates-header.png);
+    background-size: 225px 60px;
+    background-position: 16px 0;
+    width: 257px;
+}
+
+section.site-updates h1.listing-header {
+    background-color: var(--red);
+    background-image: url(../img/sections/site-updates-header.png);
+    background-size: 307px 60px;
+    background-position: 16px 0;
+    width: 339px;
+}
+
+section.second-looks h1.listing-header {
+    background-color: var(--orange);
+    background-image: url(../img/sections/second-looks-header.png);
+    background-size: 326px 60px;
+    background-position: 16px 0;
+    width: 358px;
+}
+
+section.rumours h1.listing-header {
+    background-color: var(--red);
+    background-image: url(../img/sections/rumours-header.png);
+    background-size: 240px 60px;
+    background-position: 16px 0;
+    width: 272px;
+}
+
+section.reviews h1.listing-header {
+    background-color: var(--orange);
+    background-image: url(../img/sections/reviews-header.png);
+    background-size: 211px 60px;
+    background-position: 16px 0;
+    width: 243px;
+}
+
+section.previews h1.listing-header {
+    background-color: var(--orange);
+    background-image: url(../img/sections/previews-header.png);
+    background-size: 245px 60px;
+    background-position: 16px 0;
+    width: 277px;
+}
+
+section.opinions h1.listing-header {
+    background-color: var(--blue);
+    background-image: url(../img/sections/opinions-header.png);
+    background-size: 234px 60px;
+    background-position: 16px 0;
+    width: 266px;
+}
+
+section.news h1.listing-header {
+    background-color: var(--red);
+    background-image: url(../img/sections/news-header.png);
+    background-size: 155px 60px;
+    background-position: 16px 0;
+    width: 187px;
+}
+
+section.live-updates h1.listing-header {
+    background-color: var(--red);
+    background-image: url(../img/sections/live-updates-header.png);
+    background-size: 311.5px 60px;
+    background-position: 16px 0;
+    width: 343.5px;
+}
+
+section.links h1.listing-header {
+    background-color: var(--red);
+    background-image: url(../img/sections/links-header.png);
+    background-size: 168px 60px;
+    background-position: 16px 0;
+    width: 200px;
+}
+
+section.interviews h1.listing-header {
+    background-color: var(--blue);
+    background-image: url(../img/sections/interviews-header.png);
+    background-size: 272.5px 60px;
+    background-position: 16px 0;
+    width: 304.5px;
+}
+
+section.hands-on h1.listing-header {
+    background-color: var(--orange);
+    background-image: url(../img/sections/hands-on-header.png);
+    background-size: 251.5px 60px;
+    background-position: 16px 0;
+    width: 283.5px;
+}
+
+section.guides h1.listing-header {
+    background-color: var(--blue);
+    background-image: url(../img/sections/guides-header.png);
+    background-size: 193.5px 60px;
+    background-position: 16px 0;
+    width: 225.5px;
+}
+
+section.guest-blogs h1.listing-header {
+    background-color: var(--blue);
+    background-image: url(../img/sections/guest-blogs-header.png);
+    background-size: 290px 60px;
+    background-position: 16px 0;
+    width: 322px;
+}
+
+section.first-impressions h1.listing-header {
+    background-color: var(--orange);
+    background-image: url(../img/sections/first-impressions-header.png);
+    background-size: 401.5px 60px;
+    background-position: 16px 0;
+    width: 433.5px;
+}
+
+section.features h1.listing-header {
+    background-color: var(--blue);
+    background-image: url(../img/sections/features-header.png);
+    background-size: 210.5px 60px;
+    background-position: 16px 0;
+    width: 242.5px;
+}
+
+section.persona h1.listing-header {
+    background-color: var(--black);
+    background-image: url(../img/sections/persona-header.png);
+    background-size: 235px 60px;
+    background-position: 0 0;
+    width: 235px;
+}
+
+section.pokemon h1.listing-header {
+    background-color: var(--pokemon-yellow);
+    background-image: url(../img/sections/pokemon-header.png);
+    background-size: 239px 60px;
+    background-position: 16px 0;
+    width: 255px;
+}
+
+section.pokemon-presents h1.listing-header {
+    background-color: var(--pokemon-yellow);
+    background-image: url(../img/sections/pokemon-presents-header.png);
+    background-size: 420px 60px;
+    background-position: 16px 0;
+    width: 436px;
+}
+
+section.best-of h1.listing-header {
+    background-color: var(--gold);
+    background-image: url(../img/sections/best-of-header.png);
+    background-size: 215px 60px;
+    background-position: 0 0;
+    width: 215px;
+}
+
+section.nintendo-direct h1.listing-header {
+    background-color: var(--nintendo-direct-red);
+    background-image: url(../img/sections/nintendo-direct-header.png);
+    background-size: 354px 60px;
+    background-position: 16px 0;
+    width: 386px;
+}
+
+section.switch-2 h1.listing-header {
+    background-color: var(--nintendo-direct-red);
+    background-image: url(../img/sections/switch-2.png);
+    background-size: 213.5px 60px;
+    background-position: 16px 0;
+    width: 245.5px;
+}
+
+section.state-of-play h1.listing-header {
+    background-image: url(../img/sections/state-of-play-header.png);
+    background-size: 329px 60px;
+    background-position: 0 0;
+    width: 329px;
+}
+
+section.summer-game-fest-2024 h1.listing-header {
+    background-color: var(--summer-game-fest);
+    background-image: url(../img/sections/summer-game-fest-2024-header.png);
+    background-size: 633px 60px;
+    background-position: 0 0;
+    width: 633px;
+}
+
+section.forthegaymers h1.listing-header {
+    background-image: url(../img/sections/forthegaymers-header.png);
+    background-size: 366px 60px;
+    background-position: 0 0;
+    width: 366px;
+}
+
+/* Section sidebar */
+
+#sidebar {
+    width: 352px;
+    float: right;
+    margin-top: 6px;
+}
+
+#sidebar-spacer {
+    width: 100px;
+    height: 50px;
+    display: block;
+}
+
+#section-info {
+    width: calc(100% - 32px);
+    background-color: var(--gold);
+    box-shadow: 0 2px var(--black);
+    border-radius: 16px;
+    margin-top: 10px;
+    padding: 8px 16px 6px 16px;
+    text-shadow: -1px -1px 1.5px var(--opaque-black), 1px -1px 1.5px var(--opaque-black), -1px 1px 1.5px var(--opaque-black), 1px 1px 1.5px var(--opaque-black), 0 2px var(--black);
+    background-image: url(../img/sections/best-of-background.png);
+    background-size: 352px 720px;
+    background-position: 0 0;
+    background-repeat: no-repeat;
+}
+
+#section-info h2 {
+    font-size: 31.5px;
+    line-height: 40px;
+    font-weight: 700;
+    color: var(--white);
+    padding-left: 40px;
+    border-bottom: 8px var(--hidden) solid;
+}
+
+#section-info a.thumb-link img {
+    width: 320px;
+    height: 180px;
+    border-radius: 8px;
+    box-shadow: 0 2px var(--black);
+}
+
+#section-info a.thumb-link:before {
+	border-radius: 8px;
+	display: block;
+    background-image: url(../img/thumb-hover.png);
+    background-size: 525px 180px;
+    background-position: -206px 0;
+    z-index: 100;
+    content: "";
+    width: 320px;
+    height: 180px;
+    position: relative;
+    margin-bottom: -180px;
+    opacity: 0;
+    transition: all 0.12s ease-out;
+}
+
+#section-info a.thumb-link:hover:before {
+    background-position: 0 0;
+    opacity: 1;
+}
+
+.a-listing-post a.thumb-link:before {
+	border-radius: 8px;
+	display: block;
+    background-image: url(../img/thumb-hover.png);
+    background-size: 367px 126px;
+    background-position: -144px 0;
+    z-index: 100;
+    content: "";
+    width: 224px;
+    height: 126px;
+    position: relative;
+    margin-bottom: -126px;
+    opacity: 0;
+    transition: all 0.12s ease-out;
+}
+
+.a-listing-post a.thumb-link:hover:before {
+    background-position: 0 0;
+    opacity: 1;
+}
+
+#section-info .homepage-post-title {
+	width: 100%;
+	display: block;
+	padding-top: 27px;
+}
+
+#section-info .homepage-post-title a {
+	font-size: 22px;
+	line-height: 32px;
+	text-decoration: none;
+	font-weight: 700;
+    color: var(--white);
+}
+
+#section-info span.titletag {
+    top: 20px;
+}
+
+#section-info span.titletag.icon-only:after {
+    height: 34px;
+    top: 2px;
+    position: relative;
+    margin-top: -2px;
+}
+
+#section-info .comment-count {
+    font-size: 16px;
+    line-height: 15px;
+    font-weight: 500;
+    top: 12px;
+    position: relative;
+    display: block;
+    margin-bottom: 20px;
+}
+
+#section-info .no-comment-count {
+    display: block;
+    height: 3px;
+    width: 100%;
+}
+
+#section-info .comment-count a {
+    color: var(--white);
+    opacity: 1;
+    display: inline-block;
+    background-image: url(../img/icon-best-of-comment-count.png);
+    background-size: 14px 15px;
+    background-position: 0px 0px;
+    background-repeat: no-repeat;
+    padding-left: 21px;
+    text-decoration: none;
+    overflow: visible;
+    margin-left: -1px;
+}
+
+#section-info .comment-count a:hover {
+    opacity: 0.68;
+    transition: all 0.12s ease-out;
+}
+
+.sidebar-link {
+    font-size: 16px;
+    color: var(--white);
+    font-weight: 700;
+    line-height: 24px !important;
+    text-decoration: none;
+    padding-right: 16.5px;
+    background-image: url(../img/icon-not-sidebar-link.png);
+    background-size: 12.5px 14px;
+    background-position: right 5px;
+    background-repeat: no-repeat;
+    margin-bottom: 0;
+    display: inline-block;
+}
+
+#already-viewing-best-of {
+    margin-bottom: -22px;
+}
+
+
+/* Pagination */
+
+div#pagenavi-wrapper {
+    width: 736px;
+    display: block;
+}
+
+div#pagenavi-wrapper span.pages {
+    padding-left: 16px;
+    padding-right: 16px;
+    height: 32px;
+    box-shadow: 0 2px var(--black);
+    font-size: 21px;
+    font-weight: 400;
+    line-height: 32px;
+    background-color: var(--white);
+    border-radius: 8px;
+    display: block;
+    margin-right: 16px;
+    float: left;
+    margin-bottom: 32px;
+}
+
+div#pagenavi-wrapper span.current,
+div#pagenavi-wrapper span.extend {
+    width: 32px;
+    height: 32px;
+    display: block;
+    margin-right: 8px;
+    font-size: 16px;
+    line-height: 32px;
+    background-color: var(--green);
+    color: var(--white);
+    font-weight: 600;
+    text-align: center;
+    border-radius: 8px;
+    box-shadow: 0 2px var(--black);
+    float: left;
+    margin-bottom: 32px;
+}
+
+div#pagenavi-wrapper span.extend {
+    background-color: var(--white);
+    color: var(--black);
+}
+
+div#pagenavi-wrapper a.page {
+    width: 32px;
+    height: 32px;
+    display: block;
+    margin-right: 8px;
+    font-size: 16px;
+    line-height: 32px;
+    background-color: var(--not-black);
+    color: var(--white);
+    font-weight: 600;
+    text-align: center;
+    border-radius: 8px;
+    box-shadow: 0 2px var(--black);
+    float: left;
+    text-decoration: none;
+    opacity: 1;
+    transition: opacity 0.12s ease-out;
+    margin-bottom: 32px;
+}
+
+div#pagenavi-wrapper a.nextpostslink,
+div#pagenavi-wrapper a.previouspostslink,
+div#pagenavi-wrapper a.last,
+div#pagenavi-wrapper a.first {
+    width: 32px;
+    height: 32px;
+    display: block;
+    margin-right: 8px;
+    background-color: var(--not-black);
+    border-radius: 8px;
+    box-shadow: 0 2px var(--black);
+    float: left;
+    text-decoration: none;
+    opacity: 1;
+    transition: opacity 0.12s ease-out;
+    background-image: url(../img/icon-pagination-older.png);
+    background-size: 16px 15.5px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    margin-bottom: 32px;
+}
+
+div#pagenavi-wrapper a.previouspostslink {
+    background-image: url(../img/icon-pagination-newer.png);
+}
+
+div#pagenavi-wrapper a.last {
+    background-image: url(../img/icon-pagination-oldest.png);
+    background-size: 14.5px 16px;
+}
+
+div#pagenavi-wrapper a.first {
+    background-image: url(../img/icon-pagination-newest.png);
+    background-size: 14.5px 16px;
+}
+
+div#pagenavi-wrapper a.page:hover,
+div#pagenavi-wrapper a.nextpostslink:hover,
+div#pagenavi-wrapper a.previouspostslink:hover,
+div#pagenavi-wrapper a.last:hover,
+div#pagenavi-wrapper a.first:hover {
+    opacity: 0.68;
+}
+
+/* Related categories */
+
+#more-categories {
+    width: calc(100% - 32px);
+    box-shadow: 0 2px var(--black);
+    border-radius: 16px;
+    margin-top: 32px;
+    padding: 8px 16px 10px 16px;
+}
+
+#more-categories.news {
+    background-color: var(--red);
+}
+
+#more-categories.news img {
+    width: 26.5px;
+    margin-right: 15px;
+}
+
+#more-categories.features {
+    background-color: var(--blue);
+}
+
+#more-categories.features img {
+    margin-right: 14px;
+}
+
+#more-categories.reviews {
+    background-color: var(--orange);
+}
+
+#more-categories.reviews img {
+    width: 30.5px;
+    margin-right: 15px;
+}
+
+#more-categories.e3 {
+    text-shadow: -1px -1px 1.5px var(--opaque-black), 1px -1px 1.5px var(--opaque-black), -1px 1px 1.5px var(--opaque-black), 1px 1px 1.5px var(--opaque-black), 0 2px var(--black);
+    background-size: 352px 720px;
+    background-image: url(../img/sections/e3-background.png);
+    background-position: 0 0;
+    background-repeat: no-repeat;
+    background-color: var(--e3-murky);
+}
+
+#more-categories.e3 img {
+    margin-bottom: -2px;
+    margin-right: 13px;
+    margin-left: -1px;
+}
+
+#more-categories.bluesky {
+    text-shadow: -1px -1px 1.5px var(--opaque-black), 1px -1px 1.5px var(--opaque-black), -1px 1px 1.5px var(--opaque-black), 1px 1px 1.5px var(--opaque-black), 0 2px var(--black);
+    background-size: 352px 352px;
+    background-image: url(../img/sections/bluesky-background.png);
+    background-position: 0 0;
+    background-repeat: no-repeat;
+    background-color: var(--bluesky-icon);
+}
+
+#more-categories.bluesky h2 span {
+    display: inline-block;
+    width: 42px;
+    border-bottom: 0 !important;
+}
+
+#more-categories h2 {
+    font-size: 31.5px;
+    line-height: 40px;
+    font-weight: 700;
+    color: var(--white);
+    border-bottom: none;
+}
+
+#more-categories a.more-in-section {
+    position: relative;
+    display: inline-block;
+    z-index: 150;
+    height: 32px;
+    line-height: 31px;
+    margin-right: 8px;
+    font-size: 22px;
+    border-radius: 8px;
+    background-color: var(--white);
+    font-weight: 700;
+    text-decoration: none;
+    text-shadow: none !important;
+    padding-left: 8px;
+    padding-right: 8px;
+    margin-bottom: 8px;
+}
+
+#more-categories a.more-in-section.big {
+    font-weight: 900;
+}
+
+#more-categories.news a.more-in-section {
+    color: var(--red);
+}
+
+#more-categories.features a.more-in-section {
+    color: var(--blue);
+}
+
+#more-categories.reviews a.more-in-section {
+    color: var(--orange);
+}
+
+#more-categories.e3 a.more-in-section {
+    color: var(--black);
+    box-shadow: 0 2px var(--black);
+}
+
+#more-categories .sidebar-link {
+    background-image: url(../img/icon-sidebar-link.png);
+    background-size: 12.5px 13px;
+    color: var(--white);
+    margin-top: 6px;
+}
+
+#more-categories.e3 .sidebar-link {
+    background-image: url(../img/icon-not-sidebar-link.png);
+    background-size: 12.5px 15px;
+}
+
+#more-categories.bluesky .sidebar-link {
+    background-image: url(../img/icon-bluesky-link.png);
+    background-size: 14.5px 15px;
+    padding-right: 17.5px;
+}
+
+#more-categories.bluesky .sidebar-link:first-of-type {
+    margin-bottom: 2px;
+}
+
+
+/* Top comments */
+
+#top-comments {
+    width: calc(100% - 32px);
+    box-shadow: 0 2px var(--black);
+    border-radius: 16px;
+    margin-top: 32px;
+    padding: 8px 16px 10px 16px;
+    text-shadow: 0 2px var(--black);
+    font-size: 16px;
+    background-color: var(--not-black);
+    line-height: 24px;
+    color: var(--white);
+}
+
+#top-comments h2 {
+    font-size: 31.5px;
+    line-height: 40px;
+    font-weight: 700;
+    color: var(--white);
+    margin-bottom: -9px;
+}
+
+#top-comments h2 img {
+    margin-right: 14px;
+}
+
+#top-comments .recentcomments.recent-comment {
+    margin-bottom: 0 !important;
+    margin-top: 16px;
+}
+
+#top-comments .comment-wrap {
+    padding-left: 0 !important;
+    margin-top: 1px !important;
+}
+
+#top-comments .comment-wrap:first-of-type {
+    margin-top: unset;
+}
+
+#top-comments .comment-date {
+    display: block;
+    width: 100%;
+    font-weight: 700;
+    color: var(--white);
+}
+
+#top-comments .comment-avatar {
+    position: unset !important;
+    left: unset !important;
+    top: unset !important;
+    float: left;
+    margin-right: 8px;
+    margin-top: 1px;
+}
+
+#top-comments .comment-avatar img {
+    border-radius: 16px;
+    box-shadow: 0 2px var(--black);
+}
+
+#top-comments .comment-author-link {
+    font-size: 18px;
+    line-height: 32px;
+    width: 100%;
+    display: block;
+    font-weight: 500;
+    margin-top: 2px;
+}
+
+#top-comments .comment-author-link a {
+    font-weight: 500;
+    text-decoration: none;
+    opacity: 1;
+    transition: opacity 0.12s ease-out;
+    color: var(--white);
+    padding-right: 21px;
+    background-image: url(../img/sections/comments-icon-green-tick.png);
+    background-size: 13px 15px;
+    background-position: right 6px;
+    background-repeat: no-repeat;
+}
+
+#top-comments .comment-author-link a:hover {
+    opacity: 0.68;
+}
+
+#top-comments .comment-post {
+    clear: both;
+    width: 100%;
+    display: block;
+}
+
+#top-comments .comment-post a {
+    font-weight: 500;
+    text-decoration: none;
+    opacity: 1;
+    transition: opacity 0.12s ease-out;
+    color: var(--white);
+}
+
+#top-comments .comment-post a:hover {
+    opacity: 0.68;
+}
+
+#top-comments .comment-excerpt {
+    font-size: 18px;
+    line-height: 24px;
+    display: block;
+    width: 100%;
+    font-weight: 300;
+    margin-top: 7px;
+}
+
+
+/* Topic and writer styles */
+/* TO DO: These aren't on-grid yet */
+
+h1.tag-header,
+h1.author-header {
+    width: 736px;
+    display: inline-block;
+    margin-top: 4px;
+    font-size: 41px;
+    font-weight: 700;
+    line-height: 56px;
+    color: var(--black);
+    overflow-wrap: break-word;
+    margin-bottom: -12px;
+}
+
+h1.tag-header img {
+    margin-right: 14px;
+}
+
+h1.tag-header.search img {
+    margin-right: 15px;
+}
+
+h1.tag-header.search img.ha-ha {
+    margin-right: 13px;
+}
+
+h1.author-header img.avatar {
+    width: 32px;
+    height: 32px;
+    border-radius: 16px;
+    background-color: var(--white);
+    box-shadow: 0 2px var(--black);
+    margin-right: 8px;
+    position: relative;
+    top: 1px;
+}
+
+h1.author-header img.avatar:last-of-type {
+    margin-right: 16px;
+}

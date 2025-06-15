@@ -1,0 +1,259 @@
+/*
+Copyright (C) Critical Chicken. All rights reserved.
+Critical Chicken, the Critical Chicken logo and wordmark, and #ForTheGaymers are trademarks of Critical Chicken.
+All other trademarks referred to are trademarks of their respective owners.
+*/
+
+/* Poll styles */
+
+.single-post .poll-archive .wp-polls {
+	display: flex;
+	flex-wrap: wrap;
+	row-gap: 32px;
+	padding-bottom: 50px;
+    padding-top: 16px;
+}
+
+div.one-archived-poll {
+    font-size: 22px;
+    line-height: 32px;
+    color: var(--white);
+    font-weight: 500;
+    width: 320px;
+    border-radius: 16px;
+    box-shadow: 0 2px var(--black);
+    padding: 16px;
+    margin-right: 32px;
+    background-color: var(--blue);
+}
+
+div.one-archived-poll:nth-child(3n+3) {
+	margin-right: 0;
+}
+
+.poll-archive-link {
+	display: none;
+}
+
+.poll-start-date {
+    text-shadow: 0 2px var(--black);
+}
+
+h4.poll-question {
+    font-size: 41px;
+    color: var(--white);
+    font-weight: 700;
+    line-height: 48px;
+    text-shadow: 0 2px var(--black);
+    margin-top: 2px;
+    margin-bottom: 15px;
+}
+
+h4.poll-question b,
+h4.poll-question strong {
+    font-weight: 900;
+}
+
+.poll-archive strong {
+    font-weight: 700;
+}
+
+div.pollbar {
+    border: 0 !important;
+    border-radius: 8px;
+    box-shadow: 0 2px var(--black);
+    background-color: var(--markets-background) !important;
+    margin: 1px 0 7px 0 !important;
+    display: block;
+}
+
+div.pollbar:last-of-type {
+    margin: 1px 0 14px 0 !important;
+}
+
+li.poll-result {
+    position: relative;
+    font-weight: 500;
+    text-shadow: 0 2px var(--black);
+    top: 1px;
+}
+
+li.poll-result b,
+li.poll-result strong {
+    font-weight: 700;
+}
+
+li.poll-result:first-of-type {
+    top: 0px;
+}
+
+li.poll-result small {
+    font-size: 16px;
+    line-height: 24px;
+}
+
+li.poll-result i {
+    font-style: normal;
+}
+
+p.total-votes {
+    font-size: 16px;
+    line-height: 24px;
+    text-shadow: 0 2px var(--black);
+    margin-bottom: 1px;
+    position: relative;
+    top: 1px;
+}
+
+.wp-polls-ul {
+    margin-left: 0 !important;
+}
+
+span.poll-error {
+    font-size: 22px;
+    line-height: 32px;
+    font-weight: 500;
+    color: var(--white);
+    text-shadow: 0 2px var(--black);
+    position: relative;
+    top: 1px;
+    background-color: var(--blue);
+    display: block;
+}
+
+p.no-polls-in-archive {
+    margin-top: -17px;
+    font-size: 22px;
+    line-height: 32px;
+    font-weight: 500;
+    color: var(--black);
+    display: block;
+    width: 100%;
+}
+
+p.no-polls-in-archive a {
+    color: var(--black);
+    opacity: 1;
+    transition: opacity 0.12s ease-out;
+}
+
+p.no-polls-in-archive a:hover {
+    opacity: 0.68;
+}
+
+p.no-polls-in-archive:nth-of-type(2) {
+    margin-top: -16px;
+    margin-bottom: -7px;
+}
+
+/* Pagination */
+
+div.wp-pagenavi {
+    width: 736px;
+    display: block;
+    padding-bottom: 82px;
+    margin-top: -18px;
+}
+
+div.wp-pagenavi span.pages {
+    padding-left: 16px;
+    padding-right: 16px;
+    height: 32px;
+    box-shadow: 0 2px var(--black);
+    font-size: 21px;
+    font-weight: 400;
+    line-height: 32px;
+    background-color: var(--white);
+    border-radius: 8px;
+    display: block;
+    margin-right: 16px;
+    float: left;
+    margin-bottom: 32px;
+}
+
+div.wp-pagenavi span.current,
+div.wp-pagenavi span.extend {
+    width: 32px;
+    height: 32px;
+    display: block;
+    margin-right: 8px;
+    font-size: 16px;
+    line-height: 32px;
+    background-color: var(--green);
+    color: var(--white);
+    font-weight: 600;
+    text-align: center;
+    border-radius: 8px;
+    box-shadow: 0 2px var(--black);
+    float: left;
+    margin-bottom: 32px;
+}
+
+div.wp-pagenavi span.extend {
+    background-color: var(--white);
+    color: var(--black);
+}
+
+div.wp-pagenavi a.page {
+    width: 32px;
+    height: 32px;
+    display: block;
+    margin-right: 8px;
+    font-size: 16px;
+    line-height: 32px;
+    background-color: var(--not-black);
+    color: var(--white);
+    font-weight: 600;
+    text-align: center;
+    border-radius: 8px;
+    box-shadow: 0 2px var(--black);
+    float: left;
+    text-decoration: none;
+    opacity: 1;
+    transition: opacity 0.12s ease-out;
+    margin-bottom: 32px;
+}
+
+div.wp-pagenavi a.nextpostslink,
+div.wp-pagenavi a.previouspostslink,
+div.wp-pagenavi a.last,
+div.wp-pagenavi a.first {
+    width: 32px;
+    height: 32px;
+    display: block;
+    margin-right: 8px;
+    background-color: var(--not-black);
+    border-radius: 8px;
+    box-shadow: 0 2px var(--black);
+    float: left;
+    text-decoration: none;
+    opacity: 1;
+    transition: opacity 0.12s ease-out;
+    background-image: url(../img/icon-pagination-older.png);
+    background-size: 16px 15.5px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    margin-bottom: 32px;
+}
+
+div.wp-pagenavi a.previouspostslink {
+    background-image: url(../img/icon-pagination-newer.png);
+}
+
+div.wp-pagenavi a.last {
+    background-image: url(../img/icon-pagination-oldest.png);
+    background-size: 14.5px 16px;
+}
+
+div.wp-pagenavi a.first {
+    background-image: url(../img/icon-pagination-newest.png);
+    background-size: 14.5px 16px;
+}
+
+div.wp-pagenavi a.page:hover,
+div.wp-pagenavi a.nextpostslink:hover,
+div.wp-pagenavi a.previouspostslink:hover,
+div.wp-pagenavi a.last:hover,
+div.wp-pagenavi a.first:hover {
+    opacity: 0.68;
+}

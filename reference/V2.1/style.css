@@ -1,0 +1,822 @@
+/*
+Theme Name: V2.1 Charismatic Cockatiel
+Theme URI: https://github.com/CriticalChicken/V2
+Author: Critical Chicken
+Author URI: https://github.com/CriticalChicken
+Version: 2.1.0
+*/
+
+/* http://meyerweb.com/eric/tools/css/reset */
+/* v2.0 | 20110126 */
+/* License: none (public domain) */
+
+a,abbr,acronym,address,applet,article,aside,audio,b,big,blockquote,body,canvas,caption,center,cite,code,dd,del,details,dfn,div,dl,dt,em,embed,fieldset,figcaption,figure,footer,form,h1,h2,h3,h4,h5,h6,header,hgroup,html,i,iframe,img,ins,kbd,label,legend,li,mark,menu,nav,object,ol,output,p,pre,q,ruby,s,samp,section,small,span,strike,strong,sub,summary,sup,table,tbody,td,tfoot,th,thead,time,tr,tt,u,ul,var,video{margin:0;padding:0;border:0;font-size:100%;font:inherit;vertical-align:baseline}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:after,blockquote:before,q:after,q:before{content:'';content:none}table{border-collapse:collapse;border-spacing:0}
+
+/*
+Copyright (C) Critical Chicken. All rights reserved.
+Critical Chicken, the Critical Chicken logo and wordmark, and #ForTheGaymers are trademarks of Critical Chicken.
+All other trademarks referred to are trademarks of their respective owners.
+*/
+
+@font-face { font-family: "icon-ticker-bullet"; src: url("img/icon-ticker-bullet.woff2") format("woff2"), url("img/icon-ticker-bullet.woff2") format("woff"); font-weight: 400; font-style: normal; font-display: swap; }
+
+/* Variables */
+
+:root {
+    /* Main colour palette */
+    --black: #000;
+    --blue: #1564dc;
+    --darkgrey: #717070;
+    --midgrey: #9f9e9e;
+    --lightgrey: #edecec;
+    --orange: #f47614;
+    --white: #fff;
+    --yellow: #FFDC17;
+    --red: #d20202;
+    --green: #048929;
+    --not-black: #121313;
+    --gold: #be9f43;
+
+    /* Other colours */
+    --lightblue: #6e9fe9;
+    --lightorange: #f8aa6d;
+    --lightred: #e36262;
+    --lightgreen: #63b67a;
+    --e3-murky: #212023;
+    --pokemon-grey: #5e5e5e;
+    --pokemon-yellow: #ffe103;
+    --structure-background: #e1dfdf;
+    --structure-shadow: #9e9d9d;
+    --iconic-background: rgba(255,255,255,0.84);
+    --markets-background: #b8cef4;
+
+    /* Nav gradients */
+    --nav-game-fest: linear-gradient(90deg, #5613c5 0%, #cd4298 100%);
+    --nav-latest: linear-gradient(-63.4deg, var(--orange) 0%, var(--blue) 50%, var(--red) 100%);
+
+    /* Third-party brand colours */
+    --android: #3ddc84;
+    --apple: #121212;
+    --bluesky-icon: #1185fe;
+    --discord: #5865f2;
+    --instagram: #ff0069;
+    --ko-fi: #13C3FF;
+    --mastodon: #6364FF;
+    --mastodon-off-white: #f6f5fa;
+    --nintendo-3ds-red: #cf181f;
+    --nintendo-direct-red: #fc1926;
+    --nintendo-ds-grey: #929497;
+    --playstation: #0070d1;
+    --steam-background: #171d25;
+    --steam-logo: #c5c3c0;
+    --summer-game-fest: #38199e;
+    --tumblr-icon: #ffc5eb;
+    --windows-11: #0078d4;
+    --xbox: #0f7c10;
+
+    /* Hacky stuff */
+    --hidden: rgba(0,0,0,0);
+    --opaque-black: rgba(0,0,0,0.68);
+    --opaque-white: rgba(255,255,255,0.68);
+    --faint-black: rgba(0,0,0,0.32);
+
+    /* Jumbotron backgrounds */
+    --jt90-black: linear-gradient(90deg, var(--black) 0%, var(--darkgrey) 100%);
+    --jt63-black: linear-gradient(-63.4deg, var(--black) 50%, var(--darkgrey) 50%);
+    --jt90-red: linear-gradient(90deg, var(--red) 0%, var(--lightred) 100%);
+    --jt63-red: linear-gradient(-63.4deg, var(--red) 50%, var(--lightred) 50%);
+    --jt90-blue: linear-gradient(90deg, var(--blue) 0%, var(--lightblue) 100%);
+    --jt63-blue: linear-gradient(-63.4deg, var(--blue) 50%, var(--lightblue) 50%);
+    --jt90-orange: linear-gradient(90deg, var(--orange) 0%, var(--lightorange) 100%);
+    --jt63-orange: linear-gradient(-63.4deg, var(--orange) 50%, var(--lightorange) 50%);
+}
+
+
+/* Shortcut styles */
+
+.full-width {
+    width: 100%;
+    display: block;
+}
+
+.responsive {
+    width: 1120px;
+    position: relative;
+    left: calc((100% - 1120px) / 2);
+}
+
+.responsive-rounded {
+    width: 1120px;
+    position: relative;
+    left: calc((100% - 1184px) / 2);
+    padding: 32px;
+    border-radius: 16px;
+}
+
+.responsive-rounded-no-padding {
+    width: 1184px;
+    position: relative;
+    left: calc((100% - 1184px) / 2);
+    border-radius: 16px;
+}
+
+.hover-in {
+    opacity: 0;
+    transition: all 0.12s ease-out;
+}
+
+.hover-in:hover {
+    opacity: 0.32;
+}
+
+.hover-out {
+    opacity: 1;
+    transition: all 0.12s ease-out;
+}
+
+.hover-out:hover {
+    opacity: 0.68;
+}
+
+/* Common styles */
+
+body {
+    background-color: var(--lightgrey);
+    font-family: "Noto Sans Display", sans-serif;
+    color: var(--black);
+    font-size: 0;
+    line-height: 0;
+    font-weight: 400;
+}
+
+i,
+em {
+    font-style: italic;
+}
+
+#container {
+    width: 100%;
+    min-height: 100%;
+    overflow-x: hidden;
+}
+
+header {
+    height: 96px;
+}
+
+#header_inner {
+    height: 96px;
+    background-image: url(img/forthegaymers.png);
+    background-size: 346px 43px;
+    background-position: right 31px;
+    background-repeat: no-repeat;
+}
+
+#header_inner a {
+    display: block;
+    width: 387px;
+    height: 64px;
+    position: relative;
+    top: 16px;
+    background-image: url(img/logo.png);
+    background-size: 387px 64px;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+#header_inner span.lgbtcal-text {
+    font-size: 15px;
+    font-weight: 500;
+    color: black;
+    line-height: 19px;
+    float: right;
+}
+
+nav.top {
+    margin-bottom: 16px;
+}
+
+nav.top,
+nav.bottom {
+    height: 64px;
+}
+
+nav.top .nav_inner,
+nav.bottom .nav_inner {
+    height: 32px;
+    background-color: var(--not-black);
+    padding-top: 16px;
+    padding-bottom: 16px;
+    box-shadow: 0 2px var(--black);
+    transition: all 0.24s ease-out;
+    position: relative;
+    z-index: 4000;
+    background-image: url(img/titletag-hover.png);
+    background-size: 1px 1px;
+    background-position: 0 0;
+    background-repeat: no-repeat;
+}
+
+#nav_main,
+#nav_main li,
+#nav_timed,
+#nav_timed li,
+#nav_sub,
+#nav_sub li {
+    float: left;
+    display: block;
+    height: 32px;
+    font-size: 22px;
+    line-height: 31px;
+    font-weight: 500;
+}
+
+#nav_sub,
+#nav_sub li {
+    font-weight: 300;
+}
+
+#nav_main li,
+#nav_timed li,
+#nav_sub li {
+    margin-right: 16px;
+}
+
+#nav_main li a,
+#nav_timed li a,
+#nav_sub li a {
+    color: var(--white);
+    text-decoration: none;
+}
+
+div.floated-right {
+    float: right;
+}
+
+#nav_context,
+#nav_context li {
+    float: left;
+    display: block;
+    height: 32px;
+}
+
+#nav_context li {
+    margin-left: 16px;
+}
+
+#nav_context li.menu {
+    display: none;
+}
+
+#nav_context li a,
+#nav_home li a {
+    display: block;
+    width: 30px;
+    height: 29px;
+    border-top: 1px var(--white) solid;
+    border-right: 1px var(--white) solid;
+    border-bottom: 2px var(--white) solid;
+    border-left: 1px var(--white) solid;
+    border-radius: 8px;
+}
+
+#nav_home {
+    float: left;
+    margin-right: 32px;
+}
+
+#nav_home li a {
+    background-image: url(img/icon-home.png);
+    background-size: 32px 32px;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+#nav_context li.search a {
+    background-image: url(img/icon-search.png);
+    background-size: 16px 16px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    cursor: pointer;
+}
+
+nav.top ul#nav_iconic {
+    display: none;
+}
+
+#noscript_inner {
+    background-color: var(--darkgrey);
+    height: 63px;
+    color: var(--white);
+    font-size: 22px;
+    line-height: 63px;
+    display: block;
+    background-image: url(img/icon-warning.png);
+    background-size: 16px 16px;
+    background-position: 32px center;
+    background-repeat: no-repeat;
+    box-shadow: 0 2px var(--black);
+    padding-left: 64px;
+    width: 1120px;
+}
+
+#noscript_inner a {
+    color: var(--white);
+}
+
+/* Footer styles */
+
+#footer_inner {
+    background-color: var(--white);
+    box-shadow: 0 2px var(--black);
+    margin: 16px 0 32px 0;
+    padding-top: 31px;
+}
+
+span.copyright {
+    color: var(--red);
+    font-size: 22px;
+    line-height: 32px;
+    font-weight: 700;
+    position: relative;
+}
+
+span.trademarks {
+    font-size: 16px;
+    line-height: 23px;
+    font-weight: 500;
+    display: block;
+    margin-top: 8px;
+}
+
+#version {
+	height: 32px;
+	line-height: 32px;
+	font-size: 18px;
+	color: var(--black);
+	font-weight: 500;
+    clear: both;
+    border-top: 34px var(--white) solid;
+}
+
+#version img {
+    height: 40.1px;
+	float: left;
+	margin-right: 16px;
+	width: 87px;
+    margin-bottom: -8.5px;
+}
+
+p#load_time {
+    display: inline-block;
+    vertical-align: middle;
+    line-height: 19px;
+    font-size: 15px;
+    top: -3px;
+    position: relative;
+}
+
+nav#footer-links {
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 700;
+    margin-top: 24px;
+}
+
+nav#footer-links li {
+    float: left;
+    margin-right: 16px;
+}
+
+nav#footer-links li.press {
+    clear: both;
+    float: none;
+    margin-right: 0;
+    position: relative;
+    top: 8px;
+}
+
+nav#footer-links a {
+    color: var(--black);
+    text-decoration: none;
+    padding-right: 16.5px;
+    text-decoration: none;
+    background-image: url(img/icon-footer-link.png);
+    background-size: 12.5px 12px;
+    background-position: right 5px;
+    background-repeat: no-repeat;
+}
+
+#not-lazy {
+    position: absolute;
+    bottom: 32px;
+    right: 112px;
+    width: 131px;
+    height: 42px;
+    display: block;
+}
+
+#not-lazy a {
+    border-radius: 0 13px 0 14px;
+}
+
+#not-lazy img {
+    border-radius: 0 13px 0 14px;
+}
+
+#back-to-top {
+    position: absolute;
+    bottom: 32px;
+    right: 32px;
+    width: 64px;
+    height: 64px;
+    background-color: var(--black);
+    border-radius: 8px;
+    display: block;
+    cursor: pointer;
+    background-image: url(img/icon-back-to-top.png);
+    background-position: center center;
+    background-size: 31px 32px;
+    background-repeat: no-repeat;
+}
+
+nav.bottom {
+    margin-top: -18px;
+}
+
+nav.bottom ul#nav_iconic {
+    position: absolute;
+    top: 112px;
+    right: 32px;
+    height: 34px;
+    width: auto;
+    z-index: 300;
+}
+
+nav.bottom ul#nav_iconic li {
+    margin-left: 16px;
+    display: inline-block;
+    width: 32px;
+    height: 32px;
+    border-radius: 6px;
+    background-size: 32px 32px;
+    z-index: 350;
+    box-shadow: 0 2px var(--black);
+}
+
+nav.bottom ul#nav_iconic li.bluesky {
+    margin-left: 0;
+    background-color: var(--bluesky-icon);
+    background-image: url(img/iconic-bluesky.png);
+}
+
+nav.bottom ul#nav_iconic li.discord {
+    background-color: var(--discord);
+    background-image: url(img/iconic-discord.png);
+}
+
+nav.bottom ul#nav_iconic li.instagram {
+    background-color: var(--instagram);
+    background-image: url(img/iconic-instagram.png);
+}
+
+nav.bottom ul#nav_iconic li.ko-fi {
+    background-color: var(--ko-fi);
+    background-image: url(img/iconic-ko-fi.png);
+}
+
+nav.bottom ul#nav_iconic li.mastodon {
+    background-color: var(--mastodon);
+    background-image: url(img/iconic-mastodon.png);
+}
+
+nav.bottom ul#nav_iconic li.tumblr {
+    background-color: var(--tumblr-icon);
+    background-image: url(img/iconic-tumblr.png);
+}
+
+nav.bottom ul#nav_iconic li a {
+    width: 32px;
+    height: 32px;
+    display: block;
+    border-radius: 6px;
+    background-image: url(img/thumb-hover.png);
+    background-size: 93px 32px;
+    background-position: -37px 0;
+    transition: all 0.12s ease-out;
+    opacity: 0;
+}
+
+nav.bottom ul#nav_iconic li a:hover {
+    opacity: 1;
+    background-position: -12px 0;
+}
+
+/* Nav hovers */
+
+nav.top .nav_background,
+nav.bottom .nav_background {
+    height: 64px;
+    z-index: 3990;
+    position: relative;
+    display: block;
+    top: -64px;
+}
+
+nav.top .nav_background.latest,
+nav.bottom .nav_background.latest {
+    background-image: var(--nav-latest);
+}
+
+/* Special menu items */
+nav.top .nav_background.special,
+nav.bottom .nav_background.special {
+    background-color: var(--not-black);
+}
+nav.top .nav_background.special.summer-game-fest,
+nav.bottom .nav_background.special.summer-game-fest {
+    background-image: var(--nav-game-fest);
+}
+
+nav.top .nav_inner.latest,
+nav.bottom .nav_inner.latest {
+    background-color: var(--hidden);
+}
+
+nav.top .nav_inner.news,
+nav.bottom .nav_inner.news {
+    background-color: var(--red);
+}
+
+nav.top .nav_inner.features,
+nav.bottom .nav_inner.features {
+    background-color: var(--blue);
+}
+
+nav.top .nav_inner.reviews,
+nav.bottom .nav_inner.reviews {
+    background-color: var(--orange);
+}
+
+nav.top .nav_inner.special,
+nav.bottom .nav_inner.special {
+    background-color: var(--hidden);
+}
+
+/* Search styles */
+
+section#search-box {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2147483647;
+    background-color: var(--opaque-black);
+    backdrop-filter: blur(16px);
+    transition: all 0.24s ease-out;
+    opacity: 0;
+    pointer-events: none;
+}
+
+body.searching {
+    height: 100%;
+    overflow-y: hidden;
+}
+
+body.searching section#search-box {
+    opacity: 1;
+    pointer-events: all;
+}
+
+div#search-box-inner {
+    width: 640px;
+    position: relative;
+    left: calc(50% - 320px);
+    font-size: 31.5px;
+    line-height: 40px;
+    color: var(--white);
+    text-shadow: 0 2px var(--black);
+    font-weight: 400;
+    display: block;
+    top: calc(50% - 60px);
+    height: 120px;
+}
+
+div#search-box-inner span.search-title {
+    font-weight: 700;
+    display: block;
+    height: 40px;
+    float: left;
+    padding-left: 16px;
+}
+
+div#search-box-inner span.search-title2 {
+    font-weight: 500;
+    display: block;
+    height: 40px;
+    float: left;
+}
+
+div#search-box-inner span#ityped {
+    font-weight: 500;
+    display: block;
+    height: 40px;
+    float: left;
+}
+
+div#search-box-gubbins {
+    width: 560px;
+    display: block;
+    height: 64px;
+    background-color: var(--white);
+    border-radius: 32px 64px 64px 32px;
+    box-shadow: 0 2px var(--black);
+    clear: both;
+    margin-top: 8px;
+    float: left;
+    margin-right: 16px;
+}
+
+div#search-box-gubbins input[type=text] {
+	width: 464px;
+	height: 62px;
+	line-height: 64px;
+	color: var(--black);
+	font-size: 31.5px;
+	font-weight: 400;
+	padding: 0;
+	border: 0;
+	margin: 0 16px 0 16px;
+	outline: none !important;
+	background-color: var(--white);
+	border: none;
+	font-family: "Noto Sans Display", sans-serif;
+    overflow-y: hidden;
+    display: inline-block;
+}
+
+div#search-box-gubbins input[type=submit] {
+	width: 64px;
+	height: 64px;
+	line-height: 0;
+	color: var(--hidden);
+	font-size: 0;
+	font-weight: 0;
+	padding: 0;
+	border: 0;
+	margin: 0;
+	outline: none !important;
+	background-color: var(--green);
+	border: none;
+    background-image: url(img/search-box-search-button.png);
+    background-size: 32px 32px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    border-radius: 0 16px 16px 0;
+    box-shadow: 0 2px var(--black);
+    transition: background-color 0.12s ease-out;
+    display: inline-block;
+    position: relative;
+    top: -11px;
+}
+
+div#search-box-gubbins input[type=submit]:hover {
+    background-color: var(--lightgreen);
+}
+
+div#search-box-close-button {
+    display: block;
+    width: 64px;
+    height: 64px;
+    position: relative;
+    background-color: var(--red);
+    border-radius: 16px;
+    box-shadow: 0 2px var(--black);
+    float: left;
+    cursor: pointer;
+    background-image: url(img/search-box-close-button.png);
+    background-size: 32px 32px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    top: 8px;
+    transition: background-color 0.12s ease-out;
+}
+
+div#search-box-close-button:hover {
+    background-color: var(--lightred);
+}
+
+/* Titletag styles */
+
+span.titletag {
+    position: relative;
+    display: inline-block;
+    z-index: 150;
+    top: 16px;
+    height: 32px;
+    line-height: 31px;
+    margin-right: 8px;
+}
+
+span.titletag.icon-only {
+    margin-right: 0px !important;
+}
+
+span.titletag.icon-only:after {
+    width: 2px;
+    height: 32px;
+    background-color: var(--black);
+    content: "";
+    display: inline-block;
+}
+
+#jumbotron-inner span.titletag img {
+    border-bottom: 2px var(--black) solid;
+}
+
+#jumbotron-inner span.titletag.ace-attorney img {
+    border-bottom: none;
+    height: 34px;
+}
+
+#jumbotron-inner span.titletag.icon-only:after {
+    height: 34px;
+}
+
+#ticker_top-layer span.titletag {
+    border-bottom: 0;
+}
+
+#ticker_top-layer span.titletag.icon-only:after {
+    background-color: var(--yellow);
+}
+
+span.titletag a {
+    border-radius: 8px;
+    height: 34px;
+    display: inline-block;
+    background-image: url(img/titletag-up.png);
+    background-size: 1px 34px;
+    background-position: left bottom;
+    background-repeat: repeat-x;
+    transition: all 0.03s ease-out;
+}
+
+span.titletag img {
+    border-radius: 8px;
+    width: auto;
+    border: 0;
+}
+
+span.titletag a img {
+    position: relative;
+    top: 0;
+    transition: all 0.06s ease-out;
+}
+
+span.titletag a.hovering img {
+    top: 2px;
+}
+
+section.listing span.titletag {
+    margin-bottom: 8px;
+    margin-right: 8px;
+}
+
+span.titletag.icon-only a,
+span.titletag.icon-only img {
+    border-radius: 8px 0 0 8px;
+}
+
+span.titletag a.hovering {
+    background-image: url(img/titletag-hover.png);
+}
+
+span.titletag.after-icon a,
+span.titletag.after-icon img {
+    border-radius: 0 8px 8px 0;
+}
+
+span.titletag img.no-hover {
+    box-shadow: 0 2px var(--black);
+}
+
+span.tt-inline-block {
+    display: inline-block;
+    height: 50px;
+    background-image: url(img/titletag-up.png);
+    background-size: 32px 34px;
+    background-position: 16px bottom;
+    background-repeat: no-repeat;
+    margin-bottom: -10px;
+}
+
+.not-sidebar-wrapper span.titletag {
+    top: 0;
+}
+
+.not-sidebar-wrapper span.titletag img {
+    border-bottom: 2px var(--black) solid;
+}

@@ -1,0 +1,1230 @@
+/*
+Copyright (C) Critical Chicken. All rights reserved.
+Critical Chicken, the Critical Chicken logo and wordmark, and #ForTheGaymers are trademarks of Critical Chicken.
+All other trademarks referred to are trademarks of their respective owners.
+*/
+
+.single-post h1 {
+    font-size: 62px;
+    line-height: 80px;
+    color: var(--black);
+    font-weight: 700;
+    padding-top: 24px;
+}
+
+.single-post.category-news h1 {
+	color: var(--red);
+}
+
+.single-post.category-features h1 {
+	color: var(--blue);
+}
+
+.single-post.category-reviews h1 {
+	color: var(--orange);
+}
+
+.single-post .timestamp {
+	color: var(--darkgrey);
+	font-size: 22px;
+	line-height: 32px;
+	top: 15px;
+	position: relative;
+	font-style: italic;
+	float: right;
+	font-weight: 300;
+}
+
+.single-post b,
+.single-post strong {
+	font-weight: 600;
+}
+
+.single-post .echo-the-content a {
+	opacity: 1;
+	transition: opacity 0.12s ease-out;
+}
+
+.single-post .echo-the-content a:hover {
+	opacity: 0.68;
+}
+
+.single-post .echo-the-content.page {
+	padding-bottom: 73px;
+}
+
+.single-post .echo-the-content p.last-updated {
+	color: var(--darkgrey);
+	font-style: italic;
+	font-weight: 300;
+	margin-top: 32px;
+}
+
+.single-post .timestamp a {
+	color: var(--darkgrey);
+	text-decoration-thickness: 1px;
+	text-underline-offset: 3px;
+	text-decoration-skip-ink: all;
+}
+
+.single-post .echo-the-content p,
+#no-posts-found .echo-the-content p {
+	display: block;
+	font-size: 20px;
+	line-height: 32px;
+	position: relative;
+	color: var(--black);
+	margin-top: 16px;
+}
+
+#no-posts-found .echo-the-content p {
+	margin-top: 45px;
+}
+
+.single-post .echo-the-content p:first-of-type {
+	margin-top: 41px;
+}
+
+.single-post .echo-the-content img {
+	margin-top: 55px;
+	border-radius: 8px;
+}
+
+.single-post .echo-the-content .dont-round img {
+	border-radius: 0 !important;
+}
+
+.single-post .echo-the-content figure + p {
+	margin-top: 59px;
+}
+
+.single-post .echo-the-content figcaption {
+	font-size: 20px;
+	line-height: 32px;
+	color: var(--darkgrey);
+	padding-left: 32px;
+	display: block;
+	background-image: url("../img/icon-post-image-caption.png");
+	background-size: 15px 15px;
+	background-repeat: no-repeat;
+	background-position: left 9px;
+	padding-top: 1px;
+}
+
+.single-post .echo-the-content .is-type-video figcaption {
+	background-image: url("../img/icon-post-video-caption.png");
+}
+
+.single-post .echo-the-content figcaption a {
+	color: var(--darkgrey);
+	text-decoration-thickness: 1px;
+	text-underline-offset: 3px;
+	text-decoration-skip-ink: all;
+}
+
+.single-post .echo-the-content figure.has-caption + p {
+	margin-top: 48px;
+}
+
+/* To do: need to find a new way to achieve this! */
+.single-post h1 + h2 {
+	margin-top: 36px;
+}
+
+.single-post .echo-the-content h2,
+#no-posts-found .echo-the-content h2 {
+	font-size: 41px;
+	line-height: 56px;
+	color: var(--black);
+	margin-top: 43px;
+	font-weight: 500;
+}
+
+#no-posts-found .echo-the-content h2 {
+	margin-top: -12px;
+}
+
+.single-post .echo-the-content h2 + p {
+	margin-top: 45px !important;
+}
+
+.single-post .echo-the-content h3 {
+	font-size: 31px;
+	line-height: 40px;
+	color: var(--black);
+	margin-top: 47px;
+	font-weight: 500;
+}
+
+.single-post .echo-the-content h2 + h3 {
+	margin-top: 44px !important;
+}
+
+.single-post .echo-the-content h3 + p {
+	margin-top: 17px !important;
+}
+
+.single-post .echo-the-content h4,
+.single-post .echo-the-content h5,
+.single-post .echo-the-content h6 {
+	font-size: 20px;
+	line-height: 32px;
+	color: var(--black);
+	margin-top: 32px;
+	font-weight: 500;
+}
+
+.single-post .echo-the-content h3 + h4,
+.single-post .echo-the-content h4 + h5,
+.single-post .echo-the-content h5 + h6 {
+	margin-top: 33px !important;
+}
+
+.single-post .echo-the-content .wp-block-quote {
+	display: block;
+	font-size: 20px;
+	line-height: 32px;
+	position: relative;
+	color: var(--black);
+	padding-left: 96px;
+	padding-right: 96px;
+	background-image: url("../img/icon-post-blockquote.png");
+	background-size: 15px 15px;
+	background-repeat: no-repeat;
+	background-position: 49px 56px;
+	padding-top: 7px;
+	padding-bottom: 32px;
+}
+
+.single-post .echo-the-content .wp-block-quote.info {
+	background-image: url("../img/icon-post-info.png");
+}
+
+.single-post .echo-the-content .wp-block-quote.tweet,
+.single-post .echo-the-content .wp-block-quote.twitter {
+	background-image: url("../img/icon-post-tweet.png");
+	background-size: 18.5px 15px;
+	background-position: 45.5px 56px;
+}
+
+.single-post .echo-the-content .wp-block-quote.x-post,
+.single-post .echo-the-content .wp-block-quote.x {
+	background-image: url("../img/icon-post-x.png");
+	background-size: 14.5px 15px;
+	background-position: 49.5px 56px;
+}
+
+.single-post .echo-the-content .wp-block-quote.toot,
+.single-post .echo-the-content .wp-block-quote.mastodon {
+	background-image: url("../img/icon-post-toot.png");
+	background-size: 14px 15px;
+	background-position: 50px 56px;
+}
+
+.single-post .echo-the-content .wp-block-quote.bluesky,
+.single-post .echo-the-content .wp-block-quote.bsky,
+.single-post .echo-the-content .wp-block-quote.skeet {
+	background-image: url("../img/icon-post-bluesky.png");
+	background-size: 15px 13.5px;
+	background-position: 49px 56.75px;
+}
+
+.single-post .echo-the-content ul.privacy-list li {
+	background-image: url(../img/icon-post-privacy-ok.png);
+	background-size: 13.5px 15px;
+	background-position: 50.5px 8px;
+}
+
+.single-post .echo-the-content ul.privacy-list li:last-of-type {
+	background-image: url(../img/icon-post-privacy-concern.png);
+}
+
+.single-post .echo-the-content .wp-block-quote cite {
+	width: 100%;
+	text-align: right;
+	position: relative;
+	display: block;
+	color: var(--darkgrey);
+	font-size: 20px;
+	line-height: 32px;
+	top: 16px;
+	font-style: italic;
+	padding-bottom: 16px;
+}
+
+.single-post .echo-the-content .wp-block-quote cite a {
+	color: var(--darkgrey);
+	text-decoration-thickness: 1px;
+	text-underline-offset: 3px;
+	text-decoration-skip-ink: all;
+}
+
+.single-post .echo-the-content .wp-block-quote cite:before {
+	content: "\2014\00A0";
+}
+
+.single-post .echo-the-content .wp-block-quote cite i,
+.single-post .echo-the-content .wp-block-quote cite em {
+	font-style: normal;
+}
+
+.single-post .echo-the-content .wp-block-pullquote {
+	margin: 0;
+	padding: 0;
+}
+
+.single-post .echo-the-content .wp-block-pullquote blockquote {
+	display: block;
+	position: relative;
+	color: var(--black);
+	padding-left: 96px;
+	padding-right: 96px;
+	background-image: url("../img/icon-post-pullquote-black.png");
+	background-size: 23px 23px;
+	background-repeat: no-repeat;
+	background-position: 41px 56px;
+	text-align: left;
+	padding-top: 6px;
+	margin-bottom: -10px;
+}
+
+.single-post.category-news .echo-the-content .wp-block-pullquote blockquote {
+	color: var(--red);
+	background-image: url("../img/icon-post-pullquote-red.png");
+}
+
+.single-post.category-news .echo-the-content .wp-block-pullquote blockquote p,
+.single-post.category-news .echo-the-content .wp-block-pullquote blockquote a {
+	color: var(--red);
+}
+
+.single-post.category-features .echo-the-content .wp-block-pullquote blockquote {
+	color: var(--blue);
+	background-image: url("../img/icon-post-pullquote-blue.png");
+}
+
+.single-post.category-features .echo-the-content .wp-block-pullquote blockquote p,
+.single-post.category-features .echo-the-content .wp-block-pullquote blockquote a {
+	color: var(--blue);
+}
+
+.single-post.category-reviews .echo-the-content .wp-block-pullquote blockquote {
+	color: var(--orange);
+	background-image: url("../img/icon-post-pullquote-orange.png");
+}
+
+.single-post.category-reviews .echo-the-content .wp-block-pullquote blockquote p,
+.single-post.category-reviews .echo-the-content .wp-block-pullquote blockquote a {
+	color: var(--orange);
+}
+
+.single-post .echo-the-content .wp-block-pullquote blockquote p {
+	font-size: 31px;
+	line-height: 40px;
+}
+
+.single-post .echo-the-content .wp-block-pullquote blockquote p br {
+	width: 1px;
+	height: 1px;
+	content: "";
+	display: block;
+	margin-bottom: 15px;
+	position: relative;
+}
+
+@-moz-document url-prefix() {
+	.single-post .echo-the-content .wp-block-pullquote blockquote p br {
+		margin-bottom: 16px !important;
+	}
+}
+
+.single-post .echo-the-content .wp-block-pullquote blockquote cite {
+	width: 100%;
+	text-align: right;
+	position: relative;
+	display: block;
+	color: var(--darkgrey);
+	font-size: 20px;
+	line-height: 32px;
+	top: 17px;
+	font-style: italic;
+	padding-bottom: 16px;
+}
+
+.single-post .echo-the-content .wp-block-pullquote blockquote cite a {
+	color: var(--darkgrey) !important;
+	text-decoration-thickness: 1px;
+	text-underline-offset: 3px;
+	text-decoration-skip-ink: all;
+}
+
+.single-post .echo-the-content .wp-block-pullquote blockquote cite:before {
+	content: "\2014\00A0";
+}
+
+.single-post .echo-the-content .wp-block-pullquote blockquote cite i,
+.single-post .echo-the-content .wp-block-pullquote blockquote cite em {
+	font-style: normal;
+}
+
+.single-post .echo-the-content ul,
+#no-posts-found .echo-the-content ul {
+	padding-top: 32px;
+	padding-bottom: 32px;
+}
+
+/* Shifted bullets for Radar page */
+/* TO DO: Remove #post-827 selector before launch */
+#post-827 .echo-the-content ul li, 
+#post-150 .echo-the-content ul li {
+	width: 928px;
+	padding-left: 96px;
+	font-size: 20px;
+	line-height: 32px;
+	margin-top: 16px;
+	background-image: url("../img/icon-post-bullet.png");
+	background-size: 15px 15px;
+	background-repeat: no-repeat;
+	background-position: 49px 17px;
+}
+
+.single-post .echo-the-content ul li,
+#no-posts-found .echo-the-content ul li {
+	width: 928px;
+	padding-left: 96px;
+	font-size: 20px;
+	line-height: 32px;
+	margin-top: 16px;
+	background-image: url("../img/icon-post-bullet.png");
+	background-size: 15px 15px;
+	background-repeat: no-repeat;
+	background-position: 49px 8px;
+}
+
+.single-post .echo-the-content a,
+#no-posts-found .echo-the-content a {
+	text-decoration-thickness: 2px;
+	text-underline-offset: 3px;
+	text-decoration-skip-ink: all;
+	color: var(--black);
+}
+
+.echo-the-content hr,
+.echo-the-content hr .wp-block-separator {
+	border: 0 !important;
+	height: 1px !important;
+	background-color: var(--darkgrey) !important;
+	margin-top: 54px !important;
+	margin-bottom: 57px !important;
+}
+
+.single-post .echo-the-content blockquote.pullquote + p {
+	margin-top: 49px;
+}
+
+.single-post .echo-the-content ol {
+	counter-reset: bullets;
+	padding-top: 32px;
+	padding-bottom: 32px;
+}
+
+.single-post .echo-the-content ol li {
+	width: 928px;
+	font-size: 20px;
+	line-height: 32px;
+	margin-top: 16px;
+	counter-increment: bullets;
+	display: block;
+	position: relative;
+	left: 96px;
+}
+
+.single-post .echo-the-content ol li:before {
+	content: counter(bullets) ".";
+	width: 64px;
+	display: inline-block;
+	margin-left: -96px;
+	text-align: right;
+	margin-right: 32px;
+}
+
+.single-post .echo-the-content figure iframe {
+	width: 1120px;
+	height: 630px;
+	border-radius: 8px;
+	margin-top: 55px;
+	margin-bottom: -2px;
+}
+
+.single-post .echo-the-content figure.alignright {
+	margin: 0;
+	padding: 0;
+}
+
+.single-post .echo-the-content figure.alignright img {
+	margin-top: 28px;
+	margin-left: 32px;
+	margin-bottom: 32px;
+	padding: 0;
+}
+
+/* To do: should no longer be needed */
+.single-post .echo-the-content .mii figure.alignright img {
+	margin-top: 55px;
+	margin-left: 32px;
+	margin-bottom: 32px;
+	padding: 0;
+}
+
+.echo-the-content span.timetip {
+	text-decoration: underline;
+	cursor: help;
+	text-decoration-thickness: 2px;
+	text-underline-offset: 3px;
+	text-decoration-skip-ink: all;
+	text-decoration-color: var(--opaque-white);
+}
+
+.echo-the-content span.timetip.vital-timetip {
+	text-decoration-color: var(--faint-black);
+	font-weight: 600;
+}
+
+.echo-the-content span.timetip.galline-timetip {
+	text-decoration-color: var(--faint-black);
+	font-weight: 400;
+}
+
+#post-meta,
+#the-comments {
+	width: 1120px;
+	display: block;
+	position: relative;
+	left: calc((100% - 1120px) / 2);
+	margin-top: 54px;
+	padding-bottom: 25px;
+	border-top: 1px #717070 solid;
+}
+
+#the-comments {
+	padding-bottom: 50px;
+}
+
+#post-meta h2,
+#the-comments h2 {
+	font-size: 41px;
+	line-height: 56px;
+	color:var(--black);
+	font-weight: 500;
+	padding-top: 20px;
+	display: block;
+	padding-bottom: 4px;
+}
+
+#post-meta div.no-tags {
+	position: relative;
+	display: block;
+	width: 100px;
+	height: 9px;
+}
+
+#post-meta span.post-meta-tags {
+	position: relative;
+	display: block;
+	margin-top: 33px;
+	font-size: 20px;
+	line-height: 32px;
+}
+
+#post-meta span.post-meta-tags img {
+	width: 13.5px;
+	margin-right: 8px;
+}
+
+#post-meta span.post-meta-tags a {
+	color: var(--black);
+	text-decoration-thickness: 2px;
+	text-underline-offset: 3px;
+	text-decoration-skip-ink: all;
+	display: inline-block;
+	opacity: 1;
+	transition: opacity 0.12s ease-out;
+}
+
+#post-meta span.post-meta-tags a:hover {
+	opacity: 0.68;
+}
+
+
+/* Comment styles */
+
+div#comment-rules {
+	width: 352px;
+	height: auto;
+	display: block;
+	float: right;
+	padding-top: 160px;
+}
+
+div#comment-rules h3,
+div#respond h3 {
+	font-size: 31.5px;
+	line-height: 40px;
+	font-weight: 700;
+	color: var(--black);
+	margin-bottom: 17px;
+}
+
+div#comment-rules p {
+	font-size: 20px;
+	line-height: 32px;
+	margin-bottom: 16px;
+}
+
+div#comment-rules p a {
+	color: var(--black);
+}
+
+div#comment-rules a.need-help {
+	font-size: 20px;
+	line-height: 32px;
+	font-weight: 700;
+	background-image: url(../img/icon-comments-rule-help.png);
+	background-size: 15.5px 15px;
+	background-position: right 6px;
+	background-repeat: no-repeat;
+	padding-right: 23.5px;
+	color: var(--black);
+	text-decoration: none;
+}
+
+div#comment-rules p img {
+	margin-right: 8px;
+}
+
+div#comment-listing {
+	width: 736px;
+	height: auto;
+	display: block;
+	float: left;
+}
+
+div#comment-listing h2 img {
+	margin-right: 16px;
+}
+
+div#comment-clearing {
+	clear: both;
+}
+
+div#respond {
+	width: calc(100% - 32px);
+	height: auto;
+	display: block;
+	border-radius: 16px;
+	background-color: var(--white);
+	box-shadow: 0 2px var(--black);
+	padding: 8px 16px 16px 16px;
+	font-size: 20px;
+	line-height: 32px;
+	color: var(--black);
+	margin-top: 16px;
+	min-height: 432px;
+}
+
+span.email-notes,
+span.required-field-message,
+span.required {
+	display: none;
+}
+
+div#respond label {
+	text-transform: lowercase;
+	font-weight: 600;
+}
+
+p.comment-form-comment label:after,
+p.comment-form-author label:after {
+	content: ":";
+	position: relative;
+	left: -5px;
+}
+
+div#respond label:before {
+	content: "Your\00A0";
+	text-transform: initial;
+}
+
+p.comment-form-email label:after {
+	content: "address:";
+}
+
+div#respond p input[type=text],
+div#respond p textarea {
+	position: relative;
+	display: block;
+	z-index: 1;
+	top: -32px;
+	left: 235px;
+}
+
+p.comment-form-comment {
+	margin-top: 16px;
+}
+
+p.comment-form-author,
+p.comment-form-email {
+	margin-top: -8px;
+}
+
+p.logged-in-as {
+	margin-bottom: -7px;
+	color: var(--green);
+}
+
+p.logged-in-as:before {
+	content: "Good to see you,\00A0";
+	background-image: url(../img/icon-comments-logged-in.png);
+	background-size: 15px 15px;
+	background-position: left 6px;
+	background-repeat: no-repeat;
+	padding-left: 23px;
+}
+
+div#respond p input[type=text] {
+	width: 314px;
+	height: 29px;
+	line-height: 32px;
+	color: var(--black);
+	font-size: 20px;
+	font-weight: 400;
+	padding: 1px 0 0 0;
+	border: 0;
+	margin: 0;
+	outline: none !important;
+	background-color: var(--white);
+	border: none;
+	border-bottom: 2px var(--darkgrey) solid;
+	font-family: "Noto Sans Display", sans-serif;
+    overflow-y: hidden;
+	resize: none !important;
+}
+
+div#respond p textarea {
+	width: 392px;
+	height: 0;
+	min-height: 160px !important;
+	line-height: 32px;
+	color: var(--black);
+	font-size: 20px;
+	font-weight: 400;
+	padding: 0;
+	border: 0;
+	margin: 0;
+	outline: none !important;
+	background-color: var(--white);
+	background-image: url(../img/icon-comments-underline.png);
+	background-size: 2px 32px;
+	background-position: 0 0;
+	background-repeat: repeat;
+	border: none;
+	font-family: "Noto Sans Display", sans-serif;
+    overflow-y: hidden;
+	resize: none !important;
+}
+
+div#respond p textarea::placeholder,
+div#respond p input[type=text]::placeholder {
+	font-style: italic;
+	color: var(--midgrey);
+}
+
+div#respond input.submit {
+	display: block;
+    width: 113px;
+	height: 32px;
+	margin: -1px 0 0 0;
+	border: 0;
+	padding: 0;
+	outline: none;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	-o-appearance: none;
+	appearance: none;
+	cursor: pointer;
+	background-image: url(../img/button-submit-comment.png);
+	background-size: 113px 32px;
+	background-position: 0 0;
+	background-repeat: no-repeat;
+	border-radius: 8px;
+	box-shadow: 0 2px var(--black);
+	font-size: 0;
+	line-height: 0;
+	transition: all 0.12s ease-out;
+    color: var(--hidden);
+    cursor: pointer;
+    opacity: 1;
+	margin-left: 235px;
+}
+
+div.frc-captcha {
+	margin-top: -2px;
+	margin-left: 235px;
+	margin-bottom: 16px;
+}
+
+div#respond input.submit:hover {
+    opacity: 0.68;
+}
+
+div.individual-comment {
+	width: calc(100% - 32px);
+	padding: 16px 16px 11px 16px;
+	background-color: var(--structure-background);
+	border-radius: 16px;
+    box-shadow: 0 2px var(--structure-shadow);
+	margin-top: 16px;
+	font-size: 20px;
+	line-height: 32px;
+	color: var(--black);
+}
+
+div.individual-comment span.comment-avatar {
+	float: left;
+	margin-right: 16px;
+	margin-bottom: 4px;
+}
+
+div.individual-comment span.comment-avatar img {
+	border-radius: 20px;
+	box-shadow: 0 2px var(--black);
+	background-color: var(--white);
+}
+
+div.individual-comment span.comment-author {
+	position: relative;
+	top: 4px;
+	font-weight: 500;
+}
+
+div.individual-comment span.comment-author a {
+	color: var(--black);
+	text-decoration: none;
+	transition: opacity 0.12s ease-out;
+	opacity: 1;
+	background-image: url(../img/icon-comments-staff-member.png);
+	background-size: 15px 15px;
+	background-position: right 6px;
+	background-repeat: no-repeat;
+	padding-right: 23px;
+}
+
+div.individual-comment span.comment-author a:hover {
+	opacity: 0.68;
+}
+
+div.individual-comment span.comment-body {
+	font-size: 18px;
+	line-height: 24px;
+	clear: both;
+	width: 100%;
+	display: block;
+}
+
+div.individual-comment span.comment-body p {
+	margin-top: 8px;
+}
+
+div.individual-comment span.comment-body p a {
+	color: var(--black);
+	opacity: 1;
+	transition: opacity 0.12s ease-out;
+}
+
+div.individual-comment span.comment-body p a:hover {
+	opacity: 0.68;
+}
+
+div.individual-comment span.comment-body p:first-of-type {
+	margin-top: 0;
+}
+
+div.individual-comment span.comment-meta {
+	font-size: 16px;
+	line-height: 24px;
+	display: inline-block;
+	position: relative;
+	font-weight: 700;
+	opacity: .7;
+	top: 4px;
+}
+
+div#the-lack-of-comments {
+	clear: both;
+	width: 100%;
+	display: block;
+	height: 48px;
+}
+
+
+/* Styles for YARPP related posts */
+
+div.yarpp {
+	display: block !important;
+	height: auto !important;
+	width: 100% !important;
+	margin: -2px 0 0 0 !important;
+}
+
+div.yarpp-thumbnails-horizontal {
+	display: block !important;
+	height: auto !important;
+	width: 100% !important;
+	margin: 0 !important;
+}
+
+/* We also remove this with jQuery if possible */
+div.yarpp h3 {
+	display: none !important;
+}
+
+a.yarpp-thumbnail {
+	border: none !important;
+	margin: 0 32px 0 0 !important;
+	width: 352px !important;
+	height: auto !important;
+	border-radius: 8px !important;
+}
+
+a.yarpp-thumbnail:last-of-type {
+	margin: 0 !important;
+}
+
+span.yarpp-thumbnail-default {
+	width: 352px !important;
+	height: 200px !important;
+	margin: 0 !important;
+	border-radius: 8px !important;
+}
+
+a.yarpp-thumbnail img {
+	width: 352px !important;
+	height: 198px !important;
+	min-width: unset !important;
+	min-height: unset !important;
+	border-radius: 8px !important;
+	box-shadow: 0 2px var(--black) !important;
+	margin: 0 !important;
+}
+
+a.yarpp-thumbnail:before {
+	content: "";
+	width: 352px;
+	height: 198px;
+	border-radius: 8px;
+	position: relative;
+	display: block;
+	left: 0;
+	top: 0;
+	background-image: url(../img/thumb-hover.png);
+    background-size: 577px 198px;
+    background-position: -226px 0;
+    z-index: 100;
+    opacity: 0;
+    transition: all 0.12s ease-out;
+	margin-bottom: -198px;
+}
+
+a.yarpp-thumbnail:hover:before {
+    background-position: 0 0;
+    opacity: 1;
+}
+
+span.yarpp-thumbnail-title {
+	font-size: 22px !important;
+	line-height: 32px !important;
+	color: var(--black) !important;
+	width: 352px !important;
+	height: auto !important;
+	margin: 15px 0 0 0 !important;
+	font-weight: 700 !important;
+	max-height: unset !important;
+	overflow: visible !important;
+	display: block !important;
+	opacity: 1;
+	transition: opacity 0.12s ease-out;
+}
+
+a.yarpp-thumbnail:hover span.yarpp-thumbnail-title {
+	opacity: 0.68;
+}
+
+div.yarpp p {
+	font-size: 20px;
+	line-height: 32px;
+	color: var(--black);
+	margin-top: -9px;
+	margin-bottom: -2px;
+}
+
+div.yarpp p a {
+	font-weight: 400;
+	text-decoration: underline;
+	color: var(--black);
+	transition: opacity 0.12s ease-out;
+	opacity: 1;
+}
+
+div.yarpp p a:hover {
+	opacity: 0.68;
+}
+
+
+/* Radar styles */
+li a.whos-playing {
+	margin-right: 8px;
+	border-radius: 16px !important;
+	width: 32px;
+	height: 32px;
+	display: inline-block;
+	position: relative;
+	top: 8px;
+}
+
+li a.whos-playing:last-of-type {
+	margin-right: 16px;
+}
+
+li a.whos-playing img {
+	width: 32px;
+	height: 32px;
+	background-color: var(--white);
+	box-shadow: 0 2px var(--black);
+	border-radius: 16px !important;
+	margin: 0 !important;
+}
+
+li span.radar-tag {
+	height: 24px;
+	width: auto;
+	line-height: 24px;
+	padding: 0 6px 0 6px;
+	background-color: var(--structure-background);
+	border-radius: 4px;
+    box-shadow: 0 2px var(--structure-shadow);
+	color: var(--black);
+	font-size: 16px;
+	margin-right: 8px;
+	background-position: 6px 6px;
+	background-repeat: no-repeat;
+	display: inline-block;
+}
+
+li span.radar-tag:first-of-type {
+	margin-left: 8px;
+}
+
+li span.radar-tag:last-of-type {
+	margin-right: 0;
+}
+
+li span.radar-tag.replay,
+li span.radar-tag.replaying {
+	background-color: var(--green);
+	background-image: url(../img/icon-radar-replay.png);
+	background-size: 13.5px 12px;
+	padding-left: 25.5px;
+	color: var(--white);
+	box-shadow: 0 2px var(--black);
+}
+
+li span.radar-tag.date {
+	background-color: var(--white);
+	background-image: url(../img/icon-radar-release.png);
+	background-size: 12px 12px;
+	padding-left: 24px;
+	box-shadow: 0 2px var(--black);
+}
+
+li span.radar-tag.web,
+li span.radar-tag.browser {
+	background-image: url(../img/icon-radar-web.png);
+	background-size: 12px 12px;
+	padding-left: 24px;
+}
+
+li span.radar-tag.android {
+	background-color: var(--android);
+	background-image: url(../img/icon-radar-android.png);
+	background-size: 21.5px 12px;
+	padding-left: 33.5px;
+	box-shadow: 0 2px var(--black);
+}
+
+li span.radar-tag.ps5,
+li span.radar-tag.ps4,
+li span.radar-tag.ps3,
+li span.radar-tag.ps2,
+li span.radar-tag.ps1,
+li span.radar-tag.psx,
+li span.radar-tag.psone,
+li span.radar-tag.playstation,
+li span.radar-tag.psp,
+li span.radar-tag.vita,
+li span.radar-tag.ps.vr,
+li span.radar-tag.psvr {
+	background-color: var(--playstation);
+	background-image: url(../img/icon-radar-playstation.png);
+	background-size: 15.5px 12px;
+	padding-left: 27.5px;
+	color: var(--white);
+	box-shadow: 0 2px var(--black);
+}
+
+li span.radar-tag.ds,
+li span.radar-tag.dsi {
+	background-color: var(--nintendo-ds-grey);
+	background-image: url(../img/icon-radar-ds.png);
+	background-size: 7px 12px;
+	padding-left: 19px;
+	color: var(--white);
+	box-shadow: 0 2px var(--black);
+}
+
+li span.radar-tag.three-ds {
+	background-color: var(--nintendo-3ds-red);
+	background-image: url(../img/icon-radar-ds.png);
+	background-size: 7px 12px;
+	padding-left: 19px;
+	color: var(--white);
+	box-shadow: 0 2px var(--black);
+}
+
+li span.radar-tag.ios,
+li span.radar-tag.ipad,
+li span.radar-tag.mac,
+li span.radar-tag.iphone,
+li span.radar-tag.apple {
+	background-color: var(--apple);
+	background-image: url(../img/icon-radar-apple.png);
+	background-size: 10px 12px;
+	padding-left: 22px;
+	color: var(--white);
+	box-shadow: 0 2px var(--black);
+}
+
+li span.radar-tag.xbox,
+li span.radar-tag.three-sixty,
+li span.radar-tag.series.x,
+li span.radar-tag.series.s {
+	background-color: var(--xbox);
+	background-image: url(../img/icon-radar-xbox.png);
+	background-size: 12px 12px;
+	padding-left: 24px;
+	color: var(--white);
+	box-shadow: 0 2px var(--black);
+}
+
+li span.radar-tag.switch {
+	background-color: var(--nintendo-direct-red);
+	background-image: url(../img/icon-radar-switch.png);
+	background-size: 12px 12px;
+	padding-left: 24px;
+	color: var(--white);
+	box-shadow: 0 2px var(--black);
+}
+
+li span.radar-tag.steam,
+li span.radar-tag.early.access {
+	background-color: var(--steam-background);
+	background-image: url(../img/icon-radar-steam.png);
+	background-size: 12px 12px;
+	padding-left: 24px;
+	color: var(--steam-logo);
+	box-shadow: 0 2px var(--black);
+}
+
+li span.radar-tag.pc,
+li span.radar-tag.windows {
+	background-color: var(--windows-11);
+	background-image: url(../img/icon-radar-windows.png);
+	background-size: 12px 12px;
+	padding-left: 24px;
+	color: var(--white);
+	box-shadow: 0 2px var(--black);
+}
+
+
+/* Page header styles */
+
+h1.page-header {
+    width: 736px;
+    display: inline-block;
+    margin-top: 12px;
+    font-size: 41px;
+    font-weight: 700;
+    line-height: 56px;
+    color: var(--black);
+    overflow-wrap: break-word;
+    margin-bottom: 4px;
+}
+
+h1.page-header span {
+	height: 30px;
+	background-position: 0 0;
+	background-repeat: no-repeat;
+	background-size: 30px 30px;
+}
+
+h1.page-header.privacy span {
+	width: 27px;
+	margin-right: 16px;
+	background-image: url(../img/page-header-privacy.png);
+	background-size: 27px 30px;
+	display: inline-block;
+}
+
+/* TO DO: Remove "tags" selector before launch */
+h1.page-header.topics span,
+h1.page-header.tags span {
+	width: 35px;
+	margin-right: 16px;
+	background-image: url(../img/page-header-topics.png);
+	background-size: 35px 30px;
+	display: inline-block;
+}
+
+/* TO DO: Remove v2-1-radar selector before launch */
+h1.page-header.radar span,
+h1.page-header.v2-1-whats-on-our-radar span {
+	width: 30px;
+	margin-right: 16px;
+	background-image: url(../img/page-header-radar.png);
+	display: inline-block;
+}
+
+h1.page-header.explore span {
+	width: 30px;
+	margin-right: 16px;
+	background-image: url(../img/page-header-explore.png);
+	display: inline-block;
+}
+
+h1.page-header.about span {
+	width: 24px;
+	margin-right: 16px;
+	background-image: url(../img/page-header-about.png);
+	background-size: 24px 30px;
+	display: inline-block;
+}
+
+h1.page-header.polls {
+	margin-top: -20px;
+}
+
+h1.page-header.polls span {
+	width: 30px;
+	margin-right: 16px;
+	background-image: url(../img/page-header-polls.png);
+	display: inline-block;
+}
